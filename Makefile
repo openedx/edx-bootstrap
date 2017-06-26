@@ -1,4 +1,4 @@
-.PHONY: clean docs help install quality test
+.PHONY: clean docs help install preview quality samples test
 
 .DEFAULT_GOAL := help
 
@@ -12,18 +12,19 @@ install: ## install requirements
 clean: ## remove build artifacts
 	rm -rf css/
 	rm -rf samples/css/
-	rm -rf dist/
+	rm -rf samples/edx-bootstrap/
 
-dist: ## build the distribution
-	mkdir dist
-	mkdir dist/edx-bootstrap
-	cp -r sass/* dist/edx-bootstrap
-
-samples: dist ## build the samples
+samples: ## build the samples
+	mkdir samples/edx-bootstrap
+	cp -r fonts/ samples/edx-bootstrap/fonts
+	cp -r sass/ samples/edx-bootstrap/sass
 	mkdir samples/css
-	./node_modules/node-sass/bin/node-sass samples/sass --output samples/css --include-path dist --include-path node_modules
+	mkdir samples/css/edx
+	mkdir samples/css/open-edx
+	./node_modules/node-sass/bin/node-sass samples/edx/sass --output samples/edx/css --include-path samples --include-path node_modules
+	./node_modules/node-sass/bin/node-sass samples/open-edx/sass --output samples/open-edx/css --include-path samples --include-path node_modules
 
-build: clean dist ## build the npm package
+build: clean ## build the npm package
 
 preview: samples ## build the preview site
 	aws s3 sync samples s3://${S3_PREVIEW_DOMAIN}/edx-bootstrap-samples

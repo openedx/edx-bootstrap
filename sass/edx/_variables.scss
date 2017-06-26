@@ -1,6 +1,6 @@
 //== edX Bootstrap theme for Bootstrap v4
 //
-// Note: this file is a copy of Boostrap's own _variables.scss.
+// Note: this file is a copy of Bootstrap's own _variables.scss.
 // To override a value, uncomment it and make the change.
 // Preserve the order of this file to make upgrades easier.
 
@@ -40,47 +40,6 @@
 // Carousel
 // Close
 // Code
-
-@mixin _assert-ascending($map, $map-name) {
-  $prev-key: null;
-  $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-    $prev-key: $key;
-    $prev-num: $num;
-  }
-}
-
-// Replace `$search` with `$replace` in `$string`
-// @author Hugo Giraudel
-// @param {String} $string - Initial string
-// @param {String} $search - Substring to replace
-// @param {String} $replace ('') - New value
-// @return {String} - Updated string
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
-
-@mixin _assert-starts-at-zero($map) {
-  $values: map-values($map);
-  $first-value: nth($values, 1);
-  @if $first-value != 0 {
-    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
-  }
-}
-
 
 // General variable structure
 //
@@ -217,9 +176,9 @@ $grid-breakpoints : (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 1140px,
-  md: 1140px,
-  lg: 1140px,
+  sm: 0,
+  md: 576px,
+  lg: 768px,
   xl: 1140px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");

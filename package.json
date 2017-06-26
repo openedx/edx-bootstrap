@@ -1,0 +1,27 @@
+{
+  "name": "edx-bootstrap",
+  "version": "0.1.0",
+  "description": "The Bootstrap theme for Open edX",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andy-armstrong/edx-bootstrap.git"
+  },
+  "keywords": [
+    "edx",
+    "bootstrap",
+    "theme"
+  ],
+  "homepage": "https://github.com/andy-armstrong/edx-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "aws-cli": "^0.0.1",
+    "autoprefixer": "^6.6.1",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.1",
+    "postcss-cli": "^4.0.0",
+    "postcss-rtlcss-combined": "^0.0.0"
+  }
+}

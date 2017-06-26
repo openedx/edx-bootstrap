@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EdX Sample Dashboard</title>
+    <link rel="stylesheet" href="css/sample.css" type="text/css" media="all" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8">
+
+        <h1>Dashboard</h1>
+        <p>Browse recently launched courses and see what's new in your favorite subjects.</p>
+        
+        <nav class="navbar navbar-dark bg-faded mb-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="#">Courses</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#">Programs</a></li>
+          </ul>
+        </nav>
+
+        <h2 class="mb-4">Courses</h2>
+
+        <h3>In-Progress</h3>
+        <div class="mb-5">
+          <div class="card mb-2">
+            <div class="card-block">
+              <h4 class="card-title">
+                Course Title
+                <span class="badge badge-pill badge-success">Verified</span>
+              </h4>
+              <h6 class="card-subtitle text-muted">INSTx</h6>
+              <div class="mt-3 d-flex justify-content-end">
+                <a href="#" class="card-link btn btn-primary">Resume Course</a>
+                <a href="#" class="card-link btn btn-link">Hide</a>
+                <a href="#" class="card-link btn btn-link ml-auto">Unenroll</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-2">
+            <div class="card-block">
+              <h4 class="card-title">Course Title</h4>
+              <h6 class="card-subtitle text-muted">INSTx</h6>
+              <div class="mt-3 d-flex justify-content-end">
+                <a href="#" class="card-link btn btn-primary">Resume Course</a>
+                <a href="#" class="card-link btn btn-outline-primary">Upgrade</a>
+                <a href="#" class="card-link btn btn-link">Hide</a>
+                <a href="#" class="card-link btn btn-link ml-auto">Unenroll</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Completed</h3>
+        <div class="mb-5">
+          <div class="card card-outline-success mb-2">
+            <div class="card-block">
+              <div class="d-flex justify-content-end">
+                <div>
+                  <h4 class="card-title">
+                    Course Title
+                    <span class="badge badge-pill badge-success">Verified</span>
+                  </h4>
+                  <h6 class="card-subtitle text-muted">INSTx</h6>
+                </div>
+                <img class="ml-auto" src="img/verified.png" width="64px" height="47px"/>
+              </div>
+              <div class="mt-3">
+                <a href="#" class="card-link text-success">Download Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="clearfix">
+            <h3 class="float-left">Hidden <span class="badge badge-pill badge-default">1</span></h3>
+            <button class="btn btn-link float-left ml-2" type="button" data-toggle="collapse" data-target="#hiddenCourses" aria-expanded="false" aria-controls="hiddenCourses">Expand/Collapse</button>
+          </div>
+
+          <div class="collapse" id="hiddenCourses">
+            
+            <div class="card mb-2">
+              <div class="card-block">
+                <h4 class="card-title">Course Title</h4>
+                <h6 class="card-subtitle text-muted">INSTx</h6>
+                <div class="mt-3 d-flex justify-content-end">
+                  <a href="#" class="card-link btn btn-primary">Resume Course</a>
+                  <a href="#" class="card-link btn btn-outline-primary">Upgrade</a>
+                  <a href="#" class="card-link btn btn-link">Unhide</a>
+                  <a href="#" class="card-link btn btn-link ml-auto">Unenroll</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

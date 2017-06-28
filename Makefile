@@ -14,7 +14,7 @@ clean: ## remove build artifacts
 	rm -rf samples/css/
 	rm -rf samples/edx-bootstrap/
 
-samples: ## build the samples
+samples: clean ## build the samples
 	mkdir samples/edx-bootstrap
 	cp -r fonts/ samples/edx-bootstrap/fonts
 	cp -r sass/ samples/edx-bootstrap/sass
@@ -27,6 +27,11 @@ samples: ## build the samples
 build: clean ## build the npm package
 
 preview: samples ## build the preview site
-	aws s3 sync samples s3://${S3_PREVIEW_DOMAIN}/edx-bootstrap-samples
+	aws s3 sync samples s3://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
+	@echo Preview generated to http://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
 
 test: clean samples ## run tests
+
+xxx:
+	echo $(shell git rev-parse --abbrev-ref HEAD)
+

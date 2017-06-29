@@ -2,8 +2,7 @@ EdX Bootstrap
 =============
 
 This library provides `Bootstrap 4`_ themes for use within Open edX. It
-includes an Open edX theme as well as an edX-branded theme. In addition,
-it includes the `Open Sans typeface`_ which is the default font for Open edX.
+includes an Open edX theme as well as an edX-branded theme.
 
 .. _Bootstrap 4: https://v4-alpha.getbootstrap.com/
 .. _Open Sans typeface: https://fonts.google.com/specimen/Open+Sans
@@ -34,7 +33,7 @@ any Bootstrap partial files so that the theming will be applied.
 
 See the `sample Open edX SASS file`_ for a simple example.
 
-.. sample Open edX SASS file: https://github.com/edx/edx-bootstrap/blob/master/samples/open-edx/sass/sample.scss
+.. _sample Open edX SASS file: https://github.com/edx/edx-bootstrap/blob/master/samples/open-edx/sass/sample.scss
 
 License
 -------

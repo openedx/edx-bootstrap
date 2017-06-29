@@ -16,7 +16,6 @@ clean: ## remove build artifacts
 
 samples: clean ## build the samples
 	mkdir samples/edx-bootstrap
-	cp -r fonts/ samples/edx-bootstrap/fonts
 	cp -r sass/ samples/edx-bootstrap/sass
 	mkdir samples/css
 	mkdir samples/css/edx

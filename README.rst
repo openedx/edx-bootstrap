@@ -14,7 +14,7 @@ The edx-bootstrap library should be installed via npm:
 
     npm install edx-bootstrap
 
-Once installed, you can generate the `Sample pages`_:
+Once installed, you can generate the `sample pages`_:
 
     make samples
 

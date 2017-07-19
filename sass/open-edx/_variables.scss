@@ -639,22 +639,21 @@ $nav-tabs-justified-active-link-border-color: transparent !default;
 //
 // Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             $green !default;
-$state-success-bg:               $body-bg !default;
-$state-success-border:           $green !default;
+$state-success-text:               $black !default;
+//$state-success-bg:               #dff0d8 !default;
+//$state-success-border:           darken($state-success-bg, 5%) !default;
 
-$state-info-text:                $blue !default;
-$state-info-bg:                  $body-bg !default;
-$state-info-border:              $blue !default;
+$state-info-text:                  $black !default;
+//$state-info-bg:                  #d9edf7 !default;
+//$state-info-border:              darken($state-info-bg, 7%) !default;
 
-$state-warning-text:             $yellow !default;
-$state-warning-bg:               $body-bg !default;
-$mark-bg:                        $yellow !default;
-$state-warning-border:           $yellow !default;
+$state-warning-text:               $black !default;
+//$state-warning-bg:               #fcf8e3 !default;
+//$state-warning-border:           darken($state-warning-bg, 5%) !default;
 
-$state-danger-text:              $red !default;
-$state-danger-bg:                $body-bg !default;
-$state-danger-border:            $red !default;
+$state-danger-text:                $black !default;
+//$state-danger-bg:                #f2dede !default;
+//$state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
 // Cards
@@ -776,25 +775,25 @@ $state-danger-border:            $red !default;
 //$alert-padding-x:             1.25rem !default;
 //$alert-padding-y:             .75rem !default;
 //$alert-margin-bottom:         $spacer-y !default;
-$alert-border-radius:         0 !default;
+$alert-border-radius:           1px !default;
 //$alert-link-font-weight:      $font-weight-bold !default;
 //$alert-border-width:          $border-width !default;
 
-$alert-success-bg:            $body-bg !default;
-$alert-success-text:          $body-color !default;
-$alert-success-border:        $state-success-border !default;
+//$alert-success-bg:            $state-success-bg !default;
+//$alert-success-text:          $state-success-color !default;
+//$alert-success-border:        $state-success-border !default;
 
-$alert-info-bg:               $body-bg !default;
-$alert-info-text:             $body-color !default;
-$alert-info-border:           $state-info-border !default;
+//$alert-info-bg:               $state-info-bg !default;
+//$alert-info-text:             $state-info-color !default;
+//$alert-info-border:           $state-info-border !default;
 
-$alert-warning-bg:            $body-bg !default;
-$alert-warning-text:          $body-color !default;
-$alert-warning-border:        $state-warning-border !default;
+//$alert-warning-bg:            $state-warning-bg !default;
+//$alert-warning-text:          $state-warning-color !default;
+//$alert-warning-border:        $state-warning-border !default;
 
-$alert-danger-bg:             $body-bg !default;
-$alert-danger-text:           $body-color !default;
-$alert-danger-border:         $state-danger-border !default;
+//$alert-danger-bg:             $state-danger-bg !default;
+//$alert-danger-text:           $state-danger-color !default;
+//$alert-danger-border:         $state-danger-border !default;
 
 
 // Progress bars

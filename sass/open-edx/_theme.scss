@@ -3,8 +3,8 @@
 // Brand theme for Open edX
 // ------------------------
 
-// Mixins
-@import '../mixins';
+// Bootstrap built in functions, required by variables override
+@import 'bootstrap/scss/functions';
 
 // Open edX variables
 @import 'variables';

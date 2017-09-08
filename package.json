@@ -22,6 +22,7 @@
     "node-sass": "^4.5.3",
     "postcss": "^6.0.1",
     "postcss-cli": "^4.0.0",
-    "postcss-rtlcss-combined": "^0.0.0"
+    "postcss-rtlcss-combined": "^0.0.0",
+    "stylelint-config-edx": "^1.0.0"
   }
 }

@@ -12,7 +12,7 @@ Getting Started
 
 The edx-bootstrap library should be installed via npm:
 
-    npm install edx-bootstrap
+    npm install --save edx-bootstrap
 
 Once installed, you can generate the `sample pages`_:
 
@@ -34,6 +34,18 @@ any Bootstrap partial files so that the theming will be applied.
 See the `sample Open edX SASS file`_ for a simple example.
 
 .. _sample Open edX SASS file: https://github.com/edx/edx-bootstrap/blob/master/samples/open-edx/sass/sample.scss
+
+Using The EdX Bootstrap Theme With Webpack
+------------------------------------------
+
+The edX Bootstrap Sass expects the Bootstrap source to exist at the project root.
+Add an includePaths option to your sass-loader config so that Webpack knows
+to look for Bootstrap in your node_modules folder.
+
+See a `sample Webpack config`_ in edx-paragon, which uses edX Bootstrap and Webpack.
+
+.. _sample Webpack config: https://github.com/edx/paragon/blob/master/webpack.config.js#L56
+
 
 License
 -------

@@ -29,8 +29,13 @@ preview: samples ## build the preview site
 	aws s3 sync samples s3://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
 	@echo Preview generated to http://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
 
-test: clean samples ## run tests
+quality:
+	./node_modules/stylelint/bin/stylelint.js sass/**/*.scss samples/**/*.scss
+
+fix:
+	./node_modules/stylelint/bin/stylelint.js sass/**/*.scss samples/**/*.scss --fix
+
+test: clean quality samples ## run tests
 
 xxx:
 	echo $(shell git rev-parse --abbrev-ref HEAD)
-

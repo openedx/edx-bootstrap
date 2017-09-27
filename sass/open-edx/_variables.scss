@@ -70,6 +70,7 @@ $theme-colors: map-merge((
   info: $cyan,
   warning: $yellow,
   danger: $red,
+  purchase: $green,
   lightest: $gray-100,
   light: $gray-200,
   dark: $gray-800,
@@ -212,13 +213,13 @@ $transition-collapse:    height 0.35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 //$font-family-monospace:  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //$font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 0.875rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:   1rem !default;
-$font-size-sm:   0.75rem !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   0.875rem !default;
 
 $font-weight-light: 300 !default;
 $font-weight-normal: normal !default;
@@ -305,8 +306,8 @@ $h6-font-size: 1rem !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$input-btn-padding-y:       0.5rem !default;
-$input-btn-padding-x:       0.75rem !default;
+$input-btn-padding-y:       0.625rem !default;
+$input-btn-padding-x:       0.625rem !default;
 $input-btn-line-height:     1.25 !default;
 
 $input-btn-padding-y-sm:    0.25rem !default;

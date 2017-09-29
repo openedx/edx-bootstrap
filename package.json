@@ -5,14 +5,14 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andy-armstrong/edx-bootstrap.git"
+    "url": "git+https://github.com/edx/edx-bootstrap.git"
   },
   "keywords": [
     "edx",
     "bootstrap",
     "theme"
   ],
-  "homepage": "https://github.com/andy-armstrong/edx-bootstrap#readme",
+  "homepage": "https://github.com/edx/edx-bootstrap#readme",
   "dependencies": {
     "bootstrap": "v4.0.0-beta"
   },

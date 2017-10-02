@@ -22,6 +22,7 @@ samples: clean ## build the samples
 	mkdir samples/css/open-edx
 	./node_modules/node-sass/bin/node-sass samples/edx/sass --output samples/edx/css --include-path samples --include-path node_modules
 	./node_modules/node-sass/bin/node-sass samples/open-edx/sass --output samples/open-edx/css --include-path samples --include-path node_modules
+	./node_modules/.bin/opn samples/index.html
 
 build: clean ## build the npm package
 
@@ -35,7 +36,7 @@ quality:
 fix:
 	./node_modules/stylelint/bin/stylelint.js sass/**/*.scss samples/**/*.scss --fix
 
-test: clean quality samples ## run tests
+test: clean quality ## run tests
 
 xxx:
 	echo $(shell git rev-parse --abbrev-ref HEAD)

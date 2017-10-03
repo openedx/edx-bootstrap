@@ -14,7 +14,9 @@ clean: ## remove build artifacts
 	rm -rf samples/css/
 	rm -rf samples/edx-bootstrap/
 
-samples: clean ## build the samples
+build: clean ## build the npm package
+
+build.samples: clean ## build the samples
 	mkdir samples/edx-bootstrap
 	cp -r sass/ samples/edx-bootstrap/sass
 	mkdir samples/css
@@ -22,11 +24,11 @@ samples: clean ## build the samples
 	mkdir samples/css/open-edx
 	./node_modules/node-sass/bin/node-sass samples/edx/sass --output samples/edx/css --include-path samples --include-path node_modules
 	./node_modules/node-sass/bin/node-sass samples/open-edx/sass --output samples/open-edx/css --include-path samples --include-path node_modules
+
+samples: clean build.samples ## build and show the samples
 	./node_modules/.bin/opn samples/index.html
 
-build: clean ## build the npm package
-
-preview: samples ## build the preview site
+preview: build.samples ## build the preview site
 	aws s3 sync samples s3://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
 	@echo Preview generated to http://${S3_PREVIEW_DOMAIN}/$(shell git rev-parse --abbrev-ref HEAD)
 
@@ -36,7 +38,7 @@ quality:
 fix:
 	./node_modules/stylelint/bin/stylelint.js sass/**/*.scss samples/**/*.scss --fix
 
-test: clean quality ## run tests
+test: clean quality build.samples ## run tests
 
 xxx:
 	echo $(shell git rev-parse --abbrev-ref HEAD)

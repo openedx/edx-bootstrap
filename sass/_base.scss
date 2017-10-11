@@ -1,5 +1,9 @@
 //== edX Bootstrap theme for Bootstrap v4
-//
-// Base styles
 
+// Base styles
+body {
+  text-align: initial !important;  // Remove hard-coded left alignment for RTL
+}
+
+// Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,");

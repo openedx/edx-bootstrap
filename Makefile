@@ -15,8 +15,6 @@ clean: ## remove build artifacts
 	rm -rf samples/css/
 	rm -rf samples/edx-bootstrap/
 
-build: clean ## build the npm package
-
 build.samples: clean ## build the samples
 	mkdir samples/edx-bootstrap
 	cp -r sass/ samples/edx-bootstrap/sass

@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/%40edx%2Fedx-bootstrap.svg)](https://badge.fury.io/js/%40edx%2Fedx-bootstrap)
+
 EdX Bootstrap
 =============
 

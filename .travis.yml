@@ -14,6 +14,7 @@ script:
 branches:
     only:
       - master
+      - v\d+\.\d+(\.\d+)*
 
 deploy:
     provider: npm
@@ -22,4 +23,4 @@ deploy:
       secure: Wsa+BAaxJPrfwliMJVP4TJ7KvNtoMVSYJv82lZeeRUahgDoNWBWHN/S+VkdORh7kVfkxEzEyLux9TxMQfYcT5b2Ov7hXna/vFqRWmI9F2M16oRTu8Gc6xaErg1q/Xv80pQlBewjg1eeE5RuC/f1Lfylh7mJXpUbBa0YUqRRPWAE+td0P6KZrr7PlbzOVX2E6P806ZzF5REbCWedncq34MnexqTBDS3qXmdF+KRK6uPmNT/4ASEtqxXTeQKv+MGH3RZCTxF1T/fb62PhuPYBOsrOKQHUAUp7Q5tGvOKt3CrcwBNckFbJzLM5MD6G0JYLM7fJGhCYl6ZWb7xOdwp3Hh1zsqO/utHb2wkvifaiXap1KBr2yP/gC/FVyL80PnDe5AjiAyrQbUzbiohtlwjHQt8j3/O53lDeLn1A5Z5XYBoDIyGwOIOV/9SRygoy88+dGsqkLvvI8vsiSDOi/eXxoNV1ufLK8gtpBXMclYFo0cUTQa40vtyu4UepKZevT+poLNdEiaFdSXyo30DDTOsX85XkwliBHUy7USmVdp804wF+4MNkxjcR+nSesq4ZJpkm4iDZSItmBL/qFr7ZNbb1MQRgKLWMVuJhHkJ82zntYGXaNJKjsbNhzpoLXAI8o49uhIGopNQjU+PJAzxUQH4ZhoW3iW0Bc38u7UvRkONQLuEQ=
     on:
       tags: true
-      branch: master
+      all_branches: true

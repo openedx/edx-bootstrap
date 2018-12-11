@@ -11,11 +11,6 @@ install:
 script:
     - make test
 
-branches:
-    only:
-      - master
-      - v\d+\.\d+(\.\d+)*
-
 deploy:
     provider: npm
     email: oscm@edx.org

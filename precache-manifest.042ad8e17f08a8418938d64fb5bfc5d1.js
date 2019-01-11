@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d3b1d02bda48ae542ba4",
-    "url": "/edx-bootstrap/static/css/main.1cf9aaad.chunk.css"
+    "revision": "71e42d0bff0492ea8a9a",
+    "url": "/edx-bootstrap/static/css/main.bfa8392e.chunk.css"
   },
   {
-    "revision": "d3b1d02bda48ae542ba4",
-    "url": "/edx-bootstrap/static/js/main.d3b1d02b.chunk.js"
+    "revision": "71e42d0bff0492ea8a9a",
+    "url": "/edx-bootstrap/static/js/main.71e42d0b.chunk.js"
   },
   {
     "revision": "256287ae8e003ecc74a7",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/edx-bootstrap/static/js/runtime~main.cdd81761.js"
   },
   {
-    "revision": "a2107c8bef2f66de609c1d047b6b43e1",
+    "revision": "e057a8c54251a06f80b665db5117f1f3",
     "url": "/edx-bootstrap/index.html"
   }
 ];

@@ -1,0 +1,74 @@
+//
+// This field defines a new variant of button (inverse)
+// and adds a focus outline to all buttons on :focus
+//
+
+@mixin button-inverse-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: $color;
+  border-color: transparent;
+  background-color: #fff;
+
+  @include hover {
+    color: darken($color, 7.5%);
+    background-color: #eee;
+    border-color: transparent;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: darken($color, 10%);
+    background: #eee;
+  }
+}
+
+
+// Create inverse variants
+
+@each $color, $value in $theme-colors {
+  .btn-inverse-#{$color} {
+    @include button-inverse-variant($value);
+  }
+}
+
+
+// Add focus outlines to all of them. Box shadow focus is turned off in variables.
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    &.focus,
+    &:focus {
+      box-shadow: none;
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    &.focus,
+    &:focus {
+      box-shadow: none;
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-inverse-#{$color} {
+    &.focus,
+    &:focus {
+      box-shadow: none;
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+}

@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/edx-bootstrap/static/js/runtime~main.cdd81761.js"
   },
   {
-    "revision": "55cb91d773dae40a2842f5146c755d5b",
+    "revision": "a2107c8bef2f66de609c1d047b6b43e1",
     "url": "/edx-bootstrap/index.html"
   }
 ];

@@ -27,6 +27,7 @@
   "devDependencies": {
     "bootstrap": "^4.2.1",
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "react-router-dom": "^4.3.1"
   }
 }

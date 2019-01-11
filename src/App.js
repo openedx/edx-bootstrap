@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import ScrollToTop from './ScrollToTop';
 import './App.scss';
 
 import Header from './Header';
@@ -33,8 +34,9 @@ import Tooltips from './pages/Tooltips';
 class App extends Component {
   render() {
     return (
-       <Router>
-       <div>
+      <Router>
+      <ScrollToTop>
+      <div>
         <Header />
         <div className="container-fluid">
         <div className="row flex-xl-no-wrap">
@@ -107,6 +109,7 @@ class App extends Component {
           </div>
         </div>
       </div>
+      </ScrollToTop>
       </Router>
     );
   }

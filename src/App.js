@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import './App.scss';
 
+import Header from './Header';
 import Overview from './pages/Overview';
 import Grid from './pages/Grid';
 import LayoutUtils from './pages/LayoutUtils';
@@ -34,34 +35,50 @@ class App extends Component {
   render() {
     return (
        <Router>
-        <div>
-          <Link to="/">Overview</Link>
-          <Link to="/Grid">Grid</Link>
-          <Link to="/LayoutUtils">LayoutUtils</Link>
-          <Link to="/Typography">Typography</Link>
-          <Link to="/Tables">Tables</Link>
-          <Link to="/Alerts">Alerts</Link>
-          <Link to="/Badge">Badge</Link>
-          <Link to="/Breadcrumb">Breadcrumb</Link>
-          <Link to="/Buttons">Buttons</Link>
-          <Link to="/Card">Card</Link>
-          <Link to="/Collapse">Collapse</Link>
-          <Link to="/Dropdowns">Dropdowns</Link>
-          <Link to="/Forms">Forms</Link>
-          <Link to="/InputGroup">InputGroup</Link>
-          <Link to="/Jumbotron">Jumbotron</Link>
-          <Link to="/ListGroup">ListGroup</Link>
-          <Link to="/MediaObject">MediaObject</Link>
-          <Link to="/Modal">Modal</Link>
-          <Link to="/Navs">Navs</Link>
-          <Link to="/Navbar">Navbar</Link>
-          <Link to="/Pagination">Pagination</Link>
-          <Link to="/Popovers">Popovers</Link>
-          <Link to="/Progress">Progress</Link>
-          <Link to="/Scrollspy">Scrollspy</Link>
-          <Link to="/Spinners">Spinners</Link>
-          <Link to="/Toasts">Toasts</Link>
-          <Link to="/Tooltips">Tooltips</Link>
+       <div>
+        <Header />
+        <div className="container-fluid">
+        <div className="row flex-xl-no-wrap">
+          <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <h5 className="bd-toc-link mt-5">Layout</h5>
+            <ul className="nav flex-column">
+              <li><NavLink exact to="/">Overview</NavLink></li>
+              <li><NavLink to="/Grid">Grid</NavLink></li>
+              <li><NavLink to="/LayoutUtils">LayoutUtils</NavLink></li>
+            </ul>
+
+            <h5 className="bd-toc-link mt-5">Content</h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Typography">Typography</NavLink></li>
+              <li><NavLink to="/Tables">Tables</NavLink></li>
+            </ul>
+
+            <h5 className="bd-toc-link mt-5">Components</h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Alerts">Alerts</NavLink></li>
+              <li><NavLink to="/Badge">Badge</NavLink></li>
+              <li><NavLink to="/Breadcrumb">Breadcrumb</NavLink></li>
+              <li><NavLink to="/Buttons">Buttons</NavLink></li>
+              <li><NavLink to="/Card">Card</NavLink></li>
+              <li><NavLink to="/Collapse">Collapse</NavLink></li>
+              <li><NavLink to="/Dropdowns">Dropdowns</NavLink></li>
+              <li><NavLink to="/Forms">Forms</NavLink></li>
+              <li><NavLink to="/InputGroup">InputGroup</NavLink></li>
+              <li><NavLink to="/Jumbotron">Jumbotron</NavLink></li>
+              <li><NavLink to="/ListGroup">ListGroup</NavLink></li>
+              <li><NavLink to="/MediaObject">MediaObject</NavLink></li>
+              <li><NavLink to="/Modal">Modal</NavLink></li>
+              <li><NavLink to="/Navs">Navs</NavLink></li>
+              <li><NavLink to="/Navbar">Navbar</NavLink></li>
+              <li><NavLink to="/Pagination">Pagination</NavLink></li>
+              <li><NavLink to="/Popovers">Popovers</NavLink></li>
+              <li><NavLink to="/Progress">Progress</NavLink></li>
+              <li><NavLink to="/Scrollspy">Scrollspy</NavLink></li>
+              <li><NavLink to="/Spinners">Spinners</NavLink></li>
+              <li><NavLink to="/Toasts">Toasts</NavLink></li>
+              <li><NavLink to="/Tooltips">Tooltips</NavLink></li>
+            </ul>
+          </div>
 
           <Route exact path="/" component={Overview} />
           <Route path="/grid" component={Grid} />
@@ -90,7 +107,9 @@ class App extends Component {
           <Route path="/Spinners" component={Spinners} />
           <Route path="/Toasts" component={Toasts} />
           <Route path="/Tooltips" component={Tooltips} />
+          </div>
         </div>
+      </div>
       </Router>
     );
   }

@@ -4,3 +4,13 @@
 .btn-clipboard {
   display: none;
 }
+
+.bd-sidebar {
+  overflow-y: auto;
+  .nav > li > a {
+    &.active {
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}

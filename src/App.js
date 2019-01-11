@@ -26,7 +26,6 @@ import Navbar from './pages/Navbar';
 import Pagination from './pages/Pagination';
 import Popovers from './pages/Popovers';
 import Progress from './pages/Progress';
-import Scrollspy from './pages/Scrollspy';
 import Spinners from './pages/Spinners';
 import Toasts from './pages/Toasts';
 import Tooltips from './pages/Tooltips';
@@ -73,7 +72,6 @@ class App extends Component {
               <li><NavLink to="/Pagination">Pagination</NavLink></li>
               <li><NavLink to="/Popovers">Popovers</NavLink></li>
               <li><NavLink to="/Progress">Progress</NavLink></li>
-              <li><NavLink to="/Scrollspy">Scrollspy</NavLink></li>
               <li><NavLink to="/Spinners">Spinners</NavLink></li>
               <li><NavLink to="/Toasts">Toasts</NavLink></li>
               <li><NavLink to="/Tooltips">Tooltips</NavLink></li>
@@ -103,7 +101,6 @@ class App extends Component {
           <Route path="/Pagination" component={Pagination} />
           <Route path="/Popovers" component={Popovers} />
           <Route path="/Progress" component={Progress} />
-          <Route path="/Scrollspy" component={Scrollspy} />
           <Route path="/Spinners" component={Spinners} />
           <Route path="/Toasts" component={Toasts} />
           <Route path="/Tooltips" component={Tooltips} />

@@ -7,6 +7,7 @@ import Grid from './pages/Grid';
 import LayoutUtils from './pages/LayoutUtils';
 import Typography from './pages/Typography';
 import Tables from './pages/Tables';
+import Alerts from './pages/Alerts';
 import Badge from './pages/Badge';
 import Breadcrumb from './pages/Breadcrumb';
 import Buttons from './pages/Buttons';
@@ -39,6 +40,7 @@ class App extends Component {
           <Link to="/LayoutUtils">LayoutUtils</Link>
           <Link to="/Typography">Typography</Link>
           <Link to="/Tables">Tables</Link>
+          <Link to="/Alerts">Alerts</Link>
           <Link to="/Badge">Badge</Link>
           <Link to="/Breadcrumb">Breadcrumb</Link>
           <Link to="/Buttons">Buttons</Link>
@@ -66,6 +68,7 @@ class App extends Component {
           <Route path="/LayoutUtils" component={LayoutUtils} />
           <Route path="/Typography" component={Typography} />
           <Route path="/Tables" component={Tables} />
+          <Route path="/Alerts" component={Alerts} />
           <Route path="/Badge" component={Badge} />
           <Route path="/Breadcrumb" component={Breadcrumb} />
           <Route path="/Buttons" component={Buttons} />

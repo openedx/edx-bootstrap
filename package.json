@@ -1,34 +1,29 @@
 {
-  "name": "@edx/edx-bootstrap",
-  "version": "1.0.3",
-  "description": "The Bootstrap theme for Open edX",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edx/edx-bootstrap.git"
-  },
-  "keywords": [
-    "edx",
-    "bootstrap",
-    "theme"
-  ],
-  "homepage": "https://github.com/edx/edx-bootstrap#readme",
+  "name": "edx-bootstrap",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "bootstrap": "4.0.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.6"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
-    "@edx/stylelint-config-edx": "^1.1.0",
-    "autoprefixer": "^6.6.1",
-    "aws-cli": "^0.0.1",
-    "node-sass": "^4.9.0",
-    "opn-cli": "^3.1.0",
-    "postcss": "^6.0.1",
-    "postcss-cli": "^4.0.0",
-    "postcss-rtlcss-combined": "^0.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "bootstrap": "^4.2.1",
+    "node-sass": "^4.11.0"
   }
 }

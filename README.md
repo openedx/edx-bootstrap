@@ -1,72 +1,68 @@
-[![npm version](https://badge.fury.io/js/%40edx%2Fedx-bootstrap.svg)](https://badge.fury.io/js/%40edx%2Fedx-bootstrap)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-EdX Bootstrap
-=============
+## Available Scripts
 
-This library provides [Bootstrap 4](https://v4-alpha.getbootstrap.com/) themes
-for use within Open edX. It includes an Open edX theme as well as an edX-branded
-theme.
+In the project directory, you can run:
 
-Getting Started
----------------
+### `npm start`
 
-The edx-bootstrap library should be installed via npm:
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-    npm install --save @edx/edx-bootstrap
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-Once installed, you can generate the
-[sample pages](https://github.com/edx/edx-bootstrap/blob/master/samples):
+### `npm test`
 
-    make samples
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-For a full list of the available make targets, run:
+### `npm run build`
 
-    make help
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Using The EdX Bootstrap Theme
------------------------------
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-To use an edX Bootstrap theme, import the ``_theme.scss`` partial file from
-your chosen theme into your own Sass. Note that this file must be loaded before
-any Bootstrap partial files so that the theming will be applied.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-See the [sample Open edX SASS file](https://github.com/edx/edx-bootstrap/blob/master/samples/open-edx/sass/sample.scss)
-for a simple example.
+### `npm run eject`
 
-Using The EdX Bootstrap Theme With Webpack
-------------------------------------------
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-The edX Bootstrap Sass expects the Bootstrap source to exist at the project root.
-Add an includePaths option to your sass-loader config so that Webpack knows
-to look for Bootstrap in your node_modules folder.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-See a [sample Webpack config](https://github.com/edx/paragon/blob/master/webpack.config.js#L56)
-in [Paragon](https://github.com/edx/paragon), which uses edX Bootstrap and
-Webpack.
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-License
--------
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-The code in this repository uses the Apache 2.0 license unless otherwise noted.
-Please see the [LICENSE file](https://github.com/edx/edx-bootstrap/blob/master/LICENSE)
-for details.
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Contributions
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Contributions are very welcome. Please read
-[How To Contribute](https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst)
-for details. Even though they were written with edx-platform in mind, the
-guidelines should be followed for Open edX code in general.
+### Code Splitting
 
-Reporting Security Issues
--------------------------
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-Please do not report security issues in public. Please email security@edx.org.
+### Analyzing the Bundle Size
 
-Getting Help
-------------
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-Have a question about this repository, or about Open edX in general?  Please
-refer to this [list of resources](https://open.edx.org/getting-help) if you need
-any assistance.
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

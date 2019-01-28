@@ -242,7 +242,7 @@ $border-color:                $gray-300 !default;
 
 $border-radius:               .3rem !default;
 $border-radius-lg:            .35rem !default;
-$border-radius-sm:            .25rem !default;
+$border-radius-sm:            2px !default;
 
 $rounded-pill:                50rem !default;
 
@@ -291,7 +291,7 @@ $font-size-sm:                $font-size-base * .875 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-semi-bold:       600 !default;
+$font-weight-semi-bold:       500 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -307,7 +307,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        $font-family-serif !default;
-$headings-font-weight:        700 !default;
+$headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 
@@ -345,7 +345,7 @@ $nested-kbd-font-weight:      $font-weight-bold !default;
 
 $list-inline-padding:         .5rem !default;
 
-$mark-bg:                     #fcf8e3 !default;
+$mark-bg:                     #fff243;
 
 $hr-margin-y:                 $spacer !default;
 
@@ -417,7 +417,7 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-x:               1.25rem;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
 
@@ -447,7 +447,7 @@ $btn-block-spacing-y:         .5rem !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $rounded-pill !default;
 $btn-border-radius-lg:        $rounded-pill !default;
-$btn-border-radius-sm:        $rounded-pill !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -895,10 +895,10 @@ $toast-header-border-color: rgba(0, 0, 0, .05) !default;
 // Badges
 
 $badge-font-size:                   75% !default;
-$badge-font-weight:                 $font-weight-bold !default;
+$badge-font-weight:                 $font-weight-normal !default;
 $badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .4em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-padding-x:                   .5em !default;
+$badge-border-radius:               $border-radius-sm !default;
 
 $badge-transition:                  $btn-transition !default;
 $badge-focus-width:                 $input-btn-focus-width !default;
@@ -1018,13 +1018,13 @@ $figure-caption-color:              $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              .75rem !default;
-$breadcrumb-padding-x:              1rem !default;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
 $breadcrumb-item-padding:           .5rem !default;
 
 $breadcrumb-margin-bottom:          1rem !default;
 
-$breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          $gray-600 !default;
 $breadcrumb-active-color:           $gray-600 !default;
 $breadcrumb-divider:                quote("/") !default;

@@ -15,3 +15,12 @@
     }
   }
 }
+
+.type-scale-row {
+  margin-bottom: 1rem;
+}
+.type-scale-cell-empty  {
+  background: $light;
+  padding: $spacer*.5;
+  flex-basis: 66%;
+}

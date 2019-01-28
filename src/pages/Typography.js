@@ -1,241 +1,318 @@
 import React from 'react';
+import _ from 'lodash';
+
+const colors = {
+  primary: {},
+  secondary: {},
+  success: {},
+  info: {},
+  warning: {},
+  danger: {},
+  light: {},
+  dark: {},
+  'text-muted': {}
+};
 
 export default class Typography extends React.Component {
   render() {
-    return (
-<main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-  <h1 className="bd-title" id="content">Typography</h1>
-  <p className="bd-lead">Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
-  
-  <h2 id="global-settings"><span className="bd-content-title">Global settings</span></h2>
-  <p>Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the <a href="/docs/4.2/utilities/text/">textual utility classes</a>.</p>
-  <ul>
-    <li>Use a <a href="/docs/4.2/content/reboot/#native-font-stack">native font stack</a> that selects the best <code className="highlighter-rouge">font-family</code> for each OS and device.</li>
-    <li>For a more inclusive and accessible type scale, we assume the browser default root <code className="highlighter-rouge">font-size</code> (typically 16px) so visitors can customize their browser defaults as needed.</li>
-    <li>Use the <code className="highlighter-rouge">$font-family-base</code>, <code className="highlighter-rouge">$font-size-base</code>, and <code className="highlighter-rouge">$line-height-base</code> attributes as our typographic base applied to the <code className="highlighter-rouge">&lt;body&gt;</code>.</li>
-    <li>Set the global link color via <code className="highlighter-rouge">$link-color</code> and apply link underlines only on <code className="highlighter-rouge">:hover</code>.</li>
-    <li>Use <code className="highlighter-rouge">$body-bg</code> to set a <code className="highlighter-rouge">background-color</code> on the <code className="highlighter-rouge">&lt;body&gt;</code> (<code className="highlighter-rouge">#fff</code> by default).</li>
-  </ul>
-  <p>These styles can be found within <code className="highlighter-rouge">_reboot.scss</code>, and the global variables are defined in <code className="highlighter-rouge">_variables.scss</code>. Make sure to set <code className="highlighter-rouge">$font-size-base</code> in <code className="highlighter-rouge">rem</code>.</p>
-  <h2 id="headings"><span className="bd-content-title">Headings</span></h2>
-  <p>All HTML headings, <code className="highlighter-rouge">&lt;h1&gt;</code> through <code className="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
-  <table>
-    <thead>
-      <tr>
-        <th>Heading</th>
-        <th>Example</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
-        </td>
-        <td><span className="h1">h1. Bootstrap heading</span></td>
-      </tr>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
-        </td>
-        <td><span className="h2">h2. Bootstrap heading</span></td>
-      </tr>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
-        </td>
-        <td><span className="h3">h3. Bootstrap heading</span></td>
-      </tr>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
-        </td>
-        <td><span className="h4">h4. Bootstrap heading</span></td>
-      </tr>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
-        </td>
-        <td><span className="h5">h5. Bootstrap heading</span></td>
-      </tr>
-      <tr>
-        <td>
-          <p><code className="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
-        </td>
-        <td><span className="h6">h6. Bootstrap heading</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;h1&gt;</span>h1. Bootstrap heading<span className="nt">&lt;/h1&gt;</span>{"\n"}<span className="nt">&lt;h2&gt;</span>h2. Bootstrap heading<span className="nt">&lt;/h2&gt;</span>{"\n"}<span className="nt">&lt;h3&gt;</span>h3. Bootstrap heading<span className="nt">&lt;/h3&gt;</span>{"\n"}<span className="nt">&lt;h4&gt;</span>h4. Bootstrap heading<span className="nt">&lt;/h4&gt;</span>{"\n"}<span className="nt">&lt;h5&gt;</span>h5. Bootstrap heading<span className="nt">&lt;/h5&gt;</span>{"\n"}<span className="nt">&lt;h6&gt;</span>h6. Bootstrap heading<span className="nt">&lt;/h6&gt;</span></code></pre></figure>
-  <p><code className="highlighter-rouge">.h1</code> through <code className="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
-  <div className="bd-example">
-    <p className="h1">h1. Bootstrap heading</p>
-    <p className="h2">h2. Bootstrap heading</p>
-    <p className="h3">h3. Bootstrap heading</p>
-    <p className="h4">h4. Bootstrap heading</p>
-    <p className="h5">h5. Bootstrap heading</p>
-    <p className="h6">h6. Bootstrap heading</p>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h1"</span><span className="nt">&gt;</span>h1. Bootstrap heading<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h2"</span><span className="nt">&gt;</span>h2. Bootstrap heading<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h3"</span><span className="nt">&gt;</span>h3. Bootstrap heading<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h4"</span><span className="nt">&gt;</span>h4. Bootstrap heading<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h5"</span><span className="nt">&gt;</span>h5. Bootstrap heading<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"h6"</span><span className="nt">&gt;</span>h6. Bootstrap heading<span className="nt">&lt;/p&gt;</span></code></pre></figure>
-  <h3 id="customizing-headings"><span className="bd-content-title">Customizing headings</span></h3>
-  <p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
-  <div className="bd-example">
-    <h3>
-      Fancy display heading
-      <small className="text-muted">With faded secondary text</small>
-    </h3>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;h3&gt;</span>{"\n"}{"  "}Fancy display heading{"\n"}{"  "}<span className="nt">&lt;small</span> <span className="na">class=</span><span className="s">"text-muted"</span><span className="nt">&gt;</span>With faded secondary text<span className="nt">&lt;/small&gt;</span>{"\n"}<span className="nt">&lt;/h3&gt;</span></code></pre></figure>
-  <h2 id="display-headings"><span className="bd-content-title">Display headings</span></h2>
-  <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>—a larger, slightly more opinionated heading style.</p>
-  <div className="bd-example bd-example-type">
-    <table className="table">
-      <tbody>
-        <tr>
-          <td><span className="display-1">Display 1</span></td>
-        </tr>
-        <tr>
-          <td><span className="display-2">Display 2</span></td>
-        </tr>
-        <tr>
-          <td><span className="display-3">Display 3</span></td>
-        </tr>
-        <tr>
-          <td><span className="display-4">Display 4</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;h1</span> <span className="na">class=</span><span className="s">"display-1"</span><span className="nt">&gt;</span>Display 1<span className="nt">&lt;/h1&gt;</span>{"\n"}<span className="nt">&lt;h1</span> <span className="na">class=</span><span className="s">"display-2"</span><span className="nt">&gt;</span>Display 2<span className="nt">&lt;/h1&gt;</span>{"\n"}<span className="nt">&lt;h1</span> <span className="na">class=</span><span className="s">"display-3"</span><span className="nt">&gt;</span>Display 3<span className="nt">&lt;/h1&gt;</span>{"\n"}<span className="nt">&lt;h1</span> <span className="na">class=</span><span className="s">"display-4"</span><span className="nt">&gt;</span>Display 4<span className="nt">&lt;/h1&gt;</span></code></pre></figure>
-  <h2 id="lead"><span className="bd-content-title">Lead</span></h2>
-  <p>Make a paragraph stand out by adding <code className="highlighter-rouge">.lead</code>.</p>
-  <div className="bd-example">
-    <p className="lead">
-      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-    </p>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"lead"</span><span className="nt">&gt;</span>{"\n"}{"  "}Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.{"\n"}<span className="nt">&lt;/p&gt;</span></code></pre></figure>
-  <h2 id="inline-text-elements"><span className="bd-content-title">Inline text elements</span></h2>
-  <p>Styling for common inline HTML5 elements.</p>
-  <div className="bd-example">
-    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-    <p><del>This line of text is meant to be treated as deleted text.</del></p>
-    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-    <p><u>This line of text will render as underlined</u></p>
-    <p><small>This line of text is meant to be treated as fine print.</small></p>
-    <p><strong>This line rendered as bold text.</strong></p>
-    <p><em>This line rendered as italicized text.</em></p>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;p&gt;</span>You can use the mark tag to <span className="nt">&lt;mark&gt;</span>highlight<span className="nt">&lt;/mark&gt;</span> text.<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span className="nt">&lt;/del&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span className="nt">&lt;/s&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span className="nt">&lt;/ins&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span className="nt">&lt;/u&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span className="nt">&lt;/small&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span className="nt">&lt;/strong&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span className="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></figure>
-  <p><code className="highlighter-rouge">.mark</code> and <code className="highlighter-rouge">.small</code> classes are also available to apply the same styles as <code className="highlighter-rouge">&lt;mark&gt;</code> and <code className="highlighter-rouge">&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>
-  <p>While not shown above, feel free to use <code className="highlighter-rouge">&lt;b&gt;</code> and <code className="highlighter-rouge">&lt;i&gt;</code> in HTML5. <code className="highlighter-rouge">&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code className="highlighter-rouge">&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
-  <h2 id="text-utilities"><span className="bd-content-title">Text utilities</span></h2>
-  <p>Change text alignment, transform, style, weight, and color with our <a href="/docs/4.2/utilities/text/">text utilities</a> and <a href="/docs/4.2/utilities/colors/">color utilities</a>.</p>
-  <h2 id="abbreviations"><span className="bd-content-title">Abbreviations</span></h2>
-  <p>Stylized implementation of HTML’s <code className="highlighter-rouge">&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-  <p>Add <code className="highlighter-rouge">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
-  <div className="bd-example">
-    <p><abbr title="attribute">attr</abbr></p>
-    <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;p&gt;&lt;abbr</span> <span className="na">title=</span><span className="s">"attribute"</span><span className="nt">&gt;</span>attr<span className="nt">&lt;/abbr&gt;&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;p&gt;&lt;abbr</span> <span className="na">title=</span><span className="s">"HyperText Markup Language"</span> <span className="na">class=</span><span className="s">"initialism"</span><span className="nt">&gt;</span>HTML<span className="nt">&lt;/abbr&gt;&lt;/p&gt;</span></code></pre></figure>
-  <h2 id="blockquotes"><span className="bd-content-title">Blockquotes</span></h2>
-  <p>For quoting blocks of content from another source within your document. Wrap <code className="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
-  <div className="bd-example">
-    <blockquote className="blockquote">
-      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    </blockquote>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;blockquote</span> <span className="na">class=</span><span className="s">"blockquote"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"mb-0"</span><span className="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span className="nt">&lt;/p&gt;</span>{"\n"}<span className="nt">&lt;/blockquote&gt;</span></code></pre></figure>
-  <h3 id="naming-a-source"><span className="bd-content-title">Naming a source</span></h3>
-  <p>Add a <code className="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code className="highlighter-rouge">&lt;cite&gt;</code>.</p>
-  <div className="bd-example">
-    <blockquote className="blockquote">
-      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;blockquote</span> <span className="na">class=</span><span className="s">"blockquote"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"mb-0"</span><span className="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span className="nt">&lt;/p&gt;</span>{"\n"}{"  "}<span className="nt">&lt;footer</span> <span className="na">class=</span><span className="s">"blockquote-footer"</span><span className="nt">&gt;</span>Someone famous in <span className="nt">&lt;cite</span> <span className="na">title=</span><span className="s">"Source Title"</span><span className="nt">&gt;</span>Source Title<span className="nt">&lt;/cite&gt;&lt;/footer&gt;</span>{"\n"}<span className="nt">&lt;/blockquote&gt;</span></code></pre></figure>
-  <h3 id="alignment"><span className="bd-content-title">Alignment</span></h3>
-  <p>Use text utilities as needed to change the alignment of your blockquote.</p>
-  <div className="bd-example">
-    <blockquote className="blockquote text-center">
-      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;blockquote</span> <span className="na">class=</span><span className="s">"blockquote text-center"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"mb-0"</span><span className="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span className="nt">&lt;/p&gt;</span>{"\n"}{"  "}<span className="nt">&lt;footer</span> <span className="na">class=</span><span className="s">"blockquote-footer"</span><span className="nt">&gt;</span>Someone famous in <span className="nt">&lt;cite</span> <span className="na">title=</span><span className="s">"Source Title"</span><span className="nt">&gt;</span>Source Title<span className="nt">&lt;/cite&gt;&lt;/footer&gt;</span>{"\n"}<span className="nt">&lt;/blockquote&gt;</span></code></pre></figure>
-  <div className="bd-example">
-    <blockquote className="blockquote text-right">
-      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;blockquote</span> <span className="na">class=</span><span className="s">"blockquote text-right"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;p</span> <span className="na">class=</span><span className="s">"mb-0"</span><span className="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span className="nt">&lt;/p&gt;</span>{"\n"}{"  "}<span className="nt">&lt;footer</span> <span className="na">class=</span><span className="s">"blockquote-footer"</span><span className="nt">&gt;</span>Someone famous in <span className="nt">&lt;cite</span> <span className="na">title=</span><span className="s">"Source Title"</span><span className="nt">&gt;</span>Source Title<span className="nt">&lt;/cite&gt;&lt;/footer&gt;</span>{"\n"}<span className="nt">&lt;/blockquote&gt;</span></code></pre></figure>
-  <h2 id="lists"><span className="bd-content-title">Lists</span></h2>
-  <h3 id="unstyled"><span className="bd-content-title">Unstyled</span></h3>
-  <p>Remove the default <code className="highlighter-rouge">list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
-  <div className="bd-example">
-    <ul className="list-unstyled">
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit
-        <ul>
-          <li>Phasellus iaculis neque</li>
-          <li>Purus sodales ultricies</li>
-          <li>Vestibulum laoreet porttitor sem</li>
-          <li>Ac tristique libero volutpat at</li>
-        </ul>
-      </li>
-      <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
-      <li>Eget porttitor lorem</li>
-    </ul>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;ul</span> <span className="na">class=</span><span className="s">"list-unstyled"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Integer molestie lorem at massa<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Facilisis in pretium nisl aliquet<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit{"\n"}{"    "}<span className="nt">&lt;ul&gt;</span>{"\n"}{"      "}<span className="nt">&lt;li&gt;</span>Phasellus iaculis neque<span className="nt">&lt;/li&gt;</span>{"\n"}{"      "}<span className="nt">&lt;li&gt;</span>Purus sodales ultricies<span className="nt">&lt;/li&gt;</span>{"\n"}{"      "}<span className="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span className="nt">&lt;/li&gt;</span>{"\n"}{"      "}<span className="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span className="nt">&lt;/li&gt;</span>{"\n"}{"    "}<span className="nt">&lt;/ul&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li&gt;</span>Eget porttitor lorem<span className="nt">&lt;/li&gt;</span>{"\n"}<span className="nt">&lt;/ul&gt;</span></code></pre></figure>
-  <h3 id="inline"><span className="bd-content-title">Inline</span></h3>
-  <p>Remove a list’s bullets and apply some light <code className="highlighter-rouge">margin</code> with a combination of two classes, <code className="highlighter-rouge">.list-inline</code> and <code className="highlighter-rouge">.list-inline-item</code>.</p>
-  <div className="bd-example">
-    <ul className="list-inline">
-      <li className="list-inline-item">Lorem ipsum</li>
-      <li className="list-inline-item">Phasellus iaculis</li>
-      <li className="list-inline-item">Nulla volutpat</li>
-    </ul>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;ul</span> <span className="na">class=</span><span className="s">"list-inline"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"list-inline-item"</span><span className="nt">&gt;</span>Lorem ipsum<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"list-inline-item"</span><span className="nt">&gt;</span>Phasellus iaculis<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"list-inline-item"</span><span className="nt">&gt;</span>Nulla volutpat<span className="nt">&lt;/li&gt;</span>{"\n"}<span className="nt">&lt;/ul&gt;</span></code></pre></figure>
-  <h3 id="description-list-alignment"><span className="bd-content-title">Description list alignment</span></h3>
-  <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code className="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.</p>
-  <div className="bd-example">
-    <dl className="row">
-      <dt className="col-sm-3">Description lists</dt>
-      <dd className="col-sm-9">A description list is perfect for defining terms.</dd>
-      <dt className="col-sm-3">Euismod</dt>
-      <dd className="col-sm-9">
-        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-        <p>Donec id elit non mi porta gravida at eget metus.</p>
-      </dd>
-      <dt className="col-sm-3">Malesuada porta</dt>
-      <dd className="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-      <dt className="col-sm-3 text-truncate">Truncated term is truncated</dt>
-      <dd className="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-      <dt className="col-sm-3">Nesting</dt>
-      <dd className="col-sm-9">
-        <dl className="row">
-          <dt className="col-sm-4">Nested definition list</dt>
-          <dd className="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-        </dl>
-      </dd>
-    </dl>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;dl</span> <span className="na">class=</span><span className="s">"row"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-3"</span><span className="nt">&gt;</span>Description lists<span className="nt">&lt;/dt&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-9"</span><span className="nt">&gt;</span>A description list is perfect for defining terms.<span className="nt">&lt;/dd&gt;</span>{"\n"}{"\n"}{"  "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-3"</span><span className="nt">&gt;</span>Euismod<span className="nt">&lt;/dt&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-9"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;p&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span className="nt">&lt;/p&gt;</span>{"\n"}{"    "}<span className="nt">&lt;p&gt;</span>Donec id elit non mi porta gravida at eget metus.<span className="nt">&lt;/p&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/dd&gt;</span>{"\n"}{"\n"}{"  "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-3"</span><span className="nt">&gt;</span>Malesuada porta<span className="nt">&lt;/dt&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-9"</span><span className="nt">&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span className="nt">&lt;/dd&gt;</span>{"\n"}{"\n"}{"  "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-3 text-truncate"</span><span className="nt">&gt;</span>Truncated term is truncated<span className="nt">&lt;/dt&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-9"</span><span className="nt">&gt;</span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span className="nt">&lt;/dd&gt;</span>{"\n"}{"\n"}{"  "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-3"</span><span className="nt">&gt;</span>Nesting<span className="nt">&lt;/dt&gt;</span>{"\n"}{"  "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-9"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;dl</span> <span className="na">class=</span><span className="s">"row"</span><span className="nt">&gt;</span>{"\n"}{"      "}<span className="nt">&lt;dt</span> <span className="na">class=</span><span className="s">"col-sm-4"</span><span className="nt">&gt;</span>Nested definition list<span className="nt">&lt;/dt&gt;</span>{"\n"}{"      "}<span className="nt">&lt;dd</span> <span className="na">class=</span><span className="s">"col-sm-8"</span><span className="nt">&gt;</span>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.<span className="nt">&lt;/dd&gt;</span>{"\n"}{"    "}<span className="nt">&lt;/dl&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/dd&gt;</span>{"\n"}<span className="nt">&lt;/dl&gt;</span></code></pre></figure>
-  <h2 id="responsive-typography"><span className="bd-content-title">Responsive typography</span></h2>
-  <p><em>Responsive typography</em> refers to scaling text and components by simply adjusting the root element’s <code className="highlighter-rouge">font-size</code> within a series of media queries. Bootstrap doesn’t do this for you, but it’s fairly easy to add if you need it.</p>
-  <p>Here’s an example of it in practice. Choose whatever <code className="highlighter-rouge">font-size</code>s and media queries you wish.</p>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-scss" data-lang="scss"><span className="nt">html</span> <span className="p">{"{"}</span>{"\n"}{"  "}<span className="nl">font-size</span><span className="p">:</span> <span className="m">1rem</span><span className="p">;</span>{"\n"}<span className="p">{"}"}</span>{"\n"}{"\n"}<span className="k">@include</span> <span className="nd">media-breakpoint-up</span><span className="p">(</span><span className="n">sm</span><span className="p">)</span> <span className="p">{"{"}</span>{"\n"}{"  "}<span className="nt">html</span> <span className="p">{"{"}</span>{"\n"}{"    "}<span className="nl">font-size</span><span className="p">:</span> <span className="m">1</span><span className="mi">.2rem</span><span className="p">;</span>{"\n"}{"  "}<span className="p">{"}"}</span>{"\n"}<span className="p">{"}"}</span>{"\n"}{"\n"}<span className="k">@include</span> <span className="nd">media-breakpoint-up</span><span className="p">(</span><span className="n">md</span><span className="p">)</span> <span className="p">{"{"}</span>{"\n"}{"  "}<span className="nt">html</span> <span className="p">{"{"}</span>{"\n"}{"    "}<span className="nl">font-size</span><span className="p">:</span> <span className="m">1</span><span className="mi">.4rem</span><span className="p">;</span>{"\n"}{"  "}<span className="p">{"}"}</span>{"\n"}<span className="p">{"}"}</span>{"\n"}{"\n"}<span className="k">@include</span> <span className="nd">media-breakpoint-up</span><span className="p">(</span><span className="n">lg</span><span className="p">)</span> <span className="p">{"{"}</span>{"\n"}{"  "}<span className="nt">html</span> <span className="p">{"{"}</span>{"\n"}{"    "}<span className="nl">font-size</span><span className="p">:</span> <span className="m">1</span><span className="mi">.6rem</span><span className="p">;</span>{"\n"}{"  "}<span className="p">{"}"}</span>{"\n"}<span className="p">{"}"}</span></code></pre></figure>
-</main>
+    const typeMeasurements = {
+      'font-family': (v) => v.split(',')[0],
+      'font-weight': null,
+      'font-size': remsWithPixelValue,
+      'line-height': lineHeightAsRatio,
+      'letter-spacing': null,
+    };
 
+    const renderTypeItem = ({ name, tagClass, tag }) => {
+      return (
+        <MeasuredItem 
+          styles={typeMeasurements} 
+          className="mb-3"
+          after
+          renderItem={(props, state) => {
+            return React.createElement(tag, { className: tagClass + ' mb-0 type-scale-item-example' }, (
+              <span>{name}</span>
+            ));
+          }}
+          renderValues={styleValues => {
+            if (!styleValues['font-family']) return;
+
+            const fontFamily = styleValues['font-family'].split(',')[0];
+            const oneRem = parseInt(window.getComputedStyle(document.documentElement)['font-size']);
+            const fontSize = parseInt(styleValues['font-size']);
+
+            const fontSizeRem = fontSize/oneRem;
+            const lineHeight = parseInt(styleValues['line-height']);
+            const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
+            const letterSpacing = styleValues['letter-spacing'];
+            const fontWeight = styleValues['font-weight'];
+            const getWeightName = (weight) => {
+              if (weight < 400) return 'Light';
+              if (weight < 500) return 'Regular';
+              if (weight < 600) return 'Semi-bold';
+              return 'Bold';
+            }
+
+            return (
+              <div className="d-flex text-muted">
+                {fontFamily} {getWeightName(fontWeight)} • {fontSize}/{lineHeight} • {fontSizeRem}rem • {lineHeightRatio}
+              </div>
+            );
+          }}
+        />
+      );
+    }
+
+    return (
+      <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <h1 className="bd-title">Color & Type</h1>
+        <p className="bd-lead">Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
+        
+
+        <DocSection title="Color">
+          <div className="row">
+            {Object.keys(colors).map(color => (
+              <div className="col-2">
+                <div className={`p-4 bg-${color}`} />
+                <p>${color}</p>
+              </div>
+            ))}
+          </div>
+        </DocSection>
+
+
+
+        <DocSection title="Type Scale">
+        {
+          [
+            { name: 'Heading 1', tag: 'h1', tagClass: 'no-wrap', content: 'Heading 1' },
+            { name: 'Heading 2', tag: 'h2', tagClass: 'no-wrap', },
+            { name: 'Heading 3', tag: 'h3', tagClass: 'no-wrap', },
+            { name: 'Heading 4', tag: 'h4', tagClass: 'no-wrap', },
+            { name: 'Heading 5', tag: 'h5', tagClass: 'no-wrap', },
+            { name: 'Heading 6', tag: 'h6', tagClass: 'no-wrap', },
+            { name: 'Paragraph', tag: 'p', tagClass: '', content: 'p On glancing over my notes of the seventy odd cases in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he refused to associate himself with any investigation which did not tend towards the unusual, and even the fantastic.' },
+            { name: 'Small Paragraph', tag: 'p', tagClass: 'small', content: 'p On glancing over my notes of the seventy odd cases in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he refused to associate himself with any investigation which did not tend towards the unusual, and even the fantastic.' },
+          ].map(({name, tag, tagClass, content}) => (
+            <div className="row type-scale-item">
+              
+              <div className="col">
+                
+              </div>
+            </div>
+          ))
+        }
+
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 1', tag: 'h1', tagClass: ''}) }</div>
+            <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 2', tag: 'h2', tagClass: ''}) }</div>
+            <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 3', tag: 'h3', tagClass: ''}) }</div>
+            <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 4', tag: 'h4', tagClass: ''}) }</div>
+            <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 5', tag: 'h5', tagClass: ''}) }</div>
+            <div className="col-6">{ renderTypeItem({name: 'Large Paragraph', tag: 'p', tagClass: 'lead'}) }</div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6">{ renderTypeItem({name: 'Heading 6', tag: 'h6', tagClass: ''}) }</div>
+            <div className="col-6">{ renderTypeItem({name: 'Paragraph', tag: 'p', tagClass: ''}) }</div>
+          </div>
+          <div className="row type-scale-row">
+            <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
+            <div className="col-6">{ renderTypeItem({name: 'Small ', tag: 'p', tagClass: 'small'}) }</div>
+          </div>
+        
+        </DocSection>
+
+
+        <DocSection title="Links">
+          <p style={{maxWidth:'30rem'}}>By default all links are <a href="#">primary blue and have underlines</a>. Removing the underline is fine, but <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">color must not be used as the only visual means of indicating interactivity</a>.</p>
+        </DocSection>
+        
+        <DocSection title="Buttons">
+          <div className="mb-3">
+            <button type="button" className="mr-2 btn btn-primary">Primary</button>
+            <button type="button" className="mr-2 btn btn-secondary">Secondary</button>
+            <button type="button" className="mr-2 btn btn-success">Success</button>
+            <button type="button" className="mr-2 btn btn-danger">Danger</button>
+            <button type="button" className="mr-2 btn btn-warning">Warning</button>
+            <button type="button" className="mr-2 btn btn-info">Info</button>
+            <button type="button" className="mr-2 btn btn-light">Light</button>
+            <button type="button" className="mr-2 btn btn-dark">Dark</button>
+            <button type="button" className="btn btn-link">Link</button>
+          </div>
+
+          <div className="">
+            <button type="button" className="mr-2 btn btn-outline-primary">Primary</button>
+            <button type="button" className="mr-2 btn btn-outline-secondary">Secondary</button>
+            <button type="button" className="mr-2 btn btn-outline-success">Success</button>
+            <button type="button" className="mr-2 btn btn-outline-danger">Danger</button>
+            <button type="button" className="mr-2 btn btn-outline-warning">Warning</button>
+            <button type="button" className="mr-2 btn btn-outline-info">Info</button>
+            <button type="button" className="mr-2 btn btn-outline-light">Light</button>
+            <button type="button" className="mr-2 btn btn-outline-dark">Dark</button>
+          </div>
+        </DocSection>
+
+        <DocSection title="Badges">
+          <p>
+            <span className="badge mr-1 badge-primary">Primary</span>
+            <span className="badge mr-1 badge-secondary">Secondary</span>
+            <span className="badge mr-1 badge-success">Success</span>
+            <span className="badge mr-1 badge-danger">Danger</span>
+            <span className="badge mr-1 badge-warning">Warning</span>
+            <span className="badge mr-1 badge-info">Info</span>
+            <span className="badge mr-1 badge-light">Light</span>
+            <span className="badge mr-1 badge-dark">Dark</span>
+          </p>
+        </DocSection>
+
+
+        <DocSection title="Inline Text Decorations">
+          <p><span className="badge mr-1 badge-success">OK</span> Use the <span className="text-muted">text-muted class to mute text</span>.</p>
+          <p><span className="badge mr-1 badge-success">OK</span> Use the mark tag to <mark>highlight</mark> text.</p>
+          <p><span className="badge mr-1 badge-success">OK</span> Use strikethroughs for <s>content that is no longer accurate</s> or <del>has been deleted.</del></p>
+          <p><span className="badge mr-1 badge-warning">Avoid</span> <u> Avoid using underlines for static elements</u></p>
+          <p><span className="badge mr-1 badge-warning">Use Sparingly</span> <small>Fine print text that is 80% smaller than normal.</small></p>
+          <p><span className="badge mr-1 badge-success">OK</span> <strong>This line rendered as bold text.</strong></p>
+          <p><span className="badge mr-1 badge-warning">Avoid</span><em>Italicized text is difficult to read and hard to localize.</em></p>
+        </DocSection>
+
+
+
+        <DocSection title="Themes">
+
+          <div className="border p-5 mb-5">
+            <h1>Normal Theme</h1>
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a href="#">My Courses</a></li>
+                <li className="breadcrumb-item"><a href="#">Introduction to Animal Behaviour</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Unit 1</li>
+              </ol>
+            </nav>
+            <p>On glancing over my notes of the <strong>seventy odd cases</strong> in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he refused to associate himself with any investigation which did not tend towards the unusual, and even the fantastic.</p>
+            <h4>The Events in Question</h4>
+            <p>The events in question occurred in the early days of my association with Holmes:</p> 
+            <ul>
+              <li>We were sharing rooms as bachelors in Baker Street.</li> 
+              <li>It is possible that I might have placed them upon record before.</li>
+              <li>A promise of secrecy was made at the time.</li>
+              <li>It was early in April in the year '83.</li>
+            </ul>
+          </div>
+          <div className="bg-dark p-5 mb-5 text-white">
+            <h1>Dark Theme</h1>
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a className="text-info" href="#">My Courses</a></li>
+                <li className="breadcrumb-item"><a className="text-info" href="#">Introduction to Animal Behaviour</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Unit 1</li>
+              </ol>
+            </nav>
+            <p>On glancing over my notes of the <strong>seventy odd cases</strong> in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he refused to associate himself with any investigation which did not tend towards the unusual, and even the fantastic.</p>
+            <h4>The Events in Question</h4>
+            <p>The events in question occurred in the early days of my association with Holmes:</p> 
+            <ul>
+              <li>We were sharing rooms as bachelors in Baker Street.</li> 
+              <li>It is possible that I might have placed them upon record before.</li>
+              <li>A promise of secrecy was made at the time.</li>
+              <li>It was early in April in the year '83.</li>
+            </ul>
+          </div>
+          <div className="bg-primary p-5 mb-5 text-white">
+            <h1>Blue Theme</h1>
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a className="text-info" href="#">My Courses</a></li>
+                <li className="breadcrumb-item"><a className="text-info" href="#">Introduction to Animal Behaviour</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Unit 1</li>
+              </ol>
+            </nav>
+            <p>On glancing over my notes of the <strong>seventy odd cases</strong> in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he refused to associate himself with any investigation which did not tend towards the unusual, and even the fantastic.</p>
+            <h4>The Events in Question</h4>
+            <p>The events in question occurred in the early days of my association with Holmes:</p> 
+            <ul>
+              <li>We were sharing rooms as bachelors in Baker Street.</li> 
+              <li>It is possible that I might have placed them upon record before.</li>
+              <li>A promise of secrecy was made at the time.</li>
+              <li>It was early in April in the year '83.</li>
+            </ul>
+          </div>
+        </DocSection>
+
+      </main>
+
+    );
+  }
+}
+
+function DocSection(props) {
+  return (
+    <section className="pt-5 pb-5">
+      <h3 className="mb-5">{props.title}</h3>
+      {props.children}
+    </section>
+  );
+}
+const pixelsToRems = (value) => {
+  const base = window.getComputedStyle(document.documentElement)['font-size']
+  const remValue = parseInt(value) / parseInt(base);
+
+  return `${remValue}rem`;
+}
+const remsWithPixelValue = (value) => {
+  const base = window.getComputedStyle(document.documentElement)['font-size']
+  const remValue = parseInt(value) / parseInt(base);
+  
+  return `${remValue}rem | ${Math.round(parseInt(value))}px`;
+}
+
+const lineHeightAsRatio = (value, computedStyle) => {
+  const lineHeightPixels = parseInt(value);
+  const fontSizePixels = parseInt(computedStyle.getPropertyValue('font-size'));
+  const ratio = Math.round(10*(lineHeightPixels/fontSizePixels))/10;
+
+  return `${ratio} | ${Math.round(lineHeightPixels)}px`;
+}
+
+class MeasuredItem extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      ..._.zipObject(Object.keys(this.props.styles))
+    }
+    this.item = React.createRef();
+  }
+
+  componentDidMount() {
+    const computedStyle = getComputedStyle(this.item.current);
+    const styleNames = Object.keys(this.props.styles);
+
+    this.setState({
+      ..._.zipObject(styleNames, _.map(styleNames, (styleName) => computedStyle.getPropertyValue(styleName) )),
+    });
+  }
+
+  render() {
+    const child = React.cloneElement(this.props.renderItem(this.props, this.state), { ref: this.item });
+    return (
+      <React.Fragment>
+        {this.props.before ? this.props.renderValues(this.state) : null}
+        {child}
+        {this.props.after ? this.props.renderValues(this.state) : null}
+      </React.Fragment>
     );
   }
 }

@@ -39,10 +39,10 @@ export default class Typography extends React.Component {
 
             const fontFamily = styleValues['font-family'].split(',')[0];
             const oneRem = parseInt(window.getComputedStyle(document.documentElement)['font-size']);
-            const fontSize = parseInt(styleValues['font-size']);
+            const fontSize = Math.round(parseFloat(styleValues['font-size']));
 
             const fontSizeRem = fontSize/oneRem;
-            const lineHeight = parseInt(styleValues['line-height']);
+            const lineHeight = Math.round(parseFloat(styleValues['line-height']));
             const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
             const letterSpacing = styleValues['letter-spacing'];
             const fontWeight = styleValues['font-weight'];

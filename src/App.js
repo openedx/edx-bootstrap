@@ -46,6 +46,7 @@ class App extends Component {
               <li><HashLink to="/Content#dialogs">Dialogs</HashLink></li>
               <li><HashLink to="/Content#factSheet">Fact Sheet</HashLink></li>
               <li><HashLink to="/Content#quizzes">Quizzes</HashLink></li>
+              <li><HashLink to="/Content#accordions">Accordions</HashLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
             <ul className="nav flex-column">
@@ -78,6 +79,7 @@ class App extends Component {
           <Route path="/Content#dialogs" component={Content} />
           <Route path="/Content#factSheets" component={Content} />
           <Route path="/Content#quizzes" component={Content} />
+          <Route path="/Content#accordions" component={Content} />
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
           <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
           </div>

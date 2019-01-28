@@ -11,3 +11,9 @@ h3, h4, h5, h6,
 a, .btn-link {
   text-decoration: underline;
 }
+
+.btn .spinner-border {
+  position: relative;
+  top: -.05em;
+  margin: 0 .375em 0 -.25em;
+}

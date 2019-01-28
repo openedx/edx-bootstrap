@@ -13,6 +13,16 @@
       font-weight: bold;
       color: $primary;
     }
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

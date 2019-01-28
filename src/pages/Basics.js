@@ -1,4 +1,5 @@
 import React from 'react';
+import DocSection from '../DocSection';
 
 export default class Basics extends React.Component {
   constructor(props) {
@@ -10,20 +11,26 @@ export default class Basics extends React.Component {
         <h1 className="bd-title">Basics</h1>
         <p className="bd-lead">Basic style elements.</p>
 
-        <a href="#buttons" id="buttons"><h3>Buttons</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for button styles.</p>
+        <DocSection id="buttons" title="Buttons">
+          <p className="bd-lead">Examples and usage guidelines for button styles.</p>
+        </DocSection>
 
-        <a href="#colors" id="colors"><h3>Colors</h3></a>
+        <DocSection id="colors" title="Colors">
         <p className="bd-lead">Examples and usage guidelines for color styles.</p>
+        </DocSection>
 
-        <a href="#icons" id="icons"><h3>Icons</h3></a>
+        <DocSection id="icons" title="Icons">
         <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
+        </DocSection>
         
+        <DocSection id="themes" title="Themes">
         <a href="#themes" id="themes"><h3>Themes</h3></a>
         <p className="bd-lead">Examples and usage guidelines for theming.</p>
+        </DocSection>
 
-        <a href="#typography" id="typography"><h3>Themes</h3></a>
+        <DocSection id="typography" title="Typography">
         <p className="bd-lead">Examples and usage guidelines for typography.</p>
+        </DocSection>
       </main>
     );
   }

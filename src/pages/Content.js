@@ -1,12 +1,17 @@
 import React from 'react';
 
-export default class Forms extends React.Component {
+export default class Content extends React.Component {
   render() {
     return (
       <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-        <h1 className="bd-title" id="content">
-          Forms
-        </h1>
+        <h1 className="bd-title">Content</h1>
+        <p className="bd-lead">Examples and usage for various kinds of page content.</p>
+
+        <a href="#forms" id="forms">
+          <h3 className="bd-title" id="content">
+            Forms
+          </h3>
+        </a>
         <p className="bd-lead">Examples and usage guidelines for form control styles.</p>
 
         <form>
@@ -197,6 +202,24 @@ export default class Forms extends React.Component {
             Cancel
           </button>
         </form>
+
+        <a href="#cards" id="cards"><h3>Cards</h3></a>
+        <p className="bd-lead">Examples and usage guidelines for cards.</p>
+
+        <a href="#heroes" id="heroes"><h3>Heroes</h3></a>
+        <p className="bd-lead">Examples and usage guidelines for heroes.</p>
+
+        <a href="#tables" id="tables"><h3>Tables</h3></a>
+        <p className="bd-lead">Examples and usage guidelines for tables.</p>
+
+        <a href="#dialogs" id="dialogs"><h3>Dialogs</h3></a>
+        <p className="bd-lead">Examples and usage guidelines for dialogs.</p>
+
+        <a href="#factSheets" id="factSheets"><h3>Fact Sheets</h3></a>
+        <p className="bd-lead">David saw these in a course.  Seemed like a thing.  Examples and usage guidelines for fact sheets.</p>
+
+        <a href="#quizzes" id="quizzes"><h3>Quizzes</h3></a>
+        <p className="bd-lead">Examples and usage guidelines for quizzes.</p>
       </main>
     );
   }

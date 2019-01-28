@@ -1,115 +1,89 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+
 import ScrollToTop from './ScrollToTop';
 import './App.scss';
 
 import Header from './Header';
+import Basics from './pages/Basics';
+import Navigation from './pages/Navigation';
+import Content from './pages/Content';
+import Miscellaneous from './pages/Miscellaneous';
 import Overview from './pages/Overview';
-import Grid from './pages/Grid';
-import LayoutUtils from './pages/LayoutUtils';
-import Typography from './pages/Typography';
-import Tables from './pages/Tables';
-import Alerts from './pages/Alerts';
-import Badge from './pages/Badge';
-import Breadcrumb from './pages/Breadcrumb';
-import Buttons from './pages/Buttons';
-import Card from './pages/Card';
-import Collapse from './pages/Collapse';
-import Dropdowns from './pages/Dropdowns';
-import Forms from './pages/Forms';
-import InputGroup from './pages/InputGroup';
-import Jumbotron from './pages/Jumbotron';
-import ListGroup from './pages/ListGroup';
-import MediaObject from './pages/MediaObject';
-import Modal from './pages/Modal';
-import Navs from './pages/Navs';
-import Navbar from './pages/Navbar';
-import Pagination from './pages/Pagination';
-import Popovers from './pages/Popovers';
-import Progress from './pages/Progress';
-import Spinners from './pages/Spinners';
-import Toasts from './pages/Toasts';
-import Tooltips from './pages/Tooltips';
 
 class App extends Component {
   render() {
     return (
-      <Router>
-      <ScrollToTop>
+      <Router history={this.props.history} basename="edx-bootstrap/">
+      {/* <ScrollToTop>  - this was interfering with anchor tags, unfortunately.  Commenting out for now so nav works decently.  */}
       <div>
         <Header />
         <div className="container-fluid">
         <div className="row flex-xl-no-wrap">
           <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <h5 className="bd-toc-link mt-5">Layout</h5>
+            <h5 className="bd-toc-link mt-5"><NavLink to="/Basics">Basics</NavLink></h5>
             <ul className="nav flex-column">
-              <li><NavLink exact to="/">Overview</NavLink></li>
-              <li><NavLink to="/Grid">Grid</NavLink></li>
-              <li><NavLink to="/LayoutUtils">LayoutUtils</NavLink></li>
+              <li><HashLink to="/Basics#colors">Colors</HashLink></li>
+              <li><HashLink to="/Basics#typography">Typography</HashLink></li>
+              <li><HashLink to="/Basics#buttons">Buttons</HashLink></li>
+              <li><HashLink to="/Basics#icons">Icons</HashLink></li>
+              <li><HashLink to="/Basics#themes">Themes</HashLink></li>
+            </ul>
+            <h5 className="bd-toc-link mt-4"><NavLink to="/Navigation">Navigation</NavLink></h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Navigation#links">Links</NavLink></li>
+              <li><NavLink to="/Navigation#breadcrumbs">Breadcrumbs</NavLink></li>
+              <li><NavLink to="/Navigation#tabs">Tabs</NavLink></li>
+              <li><NavLink to="/Navigation#search">Search</NavLink></li>
+            </ul>
+            <h5 className="bd-toc-link mt-4"><NavLink to="/Content">Content</NavLink></h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Content#forms">Forms</NavLink></li>
+              <li><NavLink to="/Content#cards">Cards</NavLink></li>
+              <li><NavLink to="/Content#heroes">Heroes</NavLink></li>
+              <li><NavLink to="/Content#tables">Tables</NavLink></li>
+              <li><NavLink to="/Content#dialogs">Dialogs</NavLink></li>
+              <li><NavLink to="/Content#factSheet">Fact Sheet</NavLink></li>
+              <li><NavLink to="/Content#quizzes">Quizzes</NavLink></li>
+            </ul>
+            <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Miscellaneous#loaders">Spinners / Loaders</NavLink></li>
             </ul>
 
-            <h5 className="bd-toc-link mt-5">Content</h5>
+            <h5 className="bd-toc-link mt-4">External Links</h5>
             <ul className="nav flex-column">
-              <li><NavLink to="/Typography">Typography</NavLink></li>
-              <li><NavLink to="/Tables">Tables</NavLink></li>
-            </ul>
-
-            <h5 className="bd-toc-link mt-5">Components</h5>
-            <ul className="nav flex-column">
-              <li><NavLink to="/Alerts">Alerts</NavLink></li>
-              <li><NavLink to="/Badge">Badge</NavLink></li>
-              <li><NavLink to="/Breadcrumb">Breadcrumb</NavLink></li>
-              <li><NavLink to="/Buttons">Buttons</NavLink></li>
-              <li><NavLink to="/Card">Card</NavLink></li>
-              <li><NavLink to="/Collapse">Collapse</NavLink></li>
-              <li><NavLink to="/Dropdowns">Dropdowns</NavLink></li>
-              <li><NavLink to="/Forms">Forms</NavLink></li>
-              <li><NavLink to="/InputGroup">InputGroup</NavLink></li>
-              <li><NavLink to="/Jumbotron">Jumbotron</NavLink></li>
-              <li><NavLink to="/ListGroup">ListGroup</NavLink></li>
-              <li><NavLink to="/MediaObject">MediaObject</NavLink></li>
-              <li><NavLink to="/Modal">Modal</NavLink></li>
-              <li><NavLink to="/Navs">Navs</NavLink></li>
-              <li><NavLink to="/Navbar">Navbar</NavLink></li>
-              <li><NavLink to="/Pagination">Pagination</NavLink></li>
-              <li><NavLink to="/Popovers">Popovers</NavLink></li>
-              <li><NavLink to="/Progress">Progress</NavLink></li>
-              <li><NavLink to="/Spinners">Spinners</NavLink></li>
-              <li><NavLink to="/Toasts">Toasts</NavLink></li>
-              <li><NavLink to="/Tooltips">Tooltips</NavLink></li>
+              <li><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap Docs</a></li>
             </ul>
           </div>
 
           <Route exact path="/" component={Overview} />
-          <Route path="/grid" component={Grid} />
-          <Route path="/LayoutUtils" component={LayoutUtils} />
-          <Route path="/Typography" component={Typography} />
-          <Route path="/Tables" component={Tables} />
-          <Route path="/Alerts" component={Alerts} />
-          <Route path="/Badge" component={Badge} />
-          <Route path="/Breadcrumb" component={Breadcrumb} />
-          <Route path="/Buttons" component={Buttons} />
-          <Route path="/Card" component={Card} />
-          <Route path="/Collapse" component={Collapse} />
-          <Route path="/Dropdowns" component={Dropdowns} />
-          <Route path="/Forms" component={Forms} />
-          <Route path="/InputGroup" component={InputGroup} />
-          <Route path="/Jumbotron" component={Jumbotron} />
-          <Route path="/ListGroup" component={ListGroup} />
-          <Route path="/MediaObject" component={MediaObject} />
-          <Route path="/Modal" component={Modal} />
-          <Route path="/Navs" component={Navs} />
-          <Route path="/Navbar" component={Navbar} />
-          <Route path="/Pagination" component={Pagination} />
-          <Route path="/Popovers" component={Popovers} />
-          <Route path="/Progress" component={Progress} />
-          <Route path="/Spinners" component={Spinners} />
-          <Route path="/Toasts" component={Toasts} />
-          <Route path="/Tooltips" component={Tooltips} />
+          <Route exact path="/Basics" component={Basics} />
+          <Route path="/Basics#colors" component={Basics} />
+          <Route path="/Basics#typography" component={Basics} />
+          <Route path="/Basics#buttons" component={Basics} />
+          <Route path="/Basics#icons" component={Basics} />
+          <Route path="/Basics#themes" component={Basics} />
+          <Route exact path="/Navigation" component={Navigation} />
+          <Route path="/Navigation#links" component={Navigation} />
+          <Route path="/Navigation#breadcrumbs" component={Navigation} />
+          <Route path="/Navigation#tabs" component={Navigation} />
+          <Route path="/Navigation#search" component={Navigation} />
+          <Route exact path="/Content" component={Content} />
+          <Route path="/Content#forms" component={Content} />
+          <Route path="/Content#cards" component={Content} />
+          <Route path="/Content#heroes" component={Content} />
+          <Route path="/Content#tables" component={Content} />
+          <Route path="/Content#dialogs" component={Content} />
+          <Route path="/Content#factSheet" component={Content} />
+          <Route path="/Content#quizzes" component={Content} />
+          <Route exact path="/Miscellaneous" component={Miscellaneous} />
+          <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
           </div>
         </div>
       </div>
-      </ScrollToTop>
+      {/* </ScrollToTop> */}
       </Router>
     );
   }

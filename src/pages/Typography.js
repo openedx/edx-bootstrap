@@ -55,7 +55,7 @@ export default class Typography extends React.Component {
 
             return (
               <div className="d-flex text-muted">
-                {fontFamily} {getWeightName(fontWeight)} • {fontSize}/{lineHeight} • {fontSizeRem}rem • {lineHeightRatio}
+                {fontFamily} {getWeightName(fontWeight)} • {fontSize}px / {lineHeight}px
               </div>
             );
           }}

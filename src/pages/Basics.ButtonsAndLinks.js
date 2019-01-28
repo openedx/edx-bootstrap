@@ -16,7 +16,7 @@ export default function ButtonsAndLinks() {
         <button type="button" className="btn btn-link">Link</button>
       </div>
 
-      <div className="">
+      <div className="mb-5">
         <button type="button" className="mr-2 btn btn-outline-primary">Primary</button>
         <button type="button" className="mr-2 btn btn-outline-secondary">Secondary</button>
         <button type="button" className="mr-2 btn btn-outline-success">Success</button>
@@ -27,7 +27,7 @@ export default function ButtonsAndLinks() {
         <button type="button" className="mr-2 btn btn-outline-dark">Dark</button>
       </div>
 
-
+      <h6>Links</h6>
       <p style={{maxWidth:'30rem'}}>By default all links are <a href="#">primary blue and have underlines</a>. Removing the underline is fine, but <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">color must not be used as the only visual means of indicating interactivity</a>.</p>
     </div>
   );

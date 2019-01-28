@@ -4,6 +4,7 @@ import Typography from './Basics.Typography';
 import ButtonsAndLinks from './Basics.ButtonsAndLinks';
 import Themes from './Basics.Themes';
 import MiscBasics from './Basics.MiscBasics';
+import DocSection from '../DocSection';
 
 export default class Basics extends React.Component {
   constructor(props) {
@@ -15,30 +16,36 @@ export default class Basics extends React.Component {
         <h1 className="bd-title">Basics</h1>
         <p className="bd-lead">Basic style elements.</p>
 
-        <a href="#colors" id="colors"><h3>Colors</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for color styles.</p>
-        <Colors />
+        <DocSection id="colors" title="Colors">
+          <p className="bd-lead">Examples and usage guidelines for color styles.</p>
+          <Colors />
+        </DocSection>
 
-        <a href="#typography" id="typography"><h3>Typography</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for typography.</p>
-        <Typography />
+        <DocSection id="typography" title="Typography">
+          <p className="bd-lead">Examples and usage guidelines for typography.</p>
+          <Typography />
+        </DocSection>
 
-        <a href="#buttons" id="buttons"><h3>Buttons & Links</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for button styles.</p>
-        <ButtonsAndLinks />
+        <DocSection id="buttons" title="Buttons">
+          <p className="bd-lead">Examples and usage guidelines for button styles.</p>
+          <ButtonsAndLinks />
+        </DocSection>
 
+        <DocSection id="icons" title="Icons">
+          <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
+          <p>See <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome (Free)</a></p>
+        </DocSection>
 
-        <a href="#icons" id="icons"><h3>Icons</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
-        <p>See <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome (Free)</a></p>
-        
-        <a href="#icons" id="misc-basics"><h3>Misc Elements</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
-        <MiscBasics />
+        <DocSection id="misc-basics" title="Misc Elements">
+          <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
+          <MiscBasics />
+        </DocSection>
 
-        <a href="#themes" id="themes"><h3>Themes</h3></a>
-        <p className="bd-lead">Examples and usage guidelines for theming.</p>
-        <Themes />
+        <DocSection id="themes" title="Themes">
+          <p className="bd-lead">Examples and usage guidelines for theming.</p>
+          <Themes />
+        </DocSection>
+
       </main>
     );
   }

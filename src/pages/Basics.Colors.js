@@ -1,5 +1,4 @@
 import React from 'react';
-import ColorContrastChecker from 'color-contrast-checker';
 
 const colors = {
   primary: {},
@@ -12,18 +11,6 @@ const colors = {
   dark: {},
   'text-muted': {}
 };
-
-var ccc = new ColorContrastChecker();
-
-var color1 = "#FFFFFF";
-var color2 = "#000000";
-
-if (ccc.isLevelAA(color1, color2, 14)) {
-    alert("Valid Level AA");
-} else {
-    alert("Invalid Contrast");
-}
-
 
 
 export default function Colors() {

@@ -15,7 +15,7 @@ import Overview from './pages/Overview';
 class App extends Component {
   render() {
     return (
-      <Router history={this.props.history} basename="edx-bootstrap/">
+      <Router basename="edx-bootstrap/">
       {/* <ScrollToTop>  - this was interfering with anchor tags, unfortunately.  Commenting out for now so nav works decently.  */}
       <div>
         <Header />
@@ -32,24 +32,24 @@ class App extends Component {
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Navigation">Navigation</NavLink></h5>
             <ul className="nav flex-column">
-              <li><NavLink to="/Navigation#links">Links</NavLink></li>
-              <li><NavLink to="/Navigation#breadcrumbs">Breadcrumbs</NavLink></li>
-              <li><NavLink to="/Navigation#tabs">Tabs</NavLink></li>
-              <li><NavLink to="/Navigation#search">Search</NavLink></li>
+              <li><HashLink to="/Navigation#links">Links</HashLink></li>
+              <li><HashLink to="/Navigation#breadcrumbs">Breadcrumbs</HashLink></li>
+              <li><HashLink to="/Navigation#tabs">Tabs</HashLink></li>
+              <li><HashLink to="/Navigation#search">Search</HashLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Content">Content</NavLink></h5>
             <ul className="nav flex-column">
-              <li><NavLink to="/Content#forms">Forms</NavLink></li>
-              <li><NavLink to="/Content#cards">Cards</NavLink></li>
-              <li><NavLink to="/Content#heroes">Heroes</NavLink></li>
-              <li><NavLink to="/Content#tables">Tables</NavLink></li>
-              <li><NavLink to="/Content#dialogs">Dialogs</NavLink></li>
-              <li><NavLink to="/Content#factSheet">Fact Sheet</NavLink></li>
-              <li><NavLink to="/Content#quizzes">Quizzes</NavLink></li>
+              <li><HashLink to="/Content#forms">Forms</HashLink></li>
+              <li><HashLink to="/Content#cards">Cards</HashLink></li>
+              <li><HashLink to="/Content#heroes">Heroes</HashLink></li>
+              <li><HashLink to="/Content#tables">Tables</HashLink></li>
+              <li><HashLink to="/Content#dialogs">Dialogs</HashLink></li>
+              <li><HashLink to="/Content#factSheet">Fact Sheet</HashLink></li>
+              <li><HashLink to="/Content#quizzes">Quizzes</HashLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
             <ul className="nav flex-column">
-              <li><NavLink to="/Miscellaneous#loaders">Spinners / Loaders</NavLink></li>
+              <li><HashLink to="/Miscellaneous#loaders">Spinners / Loaders</HashLink></li>
             </ul>
 
             <h5 className="bd-toc-link mt-4">External Links</h5>
@@ -76,7 +76,7 @@ class App extends Component {
           <Route path="/Content#heroes" component={Content} />
           <Route path="/Content#tables" component={Content} />
           <Route path="/Content#dialogs" component={Content} />
-          <Route path="/Content#factSheet" component={Content} />
+          <Route path="/Content#factSheets" component={Content} />
           <Route path="/Content#quizzes" component={Content} />
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
           <Route path="/Miscellaneous#loaders" component={Miscellaneous} />

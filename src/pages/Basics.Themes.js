@@ -24,7 +24,7 @@ export default function Themes() {
         </ul>
       </div>
       <div className="bg-dark p-5 mb-5 text-white">
-        <h1>Dark Theme</h1>
+        <h1>Inverse Theme</h1>
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item"><a className="text-info" href="#">My Courses</a></li>
@@ -43,7 +43,7 @@ export default function Themes() {
         </ul>
       </div>
       <div className="bg-primary p-5 mb-5 text-white">
-        <h1>Blue Theme</h1>
+        <h1>On Primary</h1>
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item"><a className="text-info" href="#">My Courses</a></li>

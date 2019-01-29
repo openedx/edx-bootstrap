@@ -105,12 +105,12 @@ export default function Colors() {
                     <ul className={`bg-${color} p-4 list-unstyled m-0`}>
                       {textColors.map((textColor) => {
                         return (
-                          <li className="d-flex justify-content-between">
+                          <li className="">
                           <MeasuredItem 
                               styles={{'color': null}} 
                               after
                               renderItem={(props, state) => {
-                                return <span className={`text-${textColor}`}>{textColor} text</span>; 
+                                return <span className={`text-${textColor}`}></span>; 
                               }}
                               renderValues={styleValues => {
                                 if (!styleValues['color']) return;
@@ -118,9 +118,12 @@ export default function Colors() {
                                 const chromaTextColor = chroma(styleValues['color']);
                                 const contrastRatio = Math.round(10*chroma.contrast(chromaTextColor, chromaColor))/10;
                                 if (contrastRatio < 3) return null;
-                                
+                                if (contrastRatio < 4.5) {
+                                  return <del className={`text-${textColor}`}>{textColor} - {contrastRatio}</del>;
+                                }
+
                                 return (
-                                  <span className="ml-3">{contrastRatio}</span>
+                                  <span className={`text-${textColor}`}>{textColor} - {contrastRatio}</span>
                                 );
                               }}
                             />

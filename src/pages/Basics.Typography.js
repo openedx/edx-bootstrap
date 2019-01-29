@@ -33,7 +33,7 @@ export default function Typography() {
           const fontSizeRem = fontSize/oneRem;
           const lineHeight = Math.round(parseFloat(styleValues['line-height']));
           const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
-          const letterSpacing = styleValues['letter-spacing'];
+          let letterSpacing = styleValues['letter-spacing'];
           const fontWeight = styleValues['font-weight'];
           const getWeightName = (weight) => {
             if (weight < 400) return 'Light';
@@ -42,9 +42,16 @@ export default function Typography() {
             return 'Bold';
           }
 
+          if (letterSpacing !== 'normal') {
+            letterSpacing = (parseFloat(letterSpacing)/fontSize) + 'em';
+          }
+
+
           return (
             <div className="d-flex text-muted">
-              {fontFamily} {getWeightName(fontWeight)} • {fontSize}px / {lineHeight}px
+              {fontFamily} {getWeightName(fontWeight)}
+               • {fontSize}px / {lineHeight}px
+              {letterSpacing !== 'normal' ? ` • ${letterSpacing}` : null}
             </div>
           );
         }}

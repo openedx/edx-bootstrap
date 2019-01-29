@@ -237,7 +237,7 @@ $grid-gutter-width:           30px !default;
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
-$border-width:                1px !default;
+$border-width:                2px;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .3rem !default;
@@ -323,7 +323,7 @@ $display4-weight:             300 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-weight:            $font-weight-base;
 
 $small-font-size:             80% !default;
 

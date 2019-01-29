@@ -8,6 +8,11 @@ h3, h4, h5, h6,
   font-family: $font-family-sans-serif;
 }
 
+h1, .h1,
+h2, .h2 {
+  letter-spacing: -.025em;
+}
+
 a, .btn-link {
   text-decoration: underline;
 }

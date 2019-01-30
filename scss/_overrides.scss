@@ -1,4 +1,6 @@
 @import './edx-custom-card';
+@import './overrides/dropdown-item';
+@import './overrides/alerts';
 @import './navs';
 
 body {
@@ -17,7 +19,11 @@ h2, .h2 {
 }
 
 a, .btn-link {
-  // text-decoration: underline;
+  text-decoration: underline;
+}
+
+.btn {
+  text-decoration: none;
 }
 
 .btn .spinner-border {

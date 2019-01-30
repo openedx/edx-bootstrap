@@ -11,6 +11,8 @@ export default class Popovers extends React.Component {
   <ul>
     <li>Style to match Prospectus card details</li>
     <li>Build in react.</li>
+    <li>Add a black version.</li>
+    <li>Add a blose button.</li>
     <li>UX to determine shadow depth. "The Shadow" becomes "The Shadows"</li>
   </ul>
 

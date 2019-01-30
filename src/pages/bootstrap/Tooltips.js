@@ -6,7 +6,7 @@ export default class Tooltips extends React.Component {
 <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 className="bd-title" id="content">Tooltips</h1>
   <p className="bd-lead">Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.</p>
-  
+  <h2>Remove this</h2>
   <h2 id="overview"><span className="bd-content-title">Overview</span></h2>
   <p>Things to know when using the tooltip plugin:</p>
   <ul>

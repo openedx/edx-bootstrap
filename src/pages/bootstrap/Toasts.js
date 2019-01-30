@@ -7,6 +7,11 @@ export default class Toasts extends React.Component {
   <h1 className="bd-title" id="content">Toasts</h1>
   <p className="bd-lead">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
   
+  <h2>To Do</h2>
+  <ul>
+    <li>Leave out. could add back in someday</li>
+  </ul>
+
   <p>Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They’re built with flexbox, so they’re easy to align and position.</p>
   <h2 id="overview"><span className="bd-content-title">Overview</span></h2>
   <p>Things to know when using the toast plugin:</p>

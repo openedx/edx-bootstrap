@@ -1,6 +1,6 @@
 @import './edx-custom-card';
-@import './overrides/dropdown-item';
 @import './overrides/alerts';
+@import './overrides/buttons';
 @import './navs';
 
 body {
@@ -18,16 +18,12 @@ h2, .h2 {
   letter-spacing: -.025em;
 }
 
-a, .btn-link {
+/* The bootstrap 'reboot' removes the underline from <a> tags and .btn-link classes.  We want it. */
+a, .btn.btn-link {
   text-decoration: underline;
 }
 
-.btn {
+/* But, because we added the underline to <a> tags above, we need to remove it again for some specific <a> tags that don't want it.  So get rid of it for them. */
+.btn, .dropdown-item {
   text-decoration: none;
-}
-
-.btn .spinner-border {
-  position: relative;
-  top: -.05em;
-  margin: 0 .375em 0 -.25em;
 }

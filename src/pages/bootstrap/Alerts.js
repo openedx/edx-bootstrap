@@ -21,11 +21,14 @@ export default class Alerts extends React.Component {
 
         <h2>Todo:</h2>
         <ul>
-          <li>Update to match Abby's designs</li>
-
-          <li>Buttons in here should always be secondary button (outline-primary)</li>
+          >
           <li>Close icon should be font awesome and black.</li>
           <li>Close icon hover states? Talk to Abby</li>
+        </ul>
+
+        <h2>Notes</h2>
+        <ul>
+          <li>The four below are representative samples.  The various buttons/links are optional.</li>
         </ul>
 
         <div className="alert alert-success d-flex alert-dismissible fade show" role="alert">
@@ -38,8 +41,8 @@ export default class Alerts extends React.Component {
             </div>
             <div className="flex-grow-1">
               <div>Well done!</div>
-              <div>You've successfully read this important alert message.</div>
-              <button className="btn btn-secondary">Do the thing</button>
+              <p>You've successfully read this important alert message.</p>
+              <button className="btn btn-outline-primary">Do the thing</button>
             </div>
           </div>
         </div>
@@ -56,6 +59,7 @@ export default class Alerts extends React.Component {
               <li>Please upload a copy of your house key.</li>
               <li>The cat requires that you compliment him.</li>
             </ul>
+            <a href="#">Need help?</a>
           </div>
         </div>
 
@@ -76,6 +80,7 @@ export default class Alerts extends React.Component {
           <div className="flex-grow-1">
             <div>Heads up!</div>
             <p>This alert needs your attention, but not urgently.</p>
+            <button className="btn btn-outline-primary mr-3">Do the thing</button>
             <a href="#">Need help?</a>
           </div>
         </div>

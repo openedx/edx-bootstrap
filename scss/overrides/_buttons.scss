@@ -1,0 +1,17 @@
+.btn {
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.btn .spinner-border {
+  position: relative;
+  top: -.05em;
+  margin: 0 .375em 0 -.25em;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: $primary;
+  border-color: $primary;
+}
+

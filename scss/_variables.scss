@@ -5,34 +5,32 @@
 
 // edX Colors
 
-$brandMagenta: #b72667;
-$brandGrey: #8a8c8f;
-$brandBlue: #00a0e3;
-$brandYellow: #ffbf18;
-
 $textBlack100: #111;
 $textBlack200: rgba(0,0,0,.75);
 $textBlack400: rgba(0,0,0,.55);
-$textPurple: #45096b;
-$textWhite100: #fff;
-$textWhite200: rgba(255,255,255,.75);
-$textWhite400: rgba(255,255,255,.55);
-$textYellow: #ffbf18;
+$uiInteractive: #23419f;
+$uiPurple: #45096b;
 
-$semanticInteractive: #23419f;
-$semanticSuccess: #008100;
-$semanticDanger: #A2221D;
-$semanticWarning: #DDC047;
-$semanticInfo: #4AA0B5;
-
-$backgroundWhite: #fff;
-$backgroundLightGray: #fcfcfc;
-$backgroundLightBlue: #f5f8ff;
-$backgroundYellow: #Fffdf3;
 
 $programMasters: #414141;
 $programProfessionalCertificate: #9a1f60;
 $programMicroMasters: #065784;
+
+
+$bgSystemSuccess: #DFF0D8;
+$bgSystemInfo: #D8EDF8;
+$bgSystemDanger: #F2DEDE;
+$bgSystemWarning: #FCF8E2;
+$uiSystemSuccess: #008100;
+$uiSystemInfo: #065784;
+$uiSystemDanger: #A2221D;
+
+
+$bgWhite: #fff;
+$bgLightGray: #fcfcfc;
+$bgLightBlue: #f5f8ff;
+$bgYellow: #Fffdf3;
+
 
 
 
@@ -67,7 +65,7 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    $semanticInteractive;
+$blue:    $uiInteractive;
 $indigo:  #6610f2 !default;
 $purple:  #45096b !default;
 $pink:    #c2387d !default;
@@ -101,14 +99,14 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
+$primary:       $uiInteractive !default;
+$secondary:     $uiPurple !default;
+$success:       $uiSystemSuccess !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
+$danger:        $uiSystemDanger !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $textBlack100 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

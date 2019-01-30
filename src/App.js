@@ -31,8 +31,7 @@ import Popovers from './pages/bootstrap/Popovers';
 import Progress from './pages/bootstrap/Progress';
 import Spinners from './pages/bootstrap/Spinners';
 import Tables from './pages/bootstrap/Tables';
-import Toasts from './pages/bootstrap/Toasts';
-import Tooltips from './pages/bootstrap/Tooltips';
+
 
 class App extends Component {
   render() {
@@ -96,8 +95,6 @@ class App extends Component {
               <li><NavLink to="/Bootstrap/Progress">Progress</NavLink></li>
               <li><NavLink to="/Bootstrap/Spinners">Spinners</NavLink></li>
               <li><NavLink to="/Bootstrap/Tables">Tables</NavLink></li>
-              <li><NavLink to="/Bootstrap/Toasts">Toasts</NavLink></li>
-              <li><NavLink to="/Bootstrap/Tooltips">Tooltips</NavLink></li>
             </ul>
 
             <h5 className="bd-toc-link mt-4">External Links</h5>
@@ -151,8 +148,6 @@ class App extends Component {
           <Route path="/Bootstrap/Progress" component={Progress} />
           <Route path="/Bootstrap/Spinners" component={Spinners} />
           <Route path="/Bootstrap/Tables" component={Tables} />
-          <Route path="/Bootstrap/Toasts" component={Toasts} />
-          <Route path="/Bootstrap/Tooltips" component={Tooltips} />
 
           </div>
         </div>

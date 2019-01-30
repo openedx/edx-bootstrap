@@ -83,11 +83,6 @@ class App extends Component {
               <li><NavLink to="/Bootstrap/Collapse">Collapse</NavLink></li>
               <li><NavLink to="/Bootstrap/Dropdowns">Dropdowns</NavLink></li>
               <li><NavLink to="/Bootstrap/Grid">Grid</NavLink></li>
-              <li><NavLink to="/Bootstrap/InputGroup">InputGroup</NavLink></li>
-              <li><NavLink to="/Bootstrap/Jumbotron">Jumbotron</NavLink></li>
-              <li><NavLink to="/Bootstrap/LayoutUtils">LayoutUtils</NavLink></li>
-              <li><NavLink to="/Bootstrap/ListGroup">ListGroup</NavLink></li>
-              <li><NavLink to="/Bootstrap/MediaObject">MediaObject</NavLink></li>
               <li><NavLink to="/Bootstrap/Modal">Modal</NavLink></li>
               <li><NavLink to="/Bootstrap/Navs">Navs</NavLink></li>
               <li><NavLink to="/Bootstrap/Pagination">Pagination</NavLink></li>
@@ -136,11 +131,6 @@ class App extends Component {
           <Route path="/Bootstrap/Collapse" component={Collapse} />
           <Route path="/Bootstrap/Dropdowns" component={Dropdowns} />
           <Route path="/Bootstrap/Grid" component={Grid} />
-          <Route path="/Bootstrap/InputGroup" component={InputGroup} />
-          <Route path="/Bootstrap/Jumbotron" component={Jumbotron} />
-          <Route path="/Bootstrap/LayoutUtils" component={LayoutUtils} />
-          <Route path="/Bootstrap/ListGroup" component={ListGroup} />
-          <Route path="/Bootstrap/MediaObject" component={MediaObject} />
           <Route path="/Bootstrap/Modal" component={Modal} />
           <Route path="/Bootstrap/Navs" component={Navs} />
           <Route path="/Bootstrap/Pagination" component={Pagination} />

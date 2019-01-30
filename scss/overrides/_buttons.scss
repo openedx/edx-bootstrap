@@ -1,7 +1,26 @@
-
 .btn .spinner-border {
   position: relative;
   top: -.05em;
   margin: 0 .375em 0 -.25em;
 }
 
+.btn,
+.btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active {
+
+  &:focus,
+  &.focus {
+    box-shadow: $focusOutlineShadow;
+  }
+  &.shadow-sm:focus { box-shadow: $focusOutlineShadow, $box-shadow-sm !important; }
+  &.shadow:focus { box-shadow: $focusOutlineShadow, $box-shadow !important; }
+  &.shadow-lg:focus { box-shadow: $focusOutlineShadow , $box-shadow-lg !important; }
+  &.shadow-none:focus { box-shadow: $focusOutlineShadow !important; }
+
+}
+
+@each $color, $value in $theme-colors {
+  .btn-inverse-#{$color} {
+    @include button-inverse-variant($value);
+  }
+}

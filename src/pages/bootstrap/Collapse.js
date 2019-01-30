@@ -8,6 +8,11 @@ export default class Collapse extends React.Component {
           Collapse
         </h1>
 
+        <h2>To do</h2>
+        <ul>
+          <li>Update with our own examples</li>
+        </ul>
+
         <h2 id="how-it-works">
           <span className="bd-content-title">How it works</span>
         </h2>

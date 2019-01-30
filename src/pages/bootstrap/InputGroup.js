@@ -7,6 +7,11 @@ export default class InputGroup extends React.Component {
   <h1 className="bd-title" id="content">Input group</h1>
   <p className="bd-lead">Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>delete this plz</li>
+  </ul>
+
   <h2 id="basic-example"><span className="bd-content-title">Basic example</span></h2>
   <p>Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place <code className="highlighter-rouge">&lt;label&gt;</code>s outside the input group.</p>
   <div className="bd-example">

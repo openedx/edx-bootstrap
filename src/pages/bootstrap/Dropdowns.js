@@ -7,6 +7,14 @@ export default class Dropdowns extends React.Component {
   <h1 className="bd-title" id="content">Dropdowns</h1>
   <p className="bd-lead">Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>Update dropdown chevron to match program pages (font awesome).</li>
+    <li>replace buttons with a one that looks more like a select.</li>
+    <li>Remove the buttons, update docs to indicate that the display of the dropdown is unimportant. It's the presences of the chevron icon.</li>
+    <li>Menu popup itself – should use 'The Shadow' that we also use for buttons, etc.</li>
+  </ul>
+
   <div className="bd-example">
     <div className="dropdown">
       <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,57 +50,7 @@ export default class Dropdowns extends React.Component {
         <div className="dropdown-divider" />
         <a className="dropdown-item" href="#">Separated link</a>
       </div>
-    </div>{/* /btn-group */}
-    <div className="btn-group">
-      <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-        <div className="dropdown-divider" />
-        <a className="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>{/* /btn-group */}
-    <div className="btn-group">
-      <button type="button" className="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-        <div className="dropdown-divider" />
-        <a className="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>{/* /btn-group */}
-    <div className="btn-group">
-      <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-        <div className="dropdown-divider" />
-        <a className="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>{/* /btn-group */}
-    <div className="btn-group">
-      <button type="button" className="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-        <div className="dropdown-divider" />
-        <a className="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>{/* /btn-group */}
-    <div className="btn-group">
-      <button type="button" className="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-        <div className="dropdown-divider" />
-        <a className="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>{/* /btn-group */}
+    </div>
   </div>
   <h3 id="split-button"><span className="bd-content-title">Split button</span></h3>
   

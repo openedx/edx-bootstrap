@@ -7,6 +7,12 @@ export default class Grid extends React.Component {
   <h1 className="bd-title" id="content">Grid system</h1>
   <p className="bd-lead">Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>UX tbd. would be nice to have some common examples.</li>
+    <li>Let's decide a max-width................ </li>
+  </ul>
+
   <h2 id="how-it-works"><span className="bd-content-title">How it works</span></h2>
   <p>Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
   <p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>

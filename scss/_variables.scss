@@ -3,6 +3,39 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// edX Colors
+
+$brandMagenta: #b72667;
+$brandGrey: #8a8c8f;
+$brandBlue: #00a0e3;
+$brandYellow: #ffbf18;
+
+$textBlack100: #111;
+$textBlack200: rgba(0,0,0,.75);
+$textBlack400: rgba(0,0,0,.55);
+$textPurple: #45096b;
+$textWhite100: #fff;
+$textWhite200: rgba(255,255,255,.75);
+$textWhite400: rgba(255,255,255,.55);
+$textYellow: #ffbf18;
+
+$semanticInteractive: #23419f;
+$semanticSuccess: #008100;
+$semanticDanger: #A2221D;
+$semanticWarning: #DDC047;
+$semanticInfo: #4AA0B5;
+
+$backgroundWhite: #fff;
+$backgroundLightGray: #fcfcfc;
+$backgroundLightBlue: #f5f8ff;
+$backgroundYellow: #Fffdf3;
+
+$programMasters: #414141;
+$programProfessionalCertificate: #9a1f60;
+$programMicroMasters: #065784;
+
+
+
 // Color system
 
 $white:    #fff !default;
@@ -34,16 +67,18 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #17285d !default;
+$blue:    $semanticInteractive;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #45096b !default;
 $pink:    #c2387d !default;
-$red:     #b20610 !default;
+$red:     #A2221D !default;
 $orange:  #fd7e14 !default;
-$yellow:  #e2c01f !default;
+$yellow:  #DDC047 !default;
 $green:   #008100 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #00a0e3 !default;
+
+
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -237,7 +272,7 @@ $grid-gutter-width:           30px !default;
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
-$border-width:                1px !default;
+$border-width:                2px;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .3rem !default;
@@ -323,7 +358,7 @@ $display4-weight:             300 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-weight:            $font-weight-base;
 
 $small-font-size:             80% !default;
 

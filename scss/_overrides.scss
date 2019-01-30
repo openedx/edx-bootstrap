@@ -1,3 +1,5 @@
+@import './edx-custom-card';
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6,6 +8,11 @@ body {
 h3, h4, h5, h6,
 .h3, .h4, .h5, .h6 {
   font-family: $font-family-sans-serif;
+}
+
+h1, .h1,
+h2, .h2 {
+  letter-spacing: -.025em;
 }
 
 a, .btn-link {

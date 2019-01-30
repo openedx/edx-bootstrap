@@ -157,7 +157,6 @@ class App extends Component {
           <Route path="/Bootstrap/Toasts" component={Toasts} />
           <Route path="/Bootstrap/Tooltips" component={Tooltips} />
 
-
           </div>
         </div>
       </div>

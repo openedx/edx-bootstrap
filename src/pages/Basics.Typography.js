@@ -48,9 +48,9 @@ export default function Typography() {
 
 
           return (
-            <div className="d-flex text-muted">
+            <div className="d-flex mt-2 text-muted">
               {fontFamily} {getWeightName(fontWeight)}
-               • {fontSize}px / {lineHeight}px
+              &nbsp; • {fontSize}px / {lineHeight}px
               {letterSpacing !== 'normal' ? ` • ${letterSpacing}` : null}
             </div>
           );
@@ -62,6 +62,10 @@ export default function Typography() {
   return (
     <div>
 
+      <div className="row type-scale-row">
+        <div className="col-6">{ renderTypeItem({name: 'Display', tag: 'h1', tagClass: 'display-1'}) }</div>
+        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>
+      </div>
       <div className="row type-scale-row">
         <div className="col-6">{ renderTypeItem({name: 'Heading 1', tag: 'h1', tagClass: ''}) }</div>
         <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>

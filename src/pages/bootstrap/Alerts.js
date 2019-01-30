@@ -22,8 +22,6 @@ export default class Alerts extends React.Component {
 
         <h2>Todo:</h2>
         <ul>
-          >
-          <li>Close icon should be font awesome and black.</li>
           <li>Close icon hover states? Talk to Abby</li>
         </ul>
 

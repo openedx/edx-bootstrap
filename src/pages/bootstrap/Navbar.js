@@ -7,6 +7,11 @@ export default class Navbar extends React.Component {
   <h1 className="bd-title" id="content">Navbar</h1>
   <p className="bd-lead">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>Keeyp it?</li>
+  </ul>
+
   <h2 id="how-it-works"><span className="bd-content-title">How it works</span></h2>
   <p>Here’s what you need to know before getting started with the navbar:</p>
   <ul>

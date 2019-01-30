@@ -7,6 +7,12 @@ export default class Spinners extends React.Component {
   <h1 className="bd-title" id="content">Spinners</h1>
   <p className="bd-lead">Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>UX to provide</li>
+    <li>Trim to one</li>
+  </ul>
+
 
   <div className="bd-example">
     <div className="spinner-border" role="status">

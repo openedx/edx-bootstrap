@@ -7,6 +7,13 @@ export default class Popovers extends React.Component {
   <h1 className="bd-title" id="content">Popovers</h1>
   <p className="bd-lead">Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>Style to match Prospectus card details</li>
+    <li>Build in react.</li>
+    <li>UX to determine shadow depth. "The Shadow" becomes "The Shadows"</li>
+  </ul>
+
   <h2 id="overview"><span className="bd-content-title">Overview</span></h2>
   <p>Things to know when using the popover plugin:</p>
   <ul>

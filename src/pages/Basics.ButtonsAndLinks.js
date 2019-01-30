@@ -4,6 +4,12 @@ import React from 'react';
 export default function ButtonsAndLinks() {
   return (
     <div>
+      <h2>To do</h2>
+      <ul>
+        <li>Add documentation on how buttons should be layed out:  left aligned. primary first, others second.</li>
+        <li>flippable for RTL.</li>
+      </ul>
+
       <div className="mb-3">
         <button type="button" className="mr-2 btn btn-primary">Primary</button>
         <button type="button" className="mr-2 btn btn-secondary">Secondary</button>

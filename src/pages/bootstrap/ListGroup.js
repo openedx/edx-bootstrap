@@ -6,7 +6,12 @@ export default class ListGroup extends React.Component {
 <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 className="bd-title" id="content">List group</h1>
   <p className="bd-lead">List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</p>
-
+  
+  <h2>To do</h2>
+  <ul>
+    <li>Delete? (may add back)</li>
+  </ul>
+  
   <h2 id="basic-example"><span className="bd-content-title">Basic example</span></h2>
   
   <div className="bd-example">

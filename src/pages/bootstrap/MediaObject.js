@@ -6,7 +6,12 @@ export default class MediaObject extends React.Component {
 <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 className="bd-title" id="content">Media object</h1>
   <p className="bd-lead">Documentation and examples for Bootstrap’s media object to construct highly repetitive components like blog comments, tweets, and the like.</p>
-  
+
+  <h2>To do</h2>
+  <ul>
+    <li>Delete</li>
+  </ul>
+
   <h2 id="example"><span className="bd-content-title">Example</span></h2>
   <p>The <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">media object</a> helps build complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. Plus, it does this with only two required classes thanks to flexbox.</p>
   <p>Below is an example of a single media object. Only two classes are required—the wrapping <code className="highlighter-rouge">.media</code> and the <code className="highlighter-rouge">.media-body</code> around your content. Optional padding and margin can be controlled through <a href="/docs/4.2/utilities/spacing/">spacing utilities</a>.</p>

@@ -7,6 +7,11 @@ export default class Progress extends React.Component {
   <h1 className="bd-title" id="content">Progress</h1>
   <p className="bd-lead">Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.</p>
   
+  <h2>To do</h2>
+  <ul>
+    <li>Document as progress bar (no animation, progress thru a course) and as loading bar (animated and completing)</li>
+  </ul>
+
   <div className="bd-example">
     <div className="progress">
       <div className="progress-bar" role="progressbar" aria-valuenow={0} aria-valuemin={0} aria-valuemax={100} />
@@ -40,17 +45,6 @@ export default class Progress extends React.Component {
     </div>
   </div>
   
-  <h2 id="height"><span className="bd-content-title">Height</span></h2>
-  
-  <div className="bd-example">
-    <div className="progress" style={{height: 1}}>
-      <div className="progress-bar" role="progressbar" style={{width: '25%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
-    </div>
-    <div className="progress" style={{height: 20}}>
-      <div className="progress-bar" role="progressbar" style={{width: '25%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
-    </div>
-  </div>
-  
   <h2 id="backgrounds"><span className="bd-content-title">Backgrounds</span></h2>
   
   <div className="bd-example">
@@ -68,15 +62,7 @@ export default class Progress extends React.Component {
     </div>
   </div>
   
-  <h2 id="multiple-bars"><span className="bd-content-title">Multiple bars</span></h2>
-  
-  <div className="bd-example">
-    <div className="progress">
-      <div className="progress-bar" role="progressbar" style={{width: '15%'}} aria-valuenow={15} aria-valuemin={0} aria-valuemax={100} />
-      <div className="progress-bar bg-success" role="progressbar" style={{width: '30%'}} aria-valuenow={30} aria-valuemin={0} aria-valuemax={100} />
-      <div className="progress-bar bg-info" role="progressbar" style={{width: '20%'}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
-    </div>
-  </div>
+ 
   
   <h2 id="striped"><span className="bd-content-title">Striped</span></h2>
   
@@ -102,11 +88,8 @@ export default class Progress extends React.Component {
   
   <div className="bd-example">
     <div className="progress">
-      <div className="progress-bar progress-bar-striped" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} style={{width: '75%'}} />
+      <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} style={{width: '75%'}} />
     </div>
-    <button type="button" className="btn btn-secondary bd-toggle-animated-progress" data-toggle="button" aria-pressed="false" autoComplete="off">
-      Toggle animation
-    </button>
   </div>
   
 </main>

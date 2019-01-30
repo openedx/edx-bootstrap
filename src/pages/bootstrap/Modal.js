@@ -6,7 +6,13 @@ export default class Modal extends React.Component {
 <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 className="bd-title" id="content">Modal</h1>
   <p className="bd-lead">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
-  
+
+  <h2>To do</h2>
+  <ul>
+    <li>Abby: to provide design.</li>
+    <li>Make buttons left aligned. Primary first. Secondary mostly likely a tertiary (link) style.</li>
+  </ul>
+
   <h2 id="examples"><span className="bd-content-title">Examples</span></h2>
   <h3 id="modal-components"><span className="bd-content-title">Modal components</span></h3>
   <div className="bd-example bd-example-modal">

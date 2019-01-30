@@ -9,6 +9,13 @@ export default class Pagination extends React.Component {
   
   <h2 id="overview"><span className="bd-content-title">Overview</span></h2>
 
+  <h2>To do</h2>
+  <ul>
+    <li>Match paragon responsive strategy</li>
+    <li>Make sure it has the rounded edges, etc.</li>
+    <li>add a minimum width of numbers (44)</li>
+  </ul>
+
   <div className="bd-example">
     <nav aria-label="Page navigation example">
       <ul className="pagination">

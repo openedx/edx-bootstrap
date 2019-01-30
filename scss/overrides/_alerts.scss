@@ -2,18 +2,10 @@
   padding: 0.75rem 0.75rem;
 }
 
-.alert-success {
+.alert-success, .alert-danger, .alert-warning, .alert-info {
   color: $alert-color;
 }
 
-.alert-danger {
-  color: $alert-color;
-}
-
-.alert-warning {
-  color: $alert-color;
-}
-
-.alert-info {
+.alert-dismissible .close {
   color: $alert-color;
 }

@@ -4,7 +4,8 @@ import {
   faCheckCircle,
   faExclamationTriangle,
   faInfoCircle,
-  faExclamationCircle
+  faExclamationCircle,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
 export default class Alerts extends React.Component {
@@ -33,7 +34,7 @@ export default class Alerts extends React.Component {
 
         <div className="alert alert-success d-flex alert-dismissible fade show" role="alert">
           <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
+            <FontAwesomeIcon aria-hidden="true" className="fa-xs" icon={faTimes} />
           </button>
           <div className="d-flex">
             <div className="flex-grow-0 mr-2">

@@ -25,7 +25,6 @@ import LayoutUtils from './pages/bootstrap/LayoutUtils';
 import ListGroup from './pages/bootstrap/ListGroup';
 import MediaObject from './pages/bootstrap/MediaObject';
 import Modal from './pages/bootstrap/Modal';
-import Navbar from './pages/bootstrap/Navbar';
 import Navs from './pages/bootstrap/Navs';
 import Pagination from './pages/bootstrap/Pagination';
 import Popovers from './pages/bootstrap/Popovers';
@@ -91,7 +90,6 @@ class App extends Component {
               <li><NavLink to="/Bootstrap/ListGroup">ListGroup</NavLink></li>
               <li><NavLink to="/Bootstrap/MediaObject">MediaObject</NavLink></li>
               <li><NavLink to="/Bootstrap/Modal">Modal</NavLink></li>
-              <li><NavLink to="/Bootstrap/Navbar">Navbar</NavLink></li>
               <li><NavLink to="/Bootstrap/Navs">Navs</NavLink></li>
               <li><NavLink to="/Bootstrap/Pagination">Pagination</NavLink></li>
               <li><NavLink to="/Bootstrap/Popovers">Popovers</NavLink></li>
@@ -147,7 +145,6 @@ class App extends Component {
           <Route path="/Bootstrap/ListGroup" component={ListGroup} />
           <Route path="/Bootstrap/MediaObject" component={MediaObject} />
           <Route path="/Bootstrap/Modal" component={Modal} />
-          <Route path="/Bootstrap/Navbar" component={Navbar} />
           <Route path="/Bootstrap/Navs" component={Navs} />
           <Route path="/Bootstrap/Pagination" component={Pagination} />
           <Route path="/Bootstrap/Popovers" component={Popovers} />

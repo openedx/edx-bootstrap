@@ -3,8 +3,26 @@
 }
 
 .alert-success, .alert-danger, .alert-warning, .alert-info {
+  border:none;
   color: $alert-color;
+  .alert-link {
+    color: $alert-color;
+  }
 }
+
+.alert-success {
+  background: $bgSystemSuccess;
+}
+.alert-danger {
+  background: $bgSystemDanger; 
+}
+.alert-warning {
+  background: $bgSystemWarning;
+}
+.alert-info {
+  background: $bgSystemInfo;
+}
+
 
 .alert-dismissible .close {
   color: $link-color;

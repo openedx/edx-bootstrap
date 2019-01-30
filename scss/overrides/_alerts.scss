@@ -1,0 +1,11 @@
+.alert {
+  padding: 0.75rem 0.75rem;
+}
+
+.alert-success, .alert-danger, .alert-warning, .alert-info {
+  color: $alert-color;
+}
+
+.alert-dismissible .close {
+  color: $alert-color;
+}

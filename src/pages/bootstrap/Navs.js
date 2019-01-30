@@ -6,13 +6,6 @@ export default class Navs extends React.Component {
 <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 className="bd-title" id="content">Navs</h1>
   <p className="bd-lead">Documentation and examples for how to use Bootstrap’s included navigation components.</p>
-  
-  <h2>To do</h2>
-  <ul>
-    <li>Add active state for base version</li>
-    <li>Tabs is the only other version</li>
-    
-  </ul>
 
   <h2 id="base-nav"><span className="bd-content-title">Base nav</span></h2>
   <p>Navigation available in Bootstrap share general markup and styles, from the base <code className="highlighter-rouge">.nav</code> class to the active and disabled states. Swap modifier classes to switch between each style.</p>
@@ -49,73 +42,7 @@ export default class Navs extends React.Component {
   <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;nav</span> <span className="na">class=</span><span className="s">"nav"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}<span className="nt">&lt;/nav&gt;</span></code></pre></figure>
   <h2 id="available-styles"><span className="bd-content-title">Available styles</span></h2>
   <p>Change the style of <code className="highlighter-rouge">.nav</code>s component with modifiers and utilities. Mix and match as needed, or build your own.</p>
-  <h3 id="horizontal-alignment"><span className="bd-content-title">Horizontal alignment</span></h3>
-  <p>Change the horizontal alignment of your nav with <a href="/docs/4.2/layout/grid/#horizontal-alignment">flexbox utilities</a>. By default, navs are left-aligned, but you can easily change them to center or right aligned.</p>
-  <p>Centered with <code className="highlighter-rouge">.justify-content-center</code>:</p>
-  <div className="bd-example">
-    <ul className="nav justify-content-center">
-      <li className="nav-item">
-        <a className="nav-link active" href="#">Active</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;ul</span> <span className="na">class=</span><span className="s">"nav justify-content-center"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}<span className="nt">&lt;/ul&gt;</span></code></pre></figure>
-  <p>Right-aligned with <code className="highlighter-rouge">.justify-content-end</code>:</p>
-  <div className="bd-example">
-    <ul className="nav justify-content-end">
-      <li className="nav-item">
-        <a className="nav-link active" href="#">Active</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;ul</span> <span className="na">class=</span><span className="s">"nav justify-content-end"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}<span className="nt">&lt;/ul&gt;</span></code></pre></figure>
-  <h3 id="vertical"><span className="bd-content-title">Vertical</span></h3>
-  <p>Stack your navigation by changing the flex item direction with the <code className="highlighter-rouge">.flex-column</code> utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code className="highlighter-rouge">.flex-sm-column</code>).</p>
-  <div className="bd-example">
-    <ul className="nav flex-column">
-      <li className="nav-item">
-        <a className="nav-link active" href="#">Active</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;ul</span> <span className="na">class=</span><span className="s">"nav flex-column"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}{"  "}<span className="nt">&lt;li</span> <span className="na">class=</span><span className="s">"nav-item"</span><span className="nt">&gt;</span>{"\n"}{"    "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;/li&gt;</span>{"\n"}<span className="nt">&lt;/ul&gt;</span></code></pre></figure>
-  <p>As always, vertical navigation is possible without <code className="highlighter-rouge">&lt;ul&gt;</code>s, too.</p>
-  <div className="bd-example">
-    <nav className="nav flex-column">
-      <a className="nav-link active" href="#">Active</a>
-      <a className="nav-link" href="#">Link</a>
-      <a className="nav-link" href="#">Link</a>
-      <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
-    </nav>
-  </div>
-  <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;nav</span> <span className="na">class=</span><span className="s">"nav flex-column"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}<span className="nt">&lt;/nav&gt;</span></code></pre></figure>
+  
   <h3 id="tabs"><span className="bd-content-title">Tabs</span></h3>
   <p>Takes the basic nav from above and adds the <code className="highlighter-rouge">.nav-tabs</code> class to generate a tabbed interface. Use them to create tabbable regions with our <a href="#javascript-behavior">tab JavaScript plugin</a>.</p>
   <div className="bd-example">

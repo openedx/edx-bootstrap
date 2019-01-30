@@ -2,164 +2,111 @@ import React from 'react';
 import chroma from 'chroma-js';
 import MeasuredItem from '../common/MeasuredItem';
 
-const bgColors = [
-  { name: 'White', value: '#fff' },
-  { name: 'BG Light Gray', value: '#fcfcfc' },
-  { name: 'BG Light Blue', value: '#f5f8ff' },
-  { name: 'BG Yellow', value: '#Fffdf3' },
-];
 
-const textColors = [
-  { name: 'Black 100', value: '#111' },
-  { name: 'Black 200', value: 'rgba(0,0,0,.75)' },
-  { name: 'Black 400', value: 'rgba(0,0,0,.55)' },
-  { name: 'Purple', value: '#45096b' },
-];
-const inverseTextColors = [
-  { name: 'White 100', value: '#fff' },
-  { name: 'White 200', value: 'rgba(255,255,255,.75)' },
-  { name: 'White 400', value: 'rgba(255,255,255,.55)' },
-  { name: 'Yellow', value: '#ffbf18' },
-];
-
-const semanticColors = [
-  { name: 'Interactive Blue', value: '#23419f' },
-  { name: 'Success', value: '#008100' },
-  { name: 'Danger', value: '#A2221D' },
-  { name: 'Warning', value: '#DDC047' },
-  { name: 'Info', value: '#4AA0B5' },
-]
-const brandColors = [
-  { name: 'Magenta', value: '#b72667' },
-  { name: 'Grey', value: '#8a8c8f' },
-  { name: 'Blue', value: '#00a0e3' },
-  { name: 'Yellow', value: '#ffbf18' },
+const textAndInteractiveColors = [
+  { name: 'Black 100', value: '#111', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Black 200', value: 'rgba(0,0,0,.75)', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Black 400', value: 'rgba(0,0,0,.55)', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Interactive UI', value: '#23419F', forText: true, forFill: true, labelColor: '#fff' },
+  { name: 'Purple UI', value: '#45096B', forText: true, forFill: true, labelColor: '#fff' },
 ];
 
 const programColors = [
-  { name: 'Masters Charcoal', value: '#414141' },
-  { name: 'Professional Certificate', value: '#9a1f60' },
-  { name: 'MicroMasters', value: '#065784' },
+  { name: 'Masters', value: '#414141', forText: false, forFill: true, labelColor: '#fff' },
+  { name: 'MicroMasters', value: '#065784', forText: false, forFill: true, labelColor: '#fff' },
+  { name: 'Prof Cert', value: '#9A1F60', forText: false, forFill: true, labelColor: '#fff' },
+];
+
+const accentColors = [
+  { name: 'Yellow', value: '#FFBF18', forText: false, forFill:true, labelColor: '#000' },
+];
+
+const systemColorsBG = [
+  { name: 'Success BG', value: '#DFF0D8', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Info BG', value: '#D8EDF8', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Danger BG', value: '#F2DEDE', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Warning BG', value: '#FCF8E2', forText: false, forFill: true, labelColor: '#000' },
+];
+const systemColorsUI = [
+  { name: 'Success UI', value: '#008100', forText: true, forFill: true, labelColor: '#fff' },
+  { name: 'Info Text', value: '#065784', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Danger UI', value: '#A2221D', forText: true, forFill: true, labelColor: '#fff' },
+]
+
+const bgColors = [
+  { name: 'White', value: '#FFF', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Light Gray BG', value: '#FCFCFC', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Light Blue BG', value: '#F5F8FF', forText: false, forFill: true, labelColor: '#000' },
+  { name: 'Yellow BG', value: '#FFFDF3', forText: false, forFill: true, labelColor: '#000' },
 ];
 
 
-function Swatch({color, className, children, style}) {
+function Tile({children}) {
+  return (
+    <div className="d-flex flex-column color-card" style={{height:'8rem'}}>
+      {children}
+    </div>
+  );
+}
+
+function Swatch({color, textColor, className, children, style}) {
   return <div 
-    className={`${className}`}
+    className={`color-card flex-grow-1 d-flex align-items-end ${className}`}
     style={{
       backgroundColor: color,
+      flexBasis: '50%',
+      padding: '1rem 1rem',
+      color: textColor || '#fff',
       ...style
     }}
-  >{children}</div>
+  >{children || color}</div>
 }
-function TextSwatch({color, className, children, style}) {
-  return <span 
-    className={`${className}`}
+
+function TextSwatch({color, bgColor, className, children, style}) {
+  return <div 
+    className={`flex-grow-1 d-flex align-items-end justify-content-between ${className}`}
     style={{
+      backgroundColor: bgColor || '#fff',
+      border: `solid 2px ${color}`,
+      flexBasis: '50%',
+      padding: '1rem 1rem',
       color: color,
       ...style
     }}
-  >{children}</span>
+  >{children || color}</div>
 }
 
-function SwatchLabel({color, name, className, children, style}) {
-  return <label 
-    className={`${className}`}
-    style={{
-      ...style
-    }}
-  >{name} • {color}</label>
-}
 
 export default function Colors() {
+  const renderColor = ({name, value, forFill, forText, labelColor}) => {
+    return (
+      <div className="col-3 mb-3">
+        <label className="color-label">{name}</label>
+        <Tile>
+          {forFill ? <Swatch color={value} textColor={labelColor} /> : null}
+          {forText ? <TextSwatch color={value}>{value} <span className="text-swatch-sample">Aa</span></TextSwatch> : null}
+        </Tile>
+      </div>
+    );
+  }
+
   return (
     <div className="pt-5">
-
-      <h5>Brand & Accents</h5>
-      <p>Use for accents only. These colors are not accessible as text or fill colors.</p>
-      <div className="row mb-5">{brandColors.map(({name, value}) => (
-        <div className="col">
-          <Swatch color={value} className="p-5 color-card" />
-          <SwatchLabel color={value} name={name} />
-        </div>
-      ))}</div>
-
-      <div className="row mb-5">
-        <div className="col">
-          <h5>Text Colors (Primary)</h5>
-          <Swatch color={bgColors[0].value} className="p-5 color-card">
-            {textColors.map(({name, value}) => <TextSwatch color={value} className="d-block">{name} • {value}</TextSwatch> )}
-          </Swatch>
-        </div>
-        <div className="col">
-          <h5>Text Colors (Inverse)</h5>
-          <Swatch color={programColors[0].value} className="p-5 color-card">
-            {inverseTextColors.map(({name, value}) => <TextSwatch color={value} className="d-block">{name} • {value}</TextSwatch> )}
-          </Swatch>
-        </div>
-      </div>
-
-      <h5>Semantic Colors</h5>
-      <p>Used both as text on light backgrounds and fill colors for white text (eg. buttons).</p>
-      <div className="row mb-5">
-      {semanticColors.map(({name, value}) => (
-        <div className="col-3">
-          <div className="color-card">
-            <Swatch color={value} className="p-3"><TextSwatch color={'#fff'}>{name}</TextSwatch></Swatch>
-            <Swatch color={'#fff'} className="pt-1 pb-3"><TextSwatch color={value}>{name} • {value}</TextSwatch></Swatch>
-          </div>
-        </div>
-      ))}
-      </div>
-
-      <h5>Backgrounds</h5>
-      <p>Primary background colors.</p>
-      <div className="row mb-5">
-      {bgColors.map(({name, value}) => (
-        <div className="col-3 mb-3">
-          <Swatch color={value} className="p-5 color-card" />
-          <SwatchLabel color={value} name={name} />
-        </div>
-      ))}
-      </div>
-      <h5>Program Backgrounds</h5>
-      <p>Used as backgrounds or accents for program related content.</p>
-      <div className="row mb-5">
-      {programColors.map(({name, value}) => (
-        <div className="col-3 mb-3">
-          <Swatch color={value} className="p-5 color-card" />
-          <SwatchLabel color={value} name={name} />
-        </div>
-      ))}
-      </div>
+      <h5 className="mt-5 mb-3">Text & Interactive</h5>
+      <div className="row mb-5">{textAndInteractiveColors.map(renderColor)}</div>
       
-      {/*textColors.map(({name, value}) => <TextSwatch color={value} className="p-3">{name}</TextSwatch> )*/}
-
-      <h5>WIP Table view</h5>
-
+      <h5 className="mt-5 mb-3">Program Specific</h5>
+      <div className="row mb-5">{programColors.map(renderColor)}</div>
       
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Color</th>
-            <th>Text Black</th>
-            <th>Text Dark</th>
-            <th>Text Gray</th>
-            <th>Text White</th>
-            <th>Interactive Blue</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <h6>White</h6>
-              <p>#fff</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <h5 className="mt-5 mb-3">Accent</h5>
+      <div className="row mb-5">{accentColors.map(renderColor)}</div>
 
-
+      <h5 className="mt-5 mb-3">System Colors</h5>
+      <div className="row mb-0">{systemColorsBG.map(renderColor)}</div>
+      <div className="row mb-5">{systemColorsUI.map(renderColor)}</div>
+      
+      <h5 className="mt-5 mb-3">Backgrounds</h5>
+      <div className="row mb-5">{bgColors.map(renderColor)}</div>
     </div>
   );
 }

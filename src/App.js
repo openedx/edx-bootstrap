@@ -12,6 +12,29 @@ import Content from './pages/Content';
 import Miscellaneous from './pages/Miscellaneous';
 import Overview from './pages/Overview';
 
+import Alerts from './pages/bootstrap/Alerts';
+import Badge from './pages/bootstrap/Badge';
+import Breadcrumb from './pages/bootstrap/Breadcrumb';
+import Card from './pages/bootstrap/Card';
+import Collapse from './pages/bootstrap/Collapse';
+import Dropdowns from './pages/bootstrap/Dropdowns';
+import Grid from './pages/bootstrap/Grid';
+import InputGroup from './pages/bootstrap/InputGroup';
+import Jumbotron from './pages/bootstrap/Jumbotron';
+import LayoutUtils from './pages/bootstrap/LayoutUtils';
+import ListGroup from './pages/bootstrap/ListGroup';
+import MediaObject from './pages/bootstrap/MediaObject';
+import Modal from './pages/bootstrap/Modal';
+import Navbar from './pages/bootstrap/Navbar';
+import Navs from './pages/bootstrap/Navs';
+import Pagination from './pages/bootstrap/Pagination';
+import Popovers from './pages/bootstrap/Popovers';
+import Progress from './pages/bootstrap/Progress';
+import Spinners from './pages/bootstrap/Spinners';
+import Tables from './pages/bootstrap/Tables';
+import Toasts from './pages/bootstrap/Toasts';
+import Tooltips from './pages/bootstrap/Tooltips';
+
 class App extends Component {
   render() {
     return (
@@ -53,6 +76,32 @@ class App extends Component {
               <li><HashLink to="/Miscellaneous#loaders">Spinners / Loaders</HashLink></li>
             </ul>
 
+            <h5 className="bd-toc-link mt-4">Styled Bootstrap Components</h5>
+            <ul className="nav flex-column">
+              <li><NavLink to="/Bootstrap/Alerts">Alerts</NavLink></li>
+              <li><NavLink to="/Bootstrap/Badge">Badge</NavLink></li>
+              <li><NavLink to="/Bootstrap/Breadcrumb">Breadcrumb</NavLink></li>
+              <li><NavLink to="/Bootstrap/Card">Card</NavLink></li>
+              <li><NavLink to="/Bootstrap/Collapse">Collapse</NavLink></li>
+              <li><NavLink to="/Bootstrap/Dropdowns">Dropdowns</NavLink></li>
+              <li><NavLink to="/Bootstrap/Grid">Grid</NavLink></li>
+              <li><NavLink to="/Bootstrap/InputGroup">InputGroup</NavLink></li>
+              <li><NavLink to="/Bootstrap/Jumbotron">Jumbotron</NavLink></li>
+              <li><NavLink to="/Bootstrap/LayoutUtils">LayoutUtils</NavLink></li>
+              <li><NavLink to="/Bootstrap/ListGroup">ListGroup</NavLink></li>
+              <li><NavLink to="/Bootstrap/MediaObject">MediaObject</NavLink></li>
+              <li><NavLink to="/Bootstrap/Modal">Modal</NavLink></li>
+              <li><NavLink to="/Bootstrap/Navbar">Navbar</NavLink></li>
+              <li><NavLink to="/Bootstrap/Navs">Navs</NavLink></li>
+              <li><NavLink to="/Bootstrap/Pagination">Pagination</NavLink></li>
+              <li><NavLink to="/Bootstrap/Popovers">Popovers</NavLink></li>
+              <li><NavLink to="/Bootstrap/Progress">Progress</NavLink></li>
+              <li><NavLink to="/Bootstrap/Spinners">Spinners</NavLink></li>
+              <li><NavLink to="/Bootstrap/Tables">Tables</NavLink></li>
+              <li><NavLink to="/Bootstrap/Toasts">Toasts</NavLink></li>
+              <li><NavLink to="/Bootstrap/Tooltips">Tooltips</NavLink></li>
+            </ul>
+
             <h5 className="bd-toc-link mt-4">External Links</h5>
             <ul className="nav flex-column">
               <li><a href="https://getbootstrap.com/docs/4.2/getting-started/introduction/">Bootstrap Docs</a></li>
@@ -83,6 +132,32 @@ class App extends Component {
           <Route path="/Content#accordions" component={Content} />
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
           <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
+
+          {/* Bootstrap documentation pages */}
+          <Route path="/Bootstrap/Alerts" component={Alerts} />
+          <Route path="/Bootstrap/Badge" component={Badge} />
+          <Route path="/Bootstrap/Breadcrumb" component={Breadcrumb} />
+          <Route path="/Bootstrap/Card" component={Card} />
+          <Route path="/Bootstrap/Collapse" component={Collapse} />
+          <Route path="/Bootstrap/Dropdowns" component={Dropdowns} />
+          <Route path="/Bootstrap/Grid" component={Grid} />
+          <Route path="/Bootstrap/InputGroup" component={InputGroup} />
+          <Route path="/Bootstrap/Jumbotron" component={Jumbotron} />
+          <Route path="/Bootstrap/LayoutUtils" component={LayoutUtils} />
+          <Route path="/Bootstrap/ListGroup" component={ListGroup} />
+          <Route path="/Bootstrap/MediaObject" component={MediaObject} />
+          <Route path="/Bootstrap/Modal" component={Modal} />
+          <Route path="/Bootstrap/Navbar" component={Navbar} />
+          <Route path="/Bootstrap/Navs" component={Navs} />
+          <Route path="/Bootstrap/Pagination" component={Pagination} />
+          <Route path="/Bootstrap/Popovers" component={Popovers} />
+          <Route path="/Bootstrap/Progress" component={Progress} />
+          <Route path="/Bootstrap/Spinners" component={Spinners} />
+          <Route path="/Bootstrap/Tables" component={Tables} />
+          <Route path="/Bootstrap/Toasts" component={Toasts} />
+          <Route path="/Bootstrap/Tooltips" component={Tooltips} />
+
+
           </div>
         </div>
       </div>

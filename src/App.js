@@ -12,6 +12,7 @@ import Content from './pages/Content';
 import Miscellaneous from './pages/Miscellaneous';
 import Overview from './pages/Overview';
 import Examples from './pages/Examples';
+import GettingStarted from './pages/GettingStarted'
 
 import Alerts from './pages/bootstrap/Alerts';
 import Badge from './pages/bootstrap/Badge';
@@ -46,6 +47,7 @@ class App extends Component {
             <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>
             <ul className="nav flex-column">
               <li><HashLink to="/">Overview</HashLink></li>
+              <li><HashLink to="/GettingStarted">GettingStarted</HashLink></li>
             </ul>
             
             <h5 className="bd-toc-link mt-5"><NavLink to="/Basics#top">Basics</NavLink></h5>
@@ -108,6 +110,7 @@ class App extends Component {
           </div>
 
           <Route exact path="/" component={Overview} />
+          <Route exact path="/GettingStarted" component={GettingStarted} />
           <Route exact path="/Basics" component={Basics} />
           <Route path="/Basics#colors" component={Basics} />
           <Route path="/Basics#typography" component={Basics} />

@@ -6,7 +6,7 @@ export default class Overview extends React.Component {
     return (
       <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 className="display-4 mt-5">edX Styles & Patterns</h1>
+        <h1 className="display-4 mt-5">edX Bootstrap</h1>
         <p className="lead mb-5">Tools for designing & building great user experiences faster.</p>
 
         <h2>A succinct yet powerful system.</h2>

@@ -1,13 +1,13 @@
 {
-  "main.css": "/edx-bootstrap/static/css/main.19425449.chunk.css",
-  "main.js": "/edx-bootstrap/static/js/main.aafdef78.chunk.js",
-  "main.js.map": "/edx-bootstrap/static/js/main.aafdef78.chunk.js.map",
-  "static/js/1.b3b452d0.chunk.js": "/edx-bootstrap/static/js/1.b3b452d0.chunk.js",
-  "static/js/1.b3b452d0.chunk.js.map": "/edx-bootstrap/static/js/1.b3b452d0.chunk.js.map",
+  "main.css": "/edx-bootstrap/static/css/main.0e01c07f.chunk.css",
+  "main.js": "/edx-bootstrap/static/js/main.1b384d77.chunk.js",
+  "main.js.map": "/edx-bootstrap/static/js/main.1b384d77.chunk.js.map",
+  "static/js/1.ad5ac142.chunk.js": "/edx-bootstrap/static/js/1.ad5ac142.chunk.js",
+  "static/js/1.ad5ac142.chunk.js.map": "/edx-bootstrap/static/js/1.ad5ac142.chunk.js.map",
   "runtime~main.js": "/edx-bootstrap/static/js/runtime~main.cdd81761.js",
   "runtime~main.js.map": "/edx-bootstrap/static/js/runtime~main.cdd81761.js.map",
-  "static/css/main.19425449.chunk.css.map": "/edx-bootstrap/static/css/main.19425449.chunk.css.map",
+  "static/css/main.0e01c07f.chunk.css.map": "/edx-bootstrap/static/css/main.0e01c07f.chunk.css.map",
   "index.html": "/edx-bootstrap/index.html",
-  "precache-manifest.04f14888163936f60e5ffa4884b406ac.js": "/edx-bootstrap/precache-manifest.04f14888163936f60e5ffa4884b406ac.js",
+  "precache-manifest.da86fc4487d822cc9ec9705f71449436.js": "/edx-bootstrap/precache-manifest.da86fc4487d822cc9ec9705f71449436.js",
   "service-worker.js": "/edx-bootstrap/service-worker.js"
 }

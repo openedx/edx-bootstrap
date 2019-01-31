@@ -5,13 +5,13 @@
 
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
   color: color-yiq($background);
-  @include gradient-bg($background);
+  background-color: $background;
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
   @include hover {
     color: color-yiq($hover-background);
-    @include gradient-bg($hover-background);
+    background-color: $hover-background;
     border-color: $hover-border;
   }
 
@@ -55,8 +55,8 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
+    color: $darkerValue;
+    background: #F5F8FF;
     border-color: $active-border;
   }
 }
@@ -81,9 +81,8 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: #fff;
-    border-color: $active-border;
+    color: darken($color, 10%);
+    background: #F5F8FF;
   }
 }
 

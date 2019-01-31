@@ -162,6 +162,12 @@ input[type="button"] {
 // Extras
 //
 
+.btn {
+  svg {
+    margin: 0 .25em 0 -.25em;
+  }
+}
+
 .btn .spinner-border {
   position: relative;
   top: -.05em;

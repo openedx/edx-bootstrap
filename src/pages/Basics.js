@@ -17,17 +17,14 @@ export default class Basics extends React.Component {
         <p className="bd-lead">Basic style elements.</p>
 
         <DocSection id="colors" title="Colors">
-          <p className="bd-lead">Examples and usage guidelines for color styles.</p>
           <Colors />
         </DocSection>
 
         <DocSection id="typography" title="Typography">
-          <p className="bd-lead">Examples and usage guidelines for typography.</p>
           <Typography />
         </DocSection>
 
         <DocSection id="buttons" title="Buttons">
-          <p className="bd-lead">Examples and usage guidelines for button styles.</p>
           <ButtonsAndLinks />
         </DocSection>
 

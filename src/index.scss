@@ -41,11 +41,18 @@
 
 .color-label {
   // color: $text-muted;
-  font-weight: 600;
+  // font-weight: 600;
   margin-bottom: .25rem;
 }
 .text-swatch-sample {
   font-size: 2em;
   line-height: 1;
   margin-left: .5rem;
+}
+
+.bd-content {
+  h5.section {
+    margin: 1.5rem 0 1rem;
+    @extend .h6;
+  }
 }

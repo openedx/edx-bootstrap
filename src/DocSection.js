@@ -5,8 +5,8 @@ export default function DocSection(props) {
   return (
     <React.Fragment>
       <a href={`#${props.id}`} id={props.id} />
-      <section className="pt-3 pb-3">
-        <h3 className="mb-3">{props.title}</h3>
+      <section className="pt-3 pb-3 mb-5 mt-5">
+        <h2 className="mb-5">{props.title}</h2>
         {props.children}
       </section>
     </React.Fragment>

@@ -1,6 +1,7 @@
 import React from 'react';
 import chroma from 'chroma-js';
 import MeasuredItem from '../common/MeasuredItem';
+import DocSection from '../DocSection';
 
 
 const textAndInteractiveColors = [
@@ -43,7 +44,7 @@ const bgColors = [
 
 function Tile({children}) {
   return (
-    <div className="d-flex flex-column color-card" style={{height:'8rem'}}>
+    <div className="d-flex flex-column color-card" style={{height:'6rem'}}>
       {children}
     </div>
   );
@@ -55,7 +56,7 @@ function Swatch({color, textColor, className, children, style}) {
     style={{
       backgroundColor: color,
       flexBasis: '50%',
-      padding: '1rem 1rem',
+      padding: '.25rem .5rem',
       color: textColor || '#fff',
       ...style
     }}
@@ -69,13 +70,12 @@ function TextSwatch({color, bgColor, className, children, style}) {
       backgroundColor: bgColor || '#fff',
       border: `solid 2px ${color}`,
       flexBasis: '50%',
-      padding: '1rem 1rem',
+      padding: '.25rem .5rem',
       color: color,
       ...style
     }}
   >{children || color}</div>
 }
-
 
 export default function Colors() {
   const renderColor = ({name, value, forFill, forText, labelColor}) => {
@@ -91,22 +91,22 @@ export default function Colors() {
   }
 
   return (
-    <div className="pt-5">
-      <h5 className="mt-5 mb-3">Text & Interactive</h5>
-      <div className="row mb-5">{textAndInteractiveColors.map(renderColor)}</div>
+    <div>
+      <h5 className="section">Text & Interactive</h5>
+      <div className="row mb-3">{textAndInteractiveColors.map(renderColor)}</div>
       
-      <h5 className="mt-5 mb-3">Program Specific</h5>
-      <div className="row mb-5">{programColors.map(renderColor)}</div>
+      <h5 className="section">Program Specific</h5>
+      <div className="row mb-3">{programColors.map(renderColor)}</div>
       
-      <h5 className="mt-5 mb-3">Accent</h5>
-      <div className="row mb-5">{accentColors.map(renderColor)}</div>
+      <h5 className="section">Accent</h5>
+      <div className="row mb-3">{accentColors.map(renderColor)}</div>
 
-      <h5 className="mt-5 mb-3">System Colors</h5>
+      <h5 className="section">System Colors</h5>
       <div className="row mb-0">{systemColorsBG.map(renderColor)}</div>
-      <div className="row mb-5">{systemColorsUI.map(renderColor)}</div>
+      <div className="row mb-3">{systemColorsUI.map(renderColor)}</div>
       
-      <h5 className="mt-5 mb-3">Backgrounds</h5>
-      <div className="row mb-5">{bgColors.map(renderColor)}</div>
+      <h5 className="section">Backgrounds</h5>
+      <div className="row mb-3">{bgColors.map(renderColor)}</div>
     </div>
   );
 }

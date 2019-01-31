@@ -65,6 +65,7 @@ class App extends Component {
               <li><NavLink to="/Dropdowns">Dropdowns</NavLink></li>
               <li><NavLink to="/Modal">Modal</NavLink></li>
               <li><NavLink to="/Pagination">Pagination</NavLink></li>
+              <li><NavLink to="/Tables">Tables</NavLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
             <ul className="nav flex-column">
@@ -81,7 +82,7 @@ class App extends Component {
               <li><NavLink to="/Bootstrap/Popovers">Popovers</NavLink></li>
               <li><NavLink to="/Bootstrap/Collapse">Collapse</NavLink></li>
               <li><NavLink to="/Bootstrap/Progress">Progress</NavLink></li>
-              <li><NavLink to="/Bootstrap/Tables">Tables</NavLink></li>
+              
             </ul>
 
             <h5 className="bd-toc-link mt-4">External Links</h5>
@@ -117,6 +118,7 @@ class App extends Component {
           <Route path="/Dropdowns" component={Dropdowns} />
           <Route path="/Modal" component={Modal} />
           <Route path="/Pagination" component={Pagination} />
+          <Route path="/Tables" component={Tables} />
 
           {/* Miscellaneous */}
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
@@ -130,7 +132,7 @@ class App extends Component {
           <Route path="/Bootstrap/Grid" component={Grid} />
           <Route path="/Bootstrap/Popovers" component={Popovers} />
           <Route path="/Bootstrap/Progress" component={Progress} />
-          <Route path="/Bootstrap/Tables" component={Tables} />
+          
 
           </div>
         </div>

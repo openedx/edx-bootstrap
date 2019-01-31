@@ -6,8 +6,8 @@ import DocSection from '../DocSection';
 
 const textAndInteractiveColors = [
   { name: 'Black 100', value: '#111', forText: true, forFill: false, labelColor: '#fff' },
-  { name: 'Black 200', value: 'rgba(0,0,0,.75)', forText: true, forFill: false, labelColor: '#fff' },
-  { name: 'Black 400', value: 'rgba(0,0,0,.55)', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Black 200', value: '#414141', forText: true, forFill: false, labelColor: '#fff' },
+  { name: 'Black 400', value: 'rgba(65,65,65,0.70)', forText: true, forFill: false, labelColor: '#fff' },
   { name: 'Interactive UI', value: '#23419F', forText: true, forFill: true, labelColor: '#fff' },
   { name: 'Purple UI', value: '#45096B', forText: true, forFill: true, labelColor: '#fff' },
 ];
@@ -80,7 +80,7 @@ function TextSwatch({color, bgColor, className, children, style}) {
 export default function Colors() {
   const renderColor = ({name, value, forFill, forText, labelColor}) => {
     return (
-      <div className="col-3 mb-3">
+      <div className="col-md-6 col-lg-5 col-xl-4 mb-3">
         <label className="color-label">{name}</label>
         <Tile>
           {forFill ? <Swatch color={value} textColor={labelColor} /> : null}

@@ -29,8 +29,8 @@ export default class Modal extends React.Component {
             <p>Modal body text goes here.</p>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" className="btn btn-primary">Save changes</button>
+          <button type="button" className="btn btn-primary mr-2">Save changes</button>
+          <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -51,8 +51,8 @@ export default class Modal extends React.Component {
           <p>Woohoo, you're reading this text in a modal!</p>
         </div>
         <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" className="btn btn-primary">Save changes</button>
+          <button type="button" className="btn btn-primary mr-2">Save changes</button>
+          <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -94,8 +94,8 @@ export default class Modal extends React.Component {
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
         </div>
         <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" className="btn btn-primary">Save changes</button>
+          <button type="button" className="btn btn-primary mr-2">Save changes</button>
+          <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -120,8 +120,8 @@ export default class Modal extends React.Component {
           <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
         <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" className="btn btn-primary">Save changes</button>
+          <button type="button" className="btn btn-primary mr-2">Save changes</button>
+          <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -151,8 +151,8 @@ export default class Modal extends React.Component {
           <p><a href="#" className="tooltip-test" title data-container="#exampleModalPopovers" data-original-title="Tooltip">This link</a> and <a href="#" className="tooltip-test" title data-container="#exampleModalPopovers" data-original-title="Tooltip">that link</a> have tooltips on hover.</p>
         </div>
         <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" className="btn btn-primary">Save changes</button>
+          <button type="button" className="btn btn-primary mr-2">Save changes</button>
+          <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

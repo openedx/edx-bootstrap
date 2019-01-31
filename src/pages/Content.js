@@ -196,10 +196,10 @@ export default class Content extends React.Component {
               <label htmlFor="exampleFormControlFile1">Example file input</label>
               <input type="file" className="form-control-file" id="exampleFormControlFile1" />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary mr-2">
               Submit
             </button>
-            <button type="button" className="btn btn-secondary">
+            <button type="button" className="btn btn-link">
               Cancel
             </button>
           </form>

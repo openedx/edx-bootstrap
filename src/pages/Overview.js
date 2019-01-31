@@ -11,7 +11,7 @@ export default class Overview extends React.Component {
 
         <h2>A succinct yet powerful system.</h2>
         <p>
-          This library aims to be a set of <strong>powerful tools that remain as succinct as possible</strong>. We can get a lot done with just a few set of tools (<a href="https://airbnb.design/building-a-visual-language/">Check out Airbnb's thoughts on the matter</a>).
+          This library aims to be a set of <strong>powerful tools that remain as succinct as possible</strong>. We can get a lot done with just a few set of tools. Check out <a href="https://airbnb.design/building-a-visual-language/">Airbnb's thoughts on the matter</a>.
         </p>
 
         <h2>Minimize design & tech debt.</h2>

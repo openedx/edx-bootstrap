@@ -38,6 +38,7 @@ export default class Miscellaneous extends React.Component {
             Saving
           </button>
         </DocSection>
+        
       </main>
     );
   }

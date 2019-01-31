@@ -11,6 +11,7 @@ import Navigation from './pages/Navigation';
 import Content from './pages/Content';
 import Miscellaneous from './pages/Miscellaneous';
 import Overview from './pages/Overview';
+import Examples from './pages/Examples';
 
 import Alerts from './pages/bootstrap/Alerts';
 import Badge from './pages/bootstrap/Badge';
@@ -43,10 +44,8 @@ class App extends Component {
         <div className="row flex-xl-no-wrap">
           <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
             <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>
-
-            <h5 className="bd-toc-link mt-5"><NavLink to="/">Overview</NavLink></h5>
             <ul className="nav flex-column">
-              <li><HashLink to="/#kitchenSink">Kitchen Sink Examples</HashLink></li>
+              <li><HashLink to="/">Overview</HashLink></li>
             </ul>
             
             <h5 className="bd-toc-link mt-5"><NavLink to="/Basics#top">Basics</NavLink></h5>
@@ -77,6 +76,10 @@ class App extends Component {
             <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
             <ul className="nav flex-column">
               <li><HashLink to="/Miscellaneous#loaders">Spinners / Loaders</HashLink></li>
+            </ul>
+            <h5 className="bd-toc-link mt-4"><NavLink to="/Examples">Examples</NavLink></h5>
+            <ul className="nav flex-column">
+              <li><HashLink to="/Examples#example1">Example 1</HashLink></li>
             </ul>
 
             <h5 className="bd-toc-link mt-4">Styled Bootstrap Components</h5>
@@ -127,6 +130,7 @@ class App extends Component {
           <Route path="/Content#accordions" component={Content} />
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
           <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
+          <Route path="/Examples" component={Examples} />
 
           {/* Bootstrap documentation pages */}
           <Route path="/Bootstrap/Alerts" component={Alerts} />

@@ -43,17 +43,22 @@ class App extends Component {
         <div className="row flex-xl-no-wrap">
           <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
             <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>
+
+            <h5 className="bd-toc-link mt-5"><NavLink to="/">Overview</NavLink></h5>
+            <ul className="nav flex-column">
+              <li><HashLink to="/#kitchenSink">Kitchen Sink Examples</HashLink></li>
+            </ul>
+            
             <h5 className="bd-toc-link mt-5"><NavLink to="/Basics#top">Basics</NavLink></h5>
             <ul className="nav flex-column">
               <li><HashLink to="/Basics#colors">Colors</HashLink></li>
               <li><HashLink to="/Basics#typography">Typography</HashLink></li>
               <li><HashLink to="/Basics#buttons">Buttons</HashLink></li>
+              <li><HashLink to="/Basics#links">Links</HashLink></li>
               <li><HashLink to="/Basics#icons">Icons</HashLink></li>
-              <li><HashLink to="/Basics#themes">Themes</HashLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Navigation">Navigation</NavLink></h5>
             <ul className="nav flex-column">
-              <li><HashLink to="/Navigation#links">Links</HashLink></li>
               <li><HashLink to="/Navigation#breadcrumbs">Breadcrumbs</HashLink></li>
               <li><HashLink to="/Navigation#tabs">Tabs</HashLink></li>
               <li><HashLink to="/Navigation#search">Search</HashLink></li>

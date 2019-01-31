@@ -1,5 +1,7 @@
 .nav-link {
   &.active {
     color: $textBlack100;
+    text-decoration: none;
+    font-weight: $font-weight-semi-bold;
   }
 }

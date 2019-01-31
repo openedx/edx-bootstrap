@@ -32,8 +32,27 @@ $bgLightBlue: #f5f8ff;
 $bgYellow: #Fffdf3;
 
 
-
-
+$edxBackgrounds: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$edxBackgrounds: map-merge(
+  (
+    "program-masters": $programMasters,
+    "program-professional-certificate": $programProfessionalCertificate,
+    "program-micro-masters": $programMicroMasters,
+    "system-success": $bgSystemSuccess,
+    "system-info": $bgSystemInfo,
+    "system-danger": $bgSystemDanger,
+    "system-warning": $bgSystemWarning,
+    "ui-system-success": $uiSystemSuccess,
+    "ui-system-info": $uiSystemInfo,
+    "ui-system-danger": $uiSystemDanger,
+    "white": $bgWhite,
+    "light-gray": $bgLightGray,
+    "light-blue": $bgLightBlue,
+    "yellow": $bgYellow,
+  ),
+  $edxBackgrounds
+);
 
 // Custom outline focus states
 $focusOutlineShadow: 0 0 0 2px #fff, 0 0 0 4px #71c9f8;

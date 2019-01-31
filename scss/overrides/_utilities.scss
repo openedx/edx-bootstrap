@@ -1,0 +1,3 @@
+@each $color, $value in $edxBackgrounds {
+  @include bg-variant(".bg-#{$color}", $value);
+}

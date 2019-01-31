@@ -5,6 +5,7 @@
 @import './overrides/dropdowns';
 @import './overrides/modals';
 @import './overrides/typography';
+@import './overrides/utilities';
 @import './navs';
 
 
@@ -22,4 +23,10 @@ a {
   svg {
     margin-right: .25em;
   }
+}
+
+
+.container,
+.container-fluid {
+  max-width: 1440px;
 }

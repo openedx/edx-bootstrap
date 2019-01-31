@@ -21,10 +21,6 @@
     color: color-yiq($background);
     background-color: $background;
     border-color: $border;
-    // Remove CSS gradients if they're enabled
-    @if $enable-gradients {
-      background-image: none;
-    }
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -32,22 +28,21 @@
   .show > &.dropdown-toggle {
     color: color-yiq($active-background);
     background-color: $active-background;
-    @if $enable-gradients {
-      background-image: none; // Remove the gradient for the pressed/active state
-    }
     border-color: $active-border;
   }
 }
 
 @mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  $darkerValue: darken($color, 7.5%);
+  
   color: $color;
   border-color: $color;
-
-  $darkerValue: darken($color, 7.5%);
+  background-color: color($darkerValue);
+  
   @include hover {
     color: $darkerValue;
     background: #F5F8FF;
-    // background-color: $active-background;
+    background-color: color-yiq($darkerValue);
     border-color: $darkerValue;
   }
 

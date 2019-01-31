@@ -5,10 +5,9 @@ import { HashLink } from 'react-router-hash-link';
 import ScrollToTop from './ScrollToTop';
 import './App.scss';
 
-import Header from './Header';
 import Basics from './pages/Basics';
 import Navigation from './pages/Navigation';
-import Content from './pages/Content';
+import Forms from './pages/Forms';
 import Miscellaneous from './pages/Miscellaneous';
 import Overview from './pages/Overview';
 import Examples from './pages/Examples';
@@ -16,22 +15,14 @@ import GettingStarted from './pages/GettingStarted'
 
 import Alerts from './pages/bootstrap/Alerts';
 import Badge from './pages/bootstrap/Badge';
-import Breadcrumb from './pages/bootstrap/Breadcrumb';
-import Card from './pages/bootstrap/Card';
+import Cards from './pages/bootstrap/Cards';
 import Collapse from './pages/bootstrap/Collapse';
 import Dropdowns from './pages/bootstrap/Dropdowns';
 import Grid from './pages/bootstrap/Grid';
-import InputGroup from './pages/bootstrap/InputGroup';
-import Jumbotron from './pages/bootstrap/Jumbotron';
-import LayoutUtils from './pages/bootstrap/LayoutUtils';
-import ListGroup from './pages/bootstrap/ListGroup';
-import MediaObject from './pages/bootstrap/MediaObject';
 import Modal from './pages/bootstrap/Modal';
-import Navs from './pages/bootstrap/Navs';
 import Pagination from './pages/bootstrap/Pagination';
 import Popovers from './pages/bootstrap/Popovers';
 import Progress from './pages/bootstrap/Progress';
-import Spinners from './pages/bootstrap/Spinners';
 import Tables from './pages/bootstrap/Tables';
 
 
@@ -47,7 +38,7 @@ class App extends Component {
             <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>
             <ul className="nav flex-column">
               <li><HashLink to="/">Overview</HashLink></li>
-              <li><HashLink to="/GettingStarted">GettingStarted</HashLink></li>
+              <li><HashLink to="/GettingStarted">Getting Started</HashLink></li>
             </ul>
             
             <h5 className="bd-toc-link mt-5"><NavLink to="/Basics#top">Basics</NavLink></h5>
@@ -61,19 +52,19 @@ class App extends Component {
             <h5 className="bd-toc-link mt-4"><NavLink to="/Navigation">Navigation</NavLink></h5>
             <ul className="nav flex-column">
               <li><HashLink to="/Navigation#breadcrumbs">Breadcrumbs</HashLink></li>
+              <li><HashLink to="/Navigation#navs">Navs</HashLink></li>
               <li><HashLink to="/Navigation#tabs">Tabs</HashLink></li>
               <li><HashLink to="/Navigation#search">Search</HashLink></li>
             </ul>
-            <h5 className="bd-toc-link mt-4"><NavLink to="/Content">Content</NavLink></h5>
+            <h5 className="bd-toc-link mt-4">Content</h5>
             <ul className="nav flex-column">
-              <li><HashLink to="/Content#forms">Forms</HashLink></li>
-              <li><HashLink to="/Content#cards">Cards</HashLink></li>
-              <li><HashLink to="/Content#heroes">Heroes</HashLink></li>
-              <li><HashLink to="/Content#tables">Tables</HashLink></li>
-              <li><HashLink to="/Content#dialogs">Dialogs</HashLink></li>
-              <li><HashLink to="/Content#factSheet">Fact Sheet</HashLink></li>
-              <li><HashLink to="/Content#quizzes">Quizzes</HashLink></li>
-              <li><HashLink to="/Content#accordions">Accordions</HashLink></li>
+              <li><HashLink to="/Forms">Forms</HashLink></li>
+              <li><HashLink to="/Cards">Cards</HashLink></li>
+              <li><NavLink to="/Alerts">Alerts</NavLink></li>
+              <li><NavLink to="/Badge">Badge</NavLink></li>
+              <li><NavLink to="/Dropdowns">Dropdowns</NavLink></li>
+              <li><NavLink to="/Modal">Modal</NavLink></li>
+              <li><NavLink to="/Pagination">Pagination</NavLink></li>
             </ul>
             <h5 className="bd-toc-link mt-4"><NavLink to="/Miscellaneous">Miscellaneous</NavLink></h5>
             <ul className="nav flex-column">
@@ -84,21 +75,12 @@ class App extends Component {
               <li><HashLink to="/Examples#example1">Example 1</HashLink></li>
             </ul>
 
-            <h5 className="bd-toc-link mt-4">Styled Bootstrap Components</h5>
+            <h5 className="bd-toc-link mt-4">In Progress Components</h5>
             <ul className="nav flex-column">
-              <li><NavLink to="/Bootstrap/Alerts">Alerts</NavLink></li>
-              <li><NavLink to="/Bootstrap/Badge">Badge</NavLink></li>
-              <li><NavLink to="/Bootstrap/Breadcrumb">Breadcrumb</NavLink></li>
-              <li><NavLink to="/Bootstrap/Card">Card</NavLink></li>
-              <li><NavLink to="/Bootstrap/Collapse">Collapse</NavLink></li>
-              <li><NavLink to="/Bootstrap/Dropdowns">Dropdowns</NavLink></li>
               <li><NavLink to="/Bootstrap/Grid">Grid</NavLink></li>
-              <li><NavLink to="/Bootstrap/Modal">Modal</NavLink></li>
-              <li><NavLink to="/Bootstrap/Navs">Navs</NavLink></li>
-              <li><NavLink to="/Bootstrap/Pagination">Pagination</NavLink></li>
               <li><NavLink to="/Bootstrap/Popovers">Popovers</NavLink></li>
+              <li><NavLink to="/Bootstrap/Collapse">Collapse</NavLink></li>
               <li><NavLink to="/Bootstrap/Progress">Progress</NavLink></li>
-              <li><NavLink to="/Bootstrap/Spinners">Spinners</NavLink></li>
               <li><NavLink to="/Bootstrap/Tables">Tables</NavLink></li>
             </ul>
 
@@ -112,43 +94,42 @@ class App extends Component {
           <Route exact path="/" component={Overview} />
           <Route exact path="/GettingStarted" component={GettingStarted} />
           <Route exact path="/Basics" component={Basics} />
+
+          {/* Basics */}
           <Route path="/Basics#colors" component={Basics} />
           <Route path="/Basics#typography" component={Basics} />
           <Route path="/Basics#buttons" component={Basics} />
           <Route path="/Basics#icons" component={Basics} />
           <Route path="/Basics#themes" component={Basics} />
+
+          {/* Navigation */}
           <Route exact path="/Navigation" component={Navigation} />
           <Route path="/Navigation#links" component={Navigation} />
           <Route path="/Navigation#breadcrumbs" component={Navigation} />
           <Route path="/Navigation#tabs" component={Navigation} />
           <Route path="/Navigation#search" component={Navigation} />
-          <Route exact path="/Content" component={Content} />
-          <Route path="/Content#forms" component={Content} />
-          <Route path="/Content#cards" component={Content} />
-          <Route path="/Content#heroes" component={Content} />
-          <Route path="/Content#tables" component={Content} />
-          <Route path="/Content#dialogs" component={Content} />
-          <Route path="/Content#factSheets" component={Content} />
-          <Route path="/Content#quizzes" component={Content} />
-          <Route path="/Content#accordions" component={Content} />
+
+          {/* Content */}
+          <Route path="/Forms" component={Forms} />
+          <Route path="/Cards" component={Cards} />
+          <Route path="/Alerts" component={Alerts} />
+          <Route path="/Badge" component={Badge} />
+          <Route path="/Dropdowns" component={Dropdowns} />
+          <Route path="/Modal" component={Modal} />
+          <Route path="/Pagination" component={Pagination} />
+
+          {/* Miscellaneous */}
           <Route exact path="/Miscellaneous" component={Miscellaneous} />
           <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
+
+          {/* Examples */}
           <Route path="/Examples" component={Examples} />
 
           {/* Bootstrap documentation pages */}
-          <Route path="/Bootstrap/Alerts" component={Alerts} />
-          <Route path="/Bootstrap/Badge" component={Badge} />
-          <Route path="/Bootstrap/Breadcrumb" component={Breadcrumb} />
-          <Route path="/Bootstrap/Card" component={Card} />
           <Route path="/Bootstrap/Collapse" component={Collapse} />
-          <Route path="/Bootstrap/Dropdowns" component={Dropdowns} />
           <Route path="/Bootstrap/Grid" component={Grid} />
-          <Route path="/Bootstrap/Modal" component={Modal} />
-          <Route path="/Bootstrap/Navs" component={Navs} />
-          <Route path="/Bootstrap/Pagination" component={Pagination} />
           <Route path="/Bootstrap/Popovers" component={Popovers} />
           <Route path="/Bootstrap/Progress" component={Progress} />
-          <Route path="/Bootstrap/Spinners" component={Spinners} />
           <Route path="/Bootstrap/Tables" component={Tables} />
 
           </div>

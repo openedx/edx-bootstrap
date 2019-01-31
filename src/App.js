@@ -41,7 +41,7 @@ class App extends Component {
       <Router basename="edx-bootstrap/">
       {/* <ScrollToTop>  - this was interfering with anchor tags, unfortunately.  Commenting out for now so nav works decently.  */}
       <div>
-        <div className="container-fluid">
+        <div className="container-fluid m-0">
         <div className="row flex-xl-no-wrap">
           <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
             <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>

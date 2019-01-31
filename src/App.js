@@ -44,7 +44,7 @@ class App extends Component {
         <div className="container-fluid m-0">
         <div className="row flex-xl-no-wrap">
           <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <h3 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h3>
+            <h5 className="bd-toc-link mt-0 pt-0"><NavLink to="/">edX Bootstrap</NavLink></h5>
             <ul className="nav flex-column">
               <li><HashLink to="/">Overview</HashLink></li>
               <li><HashLink to="/GettingStarted">GettingStarted</HashLink></li>

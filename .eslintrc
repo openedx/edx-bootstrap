@@ -11,6 +11,7 @@
         ]
       }
     ],
+    "react/jsx-filename-extension": false,
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/340#issuecomment-338424908
     "jsx-a11y/anchor-is-valid": [ "error", {
       "components": [ "Link" ],

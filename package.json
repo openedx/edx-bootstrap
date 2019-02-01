@@ -2,7 +2,6 @@
   "name": "edx-bootstrap",
   "version": "2.0.0",
   "private": true,
-  "dependencies": {},
   "homepage": "http://edx.github.io/edx-bootstrap",
   "scripts": {
     "start": "react-scripts start",
@@ -26,22 +25,25 @@
   ],
   "devDependencies": {
     "@edx/stylelint-config-edx": "^1.1.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.13",
-    "@fortawesome/free-solid-svg-icons": "^5.7.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-eslint": "^9.0.0",
-    "bootstrap": "^4.2.1",
-    "chroma-js": "^2.0.2",
     "eslint": "^4.10.0",
     "eslint-config-edx": "^4.0.3",
     "gh-pages": "^2.0.1",
-    "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
+    "react-scripts": "2.1.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.13",
+    "@fortawesome/free-solid-svg-icons": "^5.7.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "bootstrap": "^4.2.1",
+    "chroma-js": "^2.0.2",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.1",
-    "react-scripts": "2.1.3"
+    "react-router-hash-link": "^1.2.1"
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import ScrollToTop from './ScrollToTop';
 
@@ -27,7 +27,7 @@ import Tables from './pages/bootstrap/Tables';
 class App extends Component {
   render() {
     return (
-      <Router basename="edx-bootstrap/">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* <ScrollToTop>  - this was interfering with anchor tags, unfortunately.  Commenting out for now so nav works decently.  */}
       <div>
         <div className="container-fluid m-0">
@@ -136,7 +136,7 @@ class App extends Component {
         </div>
       </div>
       {/* </ScrollToTop> */}
-      </Router>
+      </BrowserRouter>
     );
   }
 }

@@ -9,9 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default class Basics extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">

@@ -10,7 +10,7 @@ export default class Card extends React.Component {
           <h4 className="mb-3">Bootstrap Cards</h4>
           <div class="d-flex mb-4">
             <div class="card mr-2" style={{ width: 286 }}>
-              <img class="card-img-top" src="https://placebear.com/286/180" alt="Card image cap" />
+              <img class="card-img-top" src="https://placebear.com/286/180" alt="A magical card" />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">

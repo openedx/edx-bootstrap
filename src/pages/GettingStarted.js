@@ -1,5 +1,4 @@
 import React from 'react';
-import DocSection from '../DocSection';
 
 export default class GettingStarted extends React.Component {
   render() {

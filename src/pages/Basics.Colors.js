@@ -225,7 +225,7 @@ export default function Colors() {
     const {name, value, forBG, forText } = colors[colorKey];
     const contrastColor = chroma(value).luminance() > .5 ? '#111' : '#fff';
     return (
-      <div className="col-md-6 col-lg-5 col-xl-4 mb-3">
+      <div key={colorKey} className="col-md-6 col-lg-5 col-xl-4 mb-3">
         <label className="color-label">{name}</label>
         <Tile>
           {forBG  ? <Swatch color={value} textColor={contrastColor} /> : null}
@@ -275,7 +275,7 @@ export default function Colors() {
             const contrastColor = chroma(value).luminance() > .5 ? '#000' : '#fff';
 
             return (
-              <tr>
+              <tr key={colorKey}>
                 <td>
                   {name}<br />
                   {value}

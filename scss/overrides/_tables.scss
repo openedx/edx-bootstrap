@@ -13,12 +13,15 @@
     @include table-border-top;
     @include table-border-right;
   }
+
   td {
     @include table-border-top;
     @include table-border-right;
   }
+
   thead th {
     @include table-border-right;
+
     border-bottom: 1px solid $gray-300;
   }
 }

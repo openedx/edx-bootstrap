@@ -8,8 +8,10 @@
     "start": "react-scripts start",
     "build-docs": "react-scripts build",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/edx-bootstrap.scss dist/css/edx-bootstrap.css",
+    "lint": "stylelint ./scss/**/*.scss",
+    "link-fix": "stylelint sass/**/*.scss --fix",
+    "pre-commit": "npm run lint && npm run css-compile",
     "test": "react-scripts test",
-    "lint": "eslint --ext .js --ext .jsx .",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
@@ -23,6 +25,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@edx/stylelint-config-edx": "^1.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",

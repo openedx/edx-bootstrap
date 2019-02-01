@@ -41,8 +41,7 @@
   
   @include hover {
     color: $darkerValue;
-    background: $bgLightBlue;
-    background-color: color-yiq($darkerValue);
+    background-color: $bgLightBlue;
     border-color: $darkerValue;
   }
 

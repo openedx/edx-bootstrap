@@ -156,7 +156,7 @@ export default class Forms extends React.Component {
                       value={this.state.notMittensOrBoots}
                       onChange={this.handleChange}
                     />
-                    Neither
+                    <span className="form-check-label">Neither</span> {/* Using the span and className here is necessary to get bootstrap to change the text color */}
                   </label>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default class Forms extends React.Component {
                       checked={this.state.floofiness === 'not'}
                       onChange={this.handleChange}
                     />
-                    Not floofy
+                    <span className="form-check-label">Not floofy</span> {/* Using the span and className here is necessary to get bootstrap to change the text color */}
                   </label>
                 </div>
               </div>

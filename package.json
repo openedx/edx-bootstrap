@@ -29,7 +29,7 @@
     "babel-eslint": "^9.0.0",
     "bootstrap": "^4.2.1",
     "chroma-js": "^2.0.2",
-    "eslint": "^5.13.0",
+    "eslint": "^4.10.0",
     "eslint-config-edx": "^4.0.3",
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",

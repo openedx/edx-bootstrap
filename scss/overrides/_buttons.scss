@@ -1,94 +1,36 @@
 
 //
-// Base styles
+// This field defines a new variant of button (inverse)
+// and adds a focus outline to all buttons on :focus
 //
 
-.btn {
-  display: inline-block;
-  font-weight: $btn-font-weight;
-  color: $body-color;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
-  padding: $btn-padding-y $btn-padding-x;
-  font-size: $btn-font-size;
-  line-height: $btn-line-height;
-  border-radius: $btn-border-radius;
+@mixin button-inverse-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: $color;
+  border-color: transparent;
+  background-color: #fff;
 
-  // transition: ...tbd;
-
-  &:hover,
-  &.hover {
-    color: $body-color;
-    text-decoration: none;
+  @include hover {
+    color: darken($color, 7.5%);
+    background-color: $pale-blue;
+    border-color: transparent;
   }
 
-  &:focus,
-  &.focus {
-    // outline: 0;
-    box-shadow: $btn-focus-box-shadow;
-  }
-
-  // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    @include box-shadow(none);
-
-    opacity: $btn-disabled-opacity;
-  }
-
-  // Opinionated: add "hand" cursor to non-disabled .btn elements
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
+    color: $color;
+    background-color: transparent;
   }
 
   &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    // create the effect of being pushed in
-    @include box-shadow($btn-active-box-shadow);
-
-    &:focus {
-      // focus & create the effect of being pushed in
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
-  }
-
-  // Things you can put inside a button
-  svg {
-    margin: 0 0.25em 0 -0.25em;
-  }
-
-  .spinner-border {
-    position: relative;
-    top: -0.05em;
-    margin: 0 0.375em 0 -0.25em;
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: darken($color, 10%);
+    background: $pale-blue;
   }
 }
 
-// Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset:disabled a.btn {
-  pointer-events: none;
-}
 
-
-//
-// Alternate buttons
-//
-
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value);
-  }
-}
+// Create inverse variants
 
 @each $color, $value in $theme-colors {
   .btn-inverse-#{$color} {
@@ -97,74 +39,34 @@ fieldset:disabled a.btn {
 }
 
 
-//
-// Link buttons
-//
+// Add focus outlines to all of them. Box shadow focus is turned off in variables.
 
-// Make a button look and behave like a link
-.btn-link {
-  font-weight: $font-weight-normal;
-  color: $link-color;
-
-  @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-
-  &:focus,
-  &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
-    pointer-events: none;
-  }
-
-  // No need for an active state here
-}
-
-
-//
-// Button Sizes
-//
-
-.btn-lg {
-  padding: $btn-padding-y-lg $btn-padding-x-lg;
-  font-size: $btn-font-size-lg;
-  line-height: $btn-line-height-lg;
-  border-radius: $btn-border-radius-lg;
-}
-
-.btn-sm {
-  padding: $btn-padding-y-sm $btn-padding-x-sm;
-  font-size: $btn-font-size-sm;
-  line-height: $btn-line-height-sm;
-  border-radius: $btn-border-radius-sm;
-}
-
-
-//
-// Block button
-//
-
-.btn-block {
-  display: block;
-  width: 100%;
-
-  // Vertically space out multiple block buttons
-  + .btn-block {
-    margin-top: $btn-block-spacing-y;
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    &.focus,
+    &:focus {
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
   }
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    &.focus,
+    &:focus {
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-inverse-#{$color} {
+    &.focus,
+    &:focus {
+      outline: 1px dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
   }
 }

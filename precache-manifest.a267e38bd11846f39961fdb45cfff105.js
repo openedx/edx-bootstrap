@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/edx-bootstrap/static/css/main.569111b7.chunk.css"
   },
   {
-    "revision": "5a05f250031b7dbfc30cf4790d65747a",
+    "revision": "9f9c408322195cba086a64e796c91d8f",
     "url": "/edx-bootstrap/index.html"
   }
 ];

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-
 import ScrollToTop from './ScrollToTop';
-import './App.scss';
 
 import Basics from './pages/Basics';
 import Navigation from './pages/Navigation';

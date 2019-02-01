@@ -6,10 +6,10 @@ node_js:
     - 8
 
 install:
-    - make install
+    - npm install
 
 script:
-    - make test
+    - npm run compile-css
 
 deploy:
     provider: npm

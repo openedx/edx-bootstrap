@@ -1,204 +1,283 @@
 import React from 'react';
+import classNames from 'classnames';
+
 import DocSection from '../DocSection';
 
+const defaultState = {
+  email: '',
+  password: '',
+  mittens: false,
+  boots: false,
+  notMittensOrBoots: false,
+  floofiness: null,
+  catCount: 3,
+  catName: '',
+  birthday: '',
+  nappingSpot: '',
+  catPicture: '',
+};
+
 export default class Forms extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: '',
+      password: '',
+      mittens: false,
+      boots: false,
+      notMittensOrBoots: false,
+      floofiness: null,
+      catCount: 3,
+      catName: '',
+      birthday: '',
+      nappingSpot: '',
+      catPicture: '',
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
+  }
+
+  handleChange(event) {
+    const { name } = event.target;
+    const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit(e) {
+    this.validate();
+
+    e.preventDefault();
+    return false;
+  }
+
+  handleCancel(e) {
+    this.setState(defaultState);
+    e.preventDefault();
+    return false;
+  }
+
+  validate() {}
+
   render() {
     return (
       <main className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
         <DocSection id="forms" title="Forms">
-        <p className="bd-lead">Examples and usage guidelines for form control styles.</p>
-          <form>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="inputPassword5">Password</label>
-              <input
-                type="password"
-                id="inputPassword5"
-                className="form-control"
-                aria-describedby="passwordHelpBlock"
-                style={{
-                  backgroundImage: 'url("data:image/png',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundAttachment: 'scroll',
-                  backgroundSize: '16px 18px',
-                  backgroundPosition: '98% 50%'
-                }}
-              />
-              <small id="passwordHelpBlock" className="form-text text-muted">
-                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
-                special characters, or emoji.
-              </small>
-            </div>
-            <div className="form-group">
-              <label>Checkboxes</label>
-              <div className="form-check">
-                <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
-                <label className="form-check-label" htmlFor="defaultCheck1">
-                  Default checkbox
-                </label>
-              </div>
-              <div className="form-check">
-                <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck2" disabled />
-                <label className="form-check-label" htmlFor="defaultCheck2">
-                  Disabled checkbox
-                </label>
-              </div>
-            </div>
-            <div className="form-group">
-              <label>Radio Buttons</label>
-              <div className="form-check">
+          <h3>Notes</h3>
+          <ul>
+            <li>
+              From groups should be stacked. Label first, then input, then help text below that.
+            </li>
+            <li>
+              If there is an error state for the input, it should go below the input, above the help
+              text.
+            </li>
+            <li>
+              Error states should be included at the top of the form with anchor links down to the
+              actual errored fields.
+            </li>
+          </ul>
+          <form action="" className="needs-validation">
+            <div className="bd-example">
+              <div className="form-group">
+                <label htmlFor="exampleFormControlInput1">Cat's Email address</label>
                 <input
-                  className="form-check-input"
-                  type="radio"
-                  name="exampleRadios"
-                  id="exampleRadios1"
-                  defaultValue="option1"
-                  defaultChecked
+                  type="email"
+                  className="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
                 />
-                <label className="form-check-label" htmlFor="exampleRadios1">
-                  Default radio
-                </label>
               </div>
-              <div className="form-check">
+              <div className="form-group">
+                <label htmlFor="inputPassword5">Secret Cat Password</label>
                 <input
-                  className="form-check-input"
-                  type="radio"
-                  name="exampleRadios"
-                  id="exampleRadios2"
-                  defaultValue="option2"
+                  type="password"
+                  id="inputPassword5"
+                  className="form-control"
+                  aria-describedby="passwordHelpBlock"
+                  onChange={this.handleChange}
+                  value={this.state.password}
+                  name="password"
                 />
-                <label className="form-check-label" htmlFor="exampleRadios2">
-                  Second default radio
-                </label>
+                <div className="valid-feedback">Looks good!</div>
+                <small id="passwordHelpBlock" className="form-text text-muted">
+                  Your password must be 8-32 characters long, contain letters and numbers, and must
+                  not contain spaces, special characters, or emoji.
+                </small>
               </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="exampleRadios"
-                  id="exampleRadios3"
-                  defaultValue="option3"
-                  disabled
-                />
-                <label className="form-check-label" htmlFor="exampleRadios3">
-                  Disabled radio
-                </label>
+              <div className="form-group">
+                <label>Does your cat have mittens and boots?</label>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="catClothes1"
+                    name="mittens"
+                    value={this.state.mittens}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="catClothes1">
+                    Mittens
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="catClothes2"
+                    name="boots"
+                    value={this.state.boots}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="catClothes2">
+                    Boots
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="catClothes3"
+                    disabled
+                    name="notMittensOrBoots"
+                    value={this.state.notMittensOrBoots}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="catClothes3">
+                    Neither
+                  </label>
+                </div>
               </div>
-            </div>
-            <div className="form-group">
-              <label style={{ display: 'block' }}>Inline Radio Buttons</label>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  defaultValue="option1"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio1">
-                  1
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  defaultValue="option2"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio2">
-                  2
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  defaultValue="option3"
-                  disabled
-                />
-                <label className="form-check-label" htmlFor="inlineRadio3">
-                  3 (disabled)
-                </label>
-              </div>
-            </div>
-            <div className="form-group">
-              <label style={{ display: 'block' }}>Inline Checkboxes</label>
-              <div className="form-check form-check-inline">
-                <input className="form-check-input" type="checkbox" id="inlineCheckbox1" defaultValue="option1" />
-                <label className="form-check-label" htmlFor="inlineCheckbox1">
-                  1
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input className="form-check-input" type="checkbox" id="inlineCheckbox2" defaultValue="option2" />
-                <label className="form-check-label" htmlFor="inlineCheckbox2">
-                  2
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="inlineCheckbox3"
-                  defaultValue="option3"
-                  disabled
-                />
-                <label className="form-check-label" htmlFor="inlineCheckbox3">
-                  3 (disabled)
-                </label>
-              </div>
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="exampleFormControlSelect1">Example select</label>
-              <select className="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <div className="form-group">
+                <label>How floofy is your cat?</label>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="floofiness"
+                    id="floofiness1"
+                    value="very"
+                    checked={this.state.floofiness === 'very'}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="floofiness1">
+                    Very floofy
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="floofiness"
+                    id="floofiness2"
+                    value="somewhat"
+                    checked={this.state.floofiness === 'somewhat'}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="floofiness2">
+                    Somewhat floofy
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="floofiness"
+                    id="floofiness3"
+                    disabled
+                    value="not"
+                    checked={this.state.floofiness === 'not'}
+                    onChange={this.handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="floofiness3">
+                    Not floofy
+                  </label>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="exampleFormControlSelect1">How many cats do you have?</label>
+                <select
+                  className="form-control"
+                  id="exampleFormControlSelect1"
+                  name="catCount"
+                  value={this.state.catCount}
+                  onChange={this.handleChange}
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlSelect2">Which is your cat's name?</label>
+                <select
+                  size={5}
+                  className="form-control"
+                  id="exampleFormControlSelect2"
+                  name="catName"
+                  value={this.state.catName}
+                  onChange={this.handleChange}
+                >
+                  <option>Snowball</option>
+                  <option>Taco</option>
+                  <option>Dr. Teeth</option>
+                  <option>Albus Dumblemeow</option>
+                  <option>Kitty</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlDate">When was your cat born?</label>
+                <input
+                  type="date"
+                  className="form-control"
+                  name="birthday"
+                  value={this.state.birthday}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlTextarea1">
+                  Describe your cat's favorite napping spot
+                </label>
+                <textarea
+                  className="form-control"
+                  id="exampleFormControlTextarea1"
+                  name="nappingSpot"
+                  value={this.state.nappingSpot}
+                  rows={3}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlFile1">Upload a picture of your cat</label>
+                <input
+                  type="file"
+                  className="form-control-file"
+                  name="catPicture"
+                  value={this.state.catPicture}
+                  id="exampleFormControlFile1"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <button type="submit" className="btn btn-primary mr-2" onClick={this.handleSubmit}>
+                Submit
+              </button>
+              <button type="button" className="btn btn-link" onClick={this.handleCancel}>
+                Cancel
+              </button>
             </div>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlSelect2">Example multiple select</label>
-              <select multiple className="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlDate">Example date</label>
-              <input type="date" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
-              <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={''} />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlFile1">Example file input</label>
-              <input type="file" className="form-control-file" id="exampleFormControlFile1" />
-            </div>
-            <button type="submit" className="btn btn-primary mr-2">
-              Submit
-            </button>
-            <button type="button" className="btn btn-link">
-              Cancel
-            </button>
           </form>
         </DocSection>
       </main>

@@ -41,7 +41,7 @@
   
   @include hover {
     color: $darkerValue;
-    background-color: $bgLightBlue;
+    background-color: $pale-blue;
     border-color: $darkerValue;
   }
 
@@ -55,7 +55,7 @@
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: $darkerValue;
-    background: $bgLightBlue;
+    background: $pale-blue;
     border-color: $active-border;
   }
 }
@@ -67,7 +67,7 @@
 
   @include hover {
     color: darken($color, 7.5%);
-    background-color: $bgLightBlue;
+    background-color: $pale-blue;
     border-color: transparent;
   }
 
@@ -81,7 +81,7 @@
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: darken($color, 10%);
-    background: $bgLightBlue;
+    background: $pale-blue;
   }
 }
 

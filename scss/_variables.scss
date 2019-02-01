@@ -3,63 +3,6 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// edX Colors
-
-$textBlack100: #111;
-$textBlack200: #414141;
-$textBlack400: rgba(65,65,65,0.70);
-$uiInteractive: #23419f;
-$uiPurple: #45096b;
-
-
-$programMasters: #414141;
-$programProfessionalCertificate: #9a1f60;
-$programMicroMasters: #065784;
-
-
-$bgSystemSuccess: #DFF0D8;
-$bgSystemInfo: #D8EDF8;
-$bgSystemDanger: #F2DEDE;
-$bgSystemWarning: #FCF8E2;
-$uiSystemSuccess: #008100;
-$uiSystemInfo: #065784;
-$uiSystemDanger: #A2221D;
-
-
-$bgWhite: #fff;
-$bgLightGray: #fcfcfc;
-$bgLightBlue: #f5f8ff;
-$bgYellow: #Fffdf3;
-
-
-$edxBackgrounds: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$edxBackgrounds: map-merge(
-  (
-    "program-masters": $programMasters,
-    "program-professional-certificate": $programProfessionalCertificate,
-    "program-micro-masters": $programMicroMasters,
-    "system-success": $bgSystemSuccess,
-    "system-info": $bgSystemInfo,
-    "system-danger": $bgSystemDanger,
-    "system-warning": $bgSystemWarning,
-    "ui-system-success": $uiSystemSuccess,
-    "ui-system-info": $uiSystemInfo,
-    "ui-system-danger": $uiSystemDanger,
-    "white": $bgWhite,
-    "light-gray": $bgLightGray,
-    "light-blue": $bgLightBlue,
-    "yellow": $bgYellow,
-  ),
-  $edxBackgrounds
-);
-
-// Custom outline focus states
-$focusOutlineShadow: 0 0 0 2px #fff, 0 0 0 4px #71c9f8;
-
-
-
-
 
 // Color system
 
@@ -69,10 +12,10 @@ $gray-200: #e7e7e7 !default;
 $gray-300: #d9d9d9 !default;
 $gray-400: #c8c8c8 !default;
 $gray-500: #a0a0a0 !default;
-$gray-600: $textBlack400;
-$gray-700: #414141 !default;
+$gray-600: rgba(65, 65, 65, .7);
+$gray-700: #414141;
 $gray-800: #313131 !default;
-$gray-900: $textBlack100;
+$gray-900: #111;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -92,62 +35,91 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    $uiInteractive;
-$indigo:  #6610f2 !default;
-$purple:  #45096b !default;
-$pink:    #c2387d !default;
-$red:     #A2221D !default;
-$orange:  #fd7e14 !default;
-$yellow:  #DDC047 !default;
-$green:   #008100 !default;
-$teal:    #20c997 !default;
-$cyan:    #00a0e3 !default;
+$blue:        #23419F;
+$dark-blue:   #065784;
+$indigo:      #45096B;
+$red:         #A2221D;
+$yellow:      #FFBF18;
+$green:       #008100;
+$slate:       $gray-700;
+$magenta:     #9A1F60;
 
+// Background only colors
+$pale-gray: #fcfcfc;
+$pale-blue: #f5f8ff;
+$pale-yellow: #Fffdf3;
+$light-green: #DFF0D8;
+$light-blue: #D8EDF8;
+$light-red: #F2DEDE;
+$light-yellow: #FCF8E2;
 
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "blue":           $blue,
+    "dark-blue":      $dark-blue,
+    "indigo":         $indigo,
+    "red":            $red,
+    "yellow":         $yellow,
+    "green":          $green,
+    "slate":          $slate,
+    "magenta":        $magenta,
+    "pale-gray":      $pale-gray,
+    "pale-blue":      $pale-blue,
+    "pale-yellow":    $pale-yellow,
+    "light-green":    $light-green,
+    "light-blue":     $light-blue,
+    "light-red":      $light-red,
+    "light-yellow":   $light-yellow,
+    "white":          $white,
+    "gray":           $gray-600,
+    "gray-dark":      $gray-800,
+    "gray-900":       $gray-900,
+    "gray-700":       $gray-700,
+    "gray-600":       $gray-600,
   ),
   $colors
 );
 
-$primary:       $uiInteractive !default;
-$secondary:     $uiPurple !default;
-$success:       $uiSystemSuccess !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $uiSystemDanger !default;
-$light:         $gray-100 !default;
-$dark:          $textBlack100 !default;
+$primary:                 $blue;
+$secondary:               $indigo;
+$success:                 $green;
+$info:                    $dark-blue;
+$warning:                 $yellow;
+$danger:                  $red;
+$fill-success:              $light-green;
+$fill-info:                 $light-blue;
+$fill-danger:               $light-red;
+$fill-warning:              $light-yellow;
+$program-masters:         $slate;
+$program-micro-masters:   $dark-blue;
+$program-prof-cert:       $magenta;
+$light:                   $gray-100 !default;
+$dark:                    $gray-900 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
+    "primary":                $primary,
+    "secondary":              $secondary,
+    "success":                $success,
+    "info":                   $info,
+    "warning":                $warning,
+    "danger":                 $danger,
+    "fill-success":           $fill-success,
+    "fill-info":              $fill-info,
+    "fill-danger":            $fill-danger,
+    "fill-warning":           $fill-warning,
+    "program-masters":        $program-masters,
+    "program-micro-masters":  $program-micro-masters,
+    "program-prof-cert":      $program-prof-cert,
   ),
   $theme-colors
 );
+
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
@@ -385,7 +357,7 @@ $lead-font-weight:            $font-weight-base;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $gray-600;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
@@ -1140,7 +1112,7 @@ $close-text-shadow:                 0 1px 0 $white !default;
 // Code
 
 $code-font-size:                    87.5% !default;
-$code-color:                        $pink !default;
+$code-color:                        $magenta !default;
 
 $kbd-padding-y:                     .2rem !default;
 $kbd-padding-x:                     .4rem !default;

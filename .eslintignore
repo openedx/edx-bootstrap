@@ -1,2 +1,4 @@
 dist/
+build/
 node_modules/
+src/pages/bootstrap/

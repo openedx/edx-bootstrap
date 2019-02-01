@@ -12,10 +12,10 @@ $gray-200: #e7e7e7 !default;
 $gray-300: #d9d9d9 !default;
 $gray-400: #c8c8c8 !default;
 $gray-500: #a0a0a0 !default;
-$gray-600: rgba(65, 65, 65, .7);
-$gray-700: #414141;
+$gray-600: rgba(65, 65, 65, .7) !default;
+$gray-700: #414141 !default;
 $gray-800: #313131 !default;
-$gray-900: #111;
+$gray-900: #111 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -35,23 +35,23 @@ $grays: map-merge(
   $grays
 );
 
-$blue:        #23419F;
-$dark-blue:   #065784;
-$indigo:      #45096B;
-$red:         #A2221D;
-$yellow:      #FFBF18;
-$green:       #008100;
-$slate:       $gray-700;
-$magenta:     #9A1F60;
+$blue:        #23419F !default;
+$dark-blue:   #065784 !default;
+$indigo:      #45096B !default;
+$red:         #A2221D !default;
+$yellow:      #FFBF18 !default;
+$green:       #008100 !default;
+$slate:       $gray-700 !default;
+$magenta:     #9A1F60 !default;
 
 // Background only colors
-$pale-gray: #fcfcfc;
-$pale-blue: #f5f8ff;
-$pale-yellow: #Fffdf3;
-$light-green: #DFF0D8;
-$light-blue: #D8EDF8;
-$light-red: #F2DEDE;
-$light-yellow: #FCF8E2;
+$pale-gray: #fcfcfc !default;
+$pale-blue: #f5f8ff !default;
+$pale-yellow: #Fffdf3 !default;
+$light-green: #DFF0D8 !default;
+$light-blue: #D8EDF8 !default;
+$light-red: #F2DEDE !default;
+$light-yellow: #FCF8E2 !default;
 
 
 $colors: () !default;
@@ -83,19 +83,19 @@ $colors: map-merge(
   $colors
 );
 
-$primary:                 $blue;
-$secondary:               $indigo;
-$success:                 $green;
-$info:                    $dark-blue;
-$warning:                 $yellow;
-$danger:                  $red;
-$fill-success:              $light-green;
-$fill-info:                 $light-blue;
-$fill-danger:               $light-red;
-$fill-warning:              $light-yellow;
-$program-masters:         $slate;
-$program-micro-masters:   $dark-blue;
-$program-prof-cert:       $magenta;
+$primary:                 $blue !default;
+$secondary:               $indigo !default;
+$success:                 $green !default;
+$info:                    $dark-blue !default;
+$warning:                 $yellow !default;
+$danger:                  $red !default;
+$fill-success:              $light-green !default;
+$fill-info:                 $light-blue !default;
+$fill-danger:               $light-red !default;
+$fill-warning:              $light-yellow !default;
+$program-masters:         $slate !default;
+$program-micro-masters:   $dark-blue !default;
+$program-prof-cert:       $magenta !default;
 $light:                   $gray-100 !default;
 $dark:                    $gray-900 !default;
 
@@ -337,7 +337,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        $font-family-serif !default;
-$headings-font-weight:        $font-weight-bold;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 
@@ -346,18 +346,18 @@ $display2-size:               4.5rem;
 $display3-size:               4.5rem;
 $display4-size:               4.5rem;
 
-$display1-weight:             700;
-$display2-weight:             700;
-$display3-weight:             700;
-$display4-weight:             700;
+$display1-weight:             700 !default;
+$display2-weight:             700 !default;
+$display3-weight:             700 !default;
+$display4-weight:             700 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            $font-weight-base;
+$lead-font-weight:            $font-weight-base !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600;
+$text-muted:                  $gray-600 !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
@@ -375,7 +375,7 @@ $nested-kbd-font-weight:      $font-weight-bold !default;
 
 $list-inline-padding:         .5rem !default;
 
-$mark-bg:                     #fff243;
+$mark-bg:                     #fff243 !default;
 
 $hr-margin-y:                 $spacer !default;
 
@@ -427,7 +427,7 @@ $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
-$input-btn-focus-box-shadow:  none;
+$input-btn-focus-box-shadow:  none !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
@@ -447,7 +447,7 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               1.25rem;
+$btn-padding-x:               1.25rem !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
 
@@ -468,7 +468,7 @@ $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($b
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       none;
+$btn-active-box-shadow:       none !default;
 
 $btn-link-disabled-color:     $gray-600 !default;
 

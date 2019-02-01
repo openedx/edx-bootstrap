@@ -19,12 +19,14 @@
 
   // transition: ...tbd;
 
-  &:hover, &.hover {
+  &:hover,
+  &.hover {
     color: $body-color;
     text-decoration: none;
   }
 
-  &:focus, &.focus {
+  &:focus,
+  &.focus {
     // outline: 0;
     box-shadow: $btn-focus-box-shadow;
   }
@@ -32,8 +34,9 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
     @include box-shadow(none);
+
+    opacity: $btn-disabled-opacity;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
@@ -50,6 +53,17 @@
       // focus & create the effect of being pushed in
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
+  }
+
+  // Things you can put inside a button
+  svg {
+    margin: 0 0.25em 0 -0.25em;
+  }
+
+  .spinner-border {
+    position: relative;
+    top: -0.05em;
+    margin: 0 0.375em 0 -0.25em;
   }
 }
 
@@ -154,23 +168,3 @@ input[type="button"] {
     width: 100%;
   }
 }
-
-
-
-
-//
-// Extras
-//
-
-.btn {
-  svg {
-    margin: 0 .25em 0 -.25em;
-  }
-}
-
-.btn .spinner-border {
-  position: relative;
-  top: -.05em;
-  margin: 0 .375em 0 -.25em;
-}
-

@@ -25,13 +25,13 @@ export default class Miscellaneous extends React.Component {
           </div>
           <br />
           <br />
-          <button className="btn btn-primary mr-2" role="button">
+          <button className="btn btn-primary mr-2">
             <div class="spinner-border spinner-border-sm text-light" role="status">
               <span class="sr-only">Loading...</span>
             </div>
             Saving
           </button>
-          <button className="btn btn-outline-primary" role="button">
+          <button className="btn btn-outline-primary">
             <div class="spinner-border spinner-border-sm text-primary" role="status">
               <span class="sr-only">Loading...</span>
             </div>

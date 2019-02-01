@@ -1,8 +1,6 @@
 import React from 'react';
 import MeasuredItem from '../common/MeasuredItem';
 
-
-
 export default function Typography() {
   const typeMeasurements = {
     'font-family': null,
@@ -27,12 +25,12 @@ export default function Typography() {
           if (!styleValues['font-family']) return;
 
           const fontFamily = styleValues['font-family'].split(',')[0];
-          const oneRem = parseInt(window.getComputedStyle(document.documentElement)['font-size']);
+          //const oneRem = parseInt(window.getComputedStyle(document.documentElement)['font-size']);
           const fontSize = Math.round(parseFloat(styleValues['font-size']));
 
-          const fontSizeRem = fontSize/oneRem;
+          //const fontSizeRem = fontSize/oneRem;
           const lineHeight = Math.round(parseFloat(styleValues['line-height']));
-          const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
+          //const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
           let letterSpacing = styleValues['letter-spacing'];
           const fontWeight = styleValues['font-weight'];
           const getWeightName = (weight) => {
@@ -94,8 +92,6 @@ export default function Typography() {
         <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
         <div className="col-6">{ renderTypeItem({name: 'Small ', tag: 'p', tagClass: 'small'}) }</div>
       </div>
-    
-
     </div>
   );
 }

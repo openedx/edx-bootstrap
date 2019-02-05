@@ -14,9 +14,6 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -25,9 +22,6 @@
   ],
   "devDependencies": {
     "@edx/stylelint-config-edx": "^1.1.0",
-    "babel-eslint": "^9.0.0",
-    "eslint": "^4.10.0",
-    "eslint-config-edx": "^4.0.3",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react-scripts": "2.1.3"

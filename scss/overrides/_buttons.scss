@@ -1,3 +1,6 @@
+.btn {
+  text-decoration: none;
+}
 
 //
 // This field defines a new variant of button (inverse)
@@ -75,9 +78,17 @@
 }
 
 .btn-link {
+  text-decoration: $link-decoration;
+
+  &.hover,
+  &:hover, {
+    text-decoration: $link-hover-decoration;
+  }
+
   &.focus,
   &:focus {
     outline: 1px dotted;
     outline: 5px auto -webkit-focus-ring-color;
+    text-decoration: $link-hover-decoration;
   }
 }

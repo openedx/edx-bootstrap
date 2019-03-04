@@ -11,19 +11,7 @@
 @import './overrides/navs';
 
 
-
-a {
-  svg {
-    margin-right: .25em;
-  }
-}
-
-
 .container,
 .container-fluid {
   max-width: 1440px;
-}
-
-label {
-  display: block;
 }

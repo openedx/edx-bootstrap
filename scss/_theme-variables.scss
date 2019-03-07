@@ -11,7 +11,7 @@ $gray-200: #e7e7e7 !default;
 $gray-300: #d9d9d9 !default;
 $gray-400: #c8c8c8 !default;
 $gray-500: #a0a0a0 !default;
-$gray-600: rgba(65, 65, 65, .7) !default;
+$gray-600: rgba(65, 65, 65, .75) !default;
 $gray-700: #414141 !default;
 $gray-800: #313131 !default;
 $gray-900: #111 !default;
@@ -232,8 +232,14 @@ $display3-weight:             700 !default;
 $display4-weight:             700 !default;
 $display-line-height:         $headings-line-height !default;
 
+
 $lead-font-size:              ($font-size-base * 1.25) !default;
 $lead-font-weight:            $font-weight-base !default;
+
+
+$small-font-size:             80% !default;
+
+$text-muted:                  $gray-600 !default;
 
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
 

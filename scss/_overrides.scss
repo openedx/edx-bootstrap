@@ -14,4 +14,6 @@
 .container,
 .container-fluid {
   max-width: 1440px;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build-docs": "react-scripts build",
-    "css-compile": "node-sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
+    "compile-css": "node-sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
     "lint": "stylelint ./scss/**/*.scss",
     "link-fix": "stylelint sass/**/*.scss --fix",
     "pre-commit": "npm run lint && npm run css-compile",

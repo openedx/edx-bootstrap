@@ -16,59 +16,54 @@ Using npm::
 
     npm install --save @edx/edx-bootstrap
 
-::
-
-Alternatively you can download this repo and use the compiled css at ``dist/css/edx-bootstrap``
-
 Usage
 -----
 
 Add the following import in your project's base scss file::
 
-    @import "~@edx/edx-bootstrap/scss/edx-bootstrap";
-    
-::
+    @import "~@edx/edx-bootstrap/scss/edx/theme.scss";
 
-This includes everything you need. Bootstrap is included for so you don't 
+Or for Open edX users,::
+
+    @import "~@edx/edx-bootstrap/scss/open-edx/theme.scss";
+
+This includes everything you need. Bootstrap is included so you don't 
 need to add it in your project. If you need more control, see the 
-customization section.
+theming section.
+
+Alternatively, you can download this repo and use one of the compiled outputs:
+
+- ``dist/open-edx/theme.css`` (Open edX bootstrap, extensions, & theme)
+- ``dist/edx/theme.css`` (edX bootstrap, extensions, & theme)
+- ``dist/core/core.css`` (edX bootstrap & extensions only)
 
 Theming
 -------
 
-To create a theme, make a copy of ``scss/theme-variables`` in your own project
+The content of a `theme.scss` file::
+    
+    // Optional
+    @import "my-fonts";
+    @import "my-variables";
+
+    // Required core (includes bootstrap and extensions)
+    @import "@edx/edx-boostrap/scss/core/core.scss";
+
+    // The rest of your scss
+    // ...
+
+To create a theme, make a copy of the ``scss/open-edx`` folder in your own project
 and make changes. Then include it before you include edx-bootstrap::
 
-    @import 'my-theme-variables';
-    
-    @import "~@edx/edx-bootstrap/scss/edx-bootstrap";
-    
-    // Your overrides go here
-    
-::
+    @import "fonts";
+    @import "variables";
 
-If you prefer not to include fonts used by default, see the granular control
-section.
+    // If you are creating your own theme remove
+    // the "../core/core" import with the line below.
+    @import "../core/core";
+    // @import "@edx/edx-boostrap/scss/core/core.scss";
 
-Granular Control
-----------------
-
-If you need more granular control, you can also include @edx-bootstrap this way::
-
-    // Your theme imports go here
-    
-    // Remove these if you need to
-    @import "~@edx/edx-bootstrap/scss/fonts";
-    @import "~@edx/edx-bootstrap/scss/theme-variables";
-    
-    // Refer to the bootstrap documentation for other ways to import bootstrap
-    @import "~bootstrap/scss/bootstrap";
-    
-    // Remove this is you need to
-    @import "~@edx/edx-bootstrap/scss/overrides";
-
-    // Your overrides go here
-::
+    @import "overrides";
 
 Getting Help
 ------------

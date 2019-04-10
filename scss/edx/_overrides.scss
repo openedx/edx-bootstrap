@@ -1,19 +1,11 @@
-@import './custom/edx-custom-card';
-
 @import './overrides/alerts';
 @import './overrides/badges';
 @import './overrides/buttons';
 @import './overrides/dropdowns';
+@import './overrides/grid';
 @import './overrides/modals';
 @import './overrides/typography';
 @import './overrides/tables';
-@import './overrides/utilities';
 @import './overrides/navs';
 
-
-.container,
-.container-fluid {
-  max-width: 1440px;
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
-}
+@import './custom/edx-custom-card.scss';

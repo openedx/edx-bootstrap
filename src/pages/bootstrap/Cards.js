@@ -16,7 +16,7 @@ export default class Card extends React.Component {
                 <p class="card-text">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
-                <a href="#" class="btn btn-primary">
+                <a href="#demo" class="btn btn-primary">
                   Go somewhere
                 </a>
               </div>
@@ -28,10 +28,10 @@ export default class Card extends React.Component {
                 <p class="card-text">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
-                <a href="#" class="card-link">
+                <a href="#demo" class="card-link">
                   Card link
                 </a>
-                <a href="#" class="card-link">
+                <a href="#demo" class="card-link">
                   Another link
                 </a>
               </div>
@@ -41,7 +41,7 @@ export default class Card extends React.Component {
               <div class="card-body">
                 <h5 class="card-title">Special title treatment</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">
+                <a href="#demo" class="btn btn-primary">
                   Go somewhere
                 </a>
               </div>

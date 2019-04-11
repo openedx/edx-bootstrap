@@ -12,8 +12,8 @@ export default class Examples extends React.Component {
             <h1>On the events <br />in question</h1>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="#">My Courses</a></li>
-                <li className="breadcrumb-item"><a href="#">Introduction to Animal Behaviour</a></li>
+                <li className="breadcrumb-item"><a href="#demo">My Courses</a></li>
+                <li className="breadcrumb-item"><a href="#demo">Introduction to Animal Behaviour</a></li>
                 <li className="breadcrumb-item active" aria-current="page">Unit 1</li>
               </ol>
             </nav>
@@ -27,8 +27,8 @@ export default class Examples extends React.Component {
               <li>It was early in April in the year '83.</li>
             </ul>
             <p className="mt-4">
-              <a href="" className="btn btn-primary mr-2">Solve the case</a>
-              <a href="" className="btn btn-outline-primary">Ask Watson</a>
+              <a href="#demo" className="btn btn-primary mr-2">Solve the case</a>
+              <a href="#demo" className="btn btn-outline-primary">Ask Watson</a>
             </p>
 
             <div className="pt-5 pb-5">
@@ -43,7 +43,7 @@ export default class Examples extends React.Component {
               <div className="row">
                 <div className="col">
                 <ul className="nav">
-                  <li><a href="#">Data Science Courses</a></li>
+                  <li><a href="#demo">Data Science Courses</a></li>
                 </ul>
                 </div>
               </div>

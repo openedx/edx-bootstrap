@@ -1,7 +1,5 @@
 import React from 'react';
 import chroma from 'chroma-js';
-import MeasuredItem from '../common/MeasuredItem';
-import DocSection from '../DocSection';
 
 const colors = {
   'gray-900': {
@@ -267,7 +265,6 @@ export default function Colors() {
               name,
               value,
               utilityClassName,
-              backgroundUtilityClass,
               forText,
               forBG,
             } = colors[colorKey];
@@ -312,25 +309,4 @@ export default function Colors() {
       </table>
     </div>
   );
-}
-
-class Measure extends React.Component {
-  constructor(props) {
-    super(props);
-    this.nodeToMeasure = React.createRef();
-
-    this.state = {
-      styles: null
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      styles: getComputedStyle(this.nodeToMeasure.current)
-    })
-  }
-
-  render() {
-    return this.props.render(this.nodeToMeasure, this.state.styles);
-  }
 }

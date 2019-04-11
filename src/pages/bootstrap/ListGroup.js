@@ -52,13 +52,13 @@ export default class ListGroup extends React.Component {
   
   <div className="bd-example">
     <div className="list-group">
-      <a href="#" className="list-group-item list-group-item-action active">
+      <a href="#demo" className="list-group-item list-group-item-action active">
         Cras justo odio
       </a>
-      <a href="#" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-      <a href="#" className="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" className="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" className="list-group-item list-group-item-action disabled" tabIndex={-1} aria-disabled="true">Vestibulum at eros</a>
+      <a href="#demo" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+      <a href="#demo" className="list-group-item list-group-item-action">Morbi leo risus</a>
+      <a href="#demo" className="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+      <a href="#demo" className="list-group-item list-group-item-action disabled" tabIndex={-1} aria-disabled="true">Vestibulum at eros</a>
     </div>
   </div>
   
@@ -106,15 +106,15 @@ export default class ListGroup extends React.Component {
   
   <div className="bd-example">
     <div className="list-group">
-      <a href="#" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
-      <a href="#" className="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+      <a href="#demo" className="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
     </div>
   </div>
   
@@ -142,7 +142,7 @@ export default class ListGroup extends React.Component {
   
   <div className="bd-example">
     <div className="list-group">
-      <a href="#" className="list-group-item list-group-item-action active">
+      <a href="#demo" className="list-group-item list-group-item-action active">
         <div className="d-flex w-100 justify-content-between">
           <h5 className="mb-1">List group item heading</h5>
           <small>3 days ago</small>
@@ -150,7 +150,7 @@ export default class ListGroup extends React.Component {
         <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
         <small>Donec id elit non mi porta.</small>
       </a>
-      <a href="#" className="list-group-item list-group-item-action">
+      <a href="#demo" className="list-group-item list-group-item-action">
         <div className="d-flex w-100 justify-content-between">
           <h5 className="mb-1">List group item heading</h5>
           <small className="text-muted">3 days ago</small>
@@ -158,7 +158,7 @@ export default class ListGroup extends React.Component {
         <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
         <small className="text-muted">Donec id elit non mi porta.</small>
       </a>
-      <a href="#" className="list-group-item list-group-item-action">
+      <a href="#demo" className="list-group-item list-group-item-action">
         <div className="d-flex w-100 justify-content-between">
           <h5 className="mb-1">List group item heading</h5>
           <small className="text-muted">3 days ago</small>

@@ -44,13 +44,13 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronDown} />
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
             </div>
@@ -69,13 +69,13 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronDown} />
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
             </div>
@@ -94,13 +94,13 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronDown} />
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
             </div>
@@ -121,17 +121,17 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronUp} />
             </button>
             <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
               <div className="dropdown-divider" />
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Separated link
               </a>
             </div>
@@ -148,17 +148,17 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronRight} />
             </button>
             <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
               <div className="dropdown-divider" />
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Separated link
               </a>
             </div>
@@ -175,17 +175,17 @@ export default class Dropdowns extends React.Component {
               <FontAwesomeIcon className="fa-sm" icon={faChevronLeft} />
             </button>
             <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Another action
               </a>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Something else here
               </a>
               <div className="dropdown-divider" />
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="#demo">
                 Separated link
               </a>
             </div>

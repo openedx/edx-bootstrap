@@ -54,7 +54,7 @@ export default class Alerts extends React.Component {
                 <li>Please upload a copy of your house key.</li>
                 <li>The cat requires that you compliment him.</li>
               </ul>
-              <a href="#">Need help?</a>
+              <a href="#demo">Need help?</a>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export default class Alerts extends React.Component {
               <div>Heads up!</div>
               <p>This alert needs your attention, but not urgently.</p>
               <button className="btn btn-outline-primary mr-3">Do the thing</button>
-              <a href="#">Need help?</a>
+              <a href="#demo">Need help?</a>
             </div>
           </div>
         </div>

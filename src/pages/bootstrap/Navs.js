@@ -16,16 +16,16 @@ export default class Navs extends React.Component {
   <div className="bd-example">
     <ul className="nav">
       <li className="nav-item">
-        <a className="nav-link active" href="#">Active</a>
+        <a className="nav-link active" href="#demo">Active</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="#demo">Link</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="#demo">Link</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+        <a className="nav-link disabled" href="#demo" tabIndex={-1} aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>
@@ -33,10 +33,10 @@ export default class Navs extends React.Component {
   <p>Classes are used throughout, so your markup can be super flexible. Use <code className="highlighter-rouge">&lt;ul&gt;</code>s like above, <code className="highlighter-rouge">&lt;ol&gt;</code> if the order of your items is important, or roll your own with a <code className="highlighter-rouge">&lt;nav&gt;</code> element. Because the <code className="highlighter-rouge">.nav</code> uses <code className="highlighter-rouge">display: flex</code>, the nav links behave the same as nav items would, but without the extra markup.</p>
   <div className="bd-example">
     <nav className="nav">
-      <a className="nav-link active" href="#">Active</a>
-      <a className="nav-link" href="#">Link</a>
-      <a className="nav-link" href="#">Link</a>
-      <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+      <a className="nav-link active" href="#demo">Active</a>
+      <a className="nav-link" href="#demo">Link</a>
+      <a className="nav-link" href="#demo">Link</a>
+      <a className="nav-link disabled" href="#demo" tabIndex={-1} aria-disabled="true">Disabled</a>
     </nav>
   </div>
   <div className="bd-clipboard"><button type="button" className="btn-clipboard" title data-original-title="Copy to clipboard">Copy</button></div><figure className="highlight"><pre><code className="language-html" data-lang="html"><span className="nt">&lt;nav</span> <span className="na">class=</span><span className="s">"nav"</span><span className="nt">&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link active"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Active<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link"</span> <span className="na">href=</span><span className="s">"#"</span><span className="nt">&gt;</span>Link<span className="nt">&lt;/a&gt;</span>{"\n"}{"  "}<span className="nt">&lt;a</span> <span className="na">class=</span><span className="s">"nav-link disabled"</span> <span className="na">href=</span><span className="s">"#"</span> <span className="na">tabindex=</span><span className="s">"-1"</span> <span className="na">aria-disabled=</span><span className="s">"true"</span><span className="nt">&gt;</span>Disabled<span className="nt">&lt;/a&gt;</span>{"\n"}<span className="nt">&lt;/nav&gt;</span></code></pre></figure>
@@ -48,16 +48,16 @@ export default class Navs extends React.Component {
   <div className="bd-example">
     <ul className="nav nav-tabs">
       <li className="nav-item">
-        <a className="nav-link active" href="#">Active</a>
+        <a className="nav-link active" href="#demo">Active</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="#demo">Link</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="#demo">Link</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+        <a className="nav-link disabled" href="#demo" tabIndex={-1} aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>

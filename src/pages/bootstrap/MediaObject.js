@@ -39,7 +39,7 @@ export default class MediaObject extends React.Component {
         <h5 className="mt-0">Media heading</h5>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
         <div className="media mt-3">
-          <a className="mr-3" href="#">
+          <a className="mr-3" href="#demo">
             <svg className="bd-placeholder-img" width={64} height={64} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%" /><text fill="#dee2e6" dy=".3em" x="50%" y="50%">64x64</text></svg>
           </a>
           <div className="media-body">

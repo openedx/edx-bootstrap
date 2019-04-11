@@ -34,10 +34,10 @@ export default class Basics extends React.Component {
           <h6>Links</h6>
           <p style={{maxWidth:'30rem'}}>To navigate to a new page use a link instead. By default all links are primary blue and have underlines. Removing the underline is fine, but <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">color must not be used as the only visual means of indicating interactivity</a>.</p>
           <div className="mb-5 d-flex align-items-center">
-            <span className="mr-5"><a href="#">Link</a></span>
-            <span className="mr-5"><a href="#">Link extension →</a></span>
-            <span className="mr-5"><a href="#"><FontAwesomeIcon icon={faCheckCircle} />Link with icon</a></span>
-            <span className="mr-5"><a className="btn btn-link" href="#">Link with button container</a></span>
+            <span className="mr-5"><a href="#demo">Link</a></span>
+            <span className="mr-5"><a href="#demo">Link extension →</a></span>
+            <span className="mr-5"><a href="#demo"><FontAwesomeIcon icon={faCheckCircle} />Link with icon</a></span>
+            <span className="mr-5"><a className="btn btn-link" href="#demo">Link with button container</a></span>
           </div>
 
 

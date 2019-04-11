@@ -20,7 +20,7 @@ export default class Navigation extends React.Component {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#demo">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Library
@@ -30,20 +30,20 @@ export default class Navigation extends React.Component {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#demo">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Library</a>
+                  <a href="#demo">Library</a>
                 </li>
               </ol>
             </nav>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#demo">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Library</a>
+                  <a href="#demo">Library</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Data
@@ -63,22 +63,22 @@ export default class Navigation extends React.Component {
           <div className="bd-example">
             <ul className="nav">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="#demo">
                   Active
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#demo">
                   Link
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#demo">
                   Link
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">
+                <a className="nav-link disabled" href="#demo" tabIndex={-1} aria-disabled="true">
                   Disabled
                 </a>
               </li>
@@ -91,27 +91,27 @@ export default class Navigation extends React.Component {
           <p>
             Takes the basic nav from above and adds the <code className="highlighter-rouge">.nav-tabs</code> class to
             generate a tabbed interface. Use them to create tabbable regions with our{' '}
-            <a href="#javascript-behavior">tab JavaScript plugin</a>.
+            tab JavaScript plugin.
           </p>
           <div className="bd-example">
             <ul className="nav nav-tabs">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="#demo">
                   Active
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#demo">
                   Link
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#demo">
                   Link
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">
+                <a className="nav-link disabled" href="#demo" tabIndex={-1} aria-disabled="true">
                   Disabled
                 </a>
               </li>

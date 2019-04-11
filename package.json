@@ -16,10 +16,13 @@
     "lint-fix": "stylelint ./scss/**/*.scss --fix",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "semantic-release": "semantic-release",
+    "predeploy": "npm run build-docs",
     "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
       "pre-commit": "npm run lint"
     }
   },
@@ -33,6 +36,8 @@
     "bootstrap": "^4.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-angular": "^7.5.0",
     "@edx/stylelint-config-edx": "^1.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
@@ -50,6 +55,34 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-router-hash-link": "^1.2.1",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "semantic-release": "^15.13.3"
+  },
+  "release": {
+    "branch": "master",
+    "tagFormat": "v${version}",
+    "verifyConditions": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": {
+          "path": "dist/*"
+        }
+      }
+    ],
+    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "generateNotes": "@semantic-release/release-notes-generator",
+    "prepare": "@semantic-release/npm",
+    "publish": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": {
+          "path": "dist/*"
+        }
+      }
+    ],
+    "success": [],
+    "fail": []
   }
 }

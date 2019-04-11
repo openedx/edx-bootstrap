@@ -1,34 +1,50 @@
 {
   "name": "@edx/edx-bootstrap",
-  "version": "1.0.4",
   "description": "The Bootstrap theme for Open edX",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edx/edx-bootstrap.git"
   },
-  "keywords": [
-    "edx",
-    "bootstrap",
-    "theme"
-  ],
-  "homepage": "https://github.com/edx/edx-bootstrap#readme",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.6"
+  "version": "2.0.0",
+  "homepage": "http://edx.github.io/edx-bootstrap",
+  "scripts": {
+    "start": "react-scripts start",
+    "build-docs": "react-scripts build",
+    "compile-css": "node-sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
+    "lint": "stylelint ./scss/**/*.scss",
+    "link-fix": "stylelint sass/**/*.scss --fix",
+    "pre-commit": "npm run lint && npm run css-compile",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@edx/stylelint-config-edx": "^1.1.0",
-    "autoprefixer": "^6.6.1",
-    "aws-cli": "^0.0.1",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
-    "opn-cli": "^3.1.0",
-    "postcss": "^6.0.1",
-    "postcss-cli": "^4.0.0",
-    "postcss-rtlcss-combined": "^0.0.0"
+    "react-scripts": "2.1.3"
   },
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6",
+    "@fortawesome/fontawesome-svg-core": "^1.2.13",
+    "@fortawesome/free-solid-svg-icons": "^5.7.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "chroma-js": "^2.0.2",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.1"
   }
 }

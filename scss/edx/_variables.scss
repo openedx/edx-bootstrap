@@ -11,7 +11,7 @@ $gray-200: #e7e7e7 !default;
 $gray-300: #d9d9d9 !default;
 $gray-400: #c8c8c8 !default;
 $gray-500: #a0a0a0 !default;
-$gray-600: rgba(65, 65, 65, .75) !default;
+$gray-600: rgba(65, 65, 65, 0.75) !default;
 $gray-700: #414141 !default;
 $gray-800: #313131 !default;
 $gray-900: #111 !default;
@@ -34,23 +34,23 @@ $grays: map-merge(
   $grays
 );
 
-$blue:        #23419F !default;
+$blue:        #23419f !default;
 $dark-blue:   #065784 !default;
-$indigo:      #45096B !default;
-$red:         #A2221D !default;
-$yellow:      #FFBF18 !default;
+$indigo:      #45096b !default;
+$red:         #a2221d !default;
+$yellow:      #ffbf18 !default;
 $green:       #008100 !default;
 $slate:       $gray-700 !default;
-$magenta:     #9A1F60 !default;
+$magenta:     #9a1f60 !default;
 
 // Background only colors
 $pale-gray: #fcfcfc !default;
 $pale-blue: #f5f8ff !default;
-$pale-yellow: #Fffdf3 !default;
-$light-green: #DFF0D8 !default;
-$light-blue: #D8EDF8 !default;
-$light-red: #F2DEDE !default;
-$light-yellow: #FCF8E2 !default;
+$pale-yellow: #fffdf3 !default;
+$light-green: #dff0d8 !default;
+$light-blue: #d8edf8 !default;
+$light-red: #f2dede !default;
+$light-yellow: #fcf8e2 !default;
 
 
 $colors: () !default;
@@ -142,8 +142,8 @@ $spacers: () !default;
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
+    1: ($spacer * 0.25),
+    2: ($spacer * 0.5),
     3: $spacer,
     4: ($spacer * 1.5),
     5: ($spacer * 3)
@@ -192,13 +192,13 @@ $grid-gutter-width:           2rem !default;
 $border-width:                2px;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .3rem !default;
-$border-radius-lg:            .35rem !default;
+$border-radius:               0.3rem !default;
+$border-radius-lg:            0.35rem !default;
 $border-radius-sm:            2px !default;
 
-$box-shadow-sm:               0 .0625rem .125rem rgba($black, .2);
-$box-shadow:                  0 .125rem .25rem rgba($black, .3);
-$box-shadow-lg:               0 .25rem .5rem rgba($black, .3);
+$box-shadow-sm:               0 0.0625rem 0.125rem rgba($black, 0.2);
+$box-shadow:                  0 0.125rem 0.25rem rgba($black, 0.3);
+$box-shadow-lg:               0 0.25rem 0.5rem rgba($black, 0.3);
 
 $rounded-pill:                50rem !default;
 
@@ -216,7 +216,7 @@ $font-family-base:            $font-family-sans-serif !default;
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                $font-size-base * 0.875 !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -280,12 +280,12 @@ $btn-border-radius-sm:        $rounded-pill !default;
 
 // Badges
 $badge-font-weight:                 $font-weight-normal !default;
-$badge-padding-y:                   .3em !default;
-$badge-padding-x:                   .6em !default;
+$badge-padding-y:                   0.3em !default;
+$badge-padding-x:                   0.6em !default;
 $badge-border-radius:               10rem !default; //$border-radius-sm !default;
 
 
-// Modals 
+// Modals
 $modal-inner-padding:               1.25rem !default;
 $modal-content-border-width:        0 !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
@@ -297,7 +297,7 @@ $alert-color:                       $body-color !default;
 
 
 // Progress
-$progress-font-size:                ($font-size-base * .75) !default;
+$progress-font-size:                ($font-size-base * 0.75) !default;
 
 
 // Breadcrumbs

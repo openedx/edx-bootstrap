@@ -1,11 +1,11 @@
-$charcoal-grey: #393f43;
-$dark-slate-blue: #17285d;
-$ice-blue: #f5f8ff;
-$sapphire: #23419f;
-$silver: #d6dbe0;
-$slate-grey: #636c72;
-$light-border: 1px solid $silver;
-$edx-shadow-color: rgba(0, 0, 0, 0.3);
+$charcoal-grey: #393f43 !default;
+$dark-slate-blue: #17285d !default;
+$ice-blue: #f5f8ff !default;
+$sapphire: #23419f !default;
+$silver: #d6dbe0 !default;
+$slate-grey: #636c72 !default;
+$light-border: 1px solid $silver !default;
+$edx-shadow-color: rgba(0, 0, 0, 0.3) !default;
 
 @mixin edx-shadow {
   box-shadow: 0 2px 2px 0 $edx-shadow-color;

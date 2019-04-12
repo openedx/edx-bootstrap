@@ -1,0 +1,58 @@
+@import "../scss/edx/theme";
+@import "./scss/bootstrap-docs-4-2/docs";
+
+
+.btn-clipboard {
+  display: none;
+}
+
+.bd-sidebar {
+  overflow-y: auto;
+  .nav > li > a {
+    &.active {
+      font-weight: bold;
+      color: $primary;
+    }
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.type-scale-row {
+  margin-bottom: 3rem;
+}
+.type-scale-cell-empty  {
+  background: transparent;
+  padding: $spacer*.5;
+  flex-basis: 66%;
+}
+
+.color-card {
+  box-shadow: inset 0 0 1px rgba(0,0,0,.2);
+}
+
+.color-label {
+  // color: $text-muted;
+  // font-weight: 600;
+  margin-bottom: .25rem;
+}
+.text-swatch-sample {
+  font-size: 2em;
+  line-height: 1;
+  margin-left: .5rem;
+}
+
+.bd-content {
+  h5.section {
+    margin: 1.5rem 0 1rem;
+    @extend .h6;
+  }
+}

@@ -1,34 +1,85 @@
 {
   "name": "@edx/edx-bootstrap",
-  "version": "1.0.4",
   "description": "The Bootstrap theme for Open edX",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edx/edx-bootstrap.git"
+  "repository": "git@github.com:edx/edx-bootstrap.git",
+  "version": "2.0.0",
+  "homepage": "http://edx.github.io/edx-bootstrap",
+  "scripts": {
+    "start": "react-scripts start",
+    "build-docs": "react-scripts build",
+    "build": "node-sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
+    "lint": "stylelint ./scss/**/*.scss",
+    "lint-fix": "stylelint ./scss/**/*.scss --fix",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "semantic-release": "semantic-release",
+    "predeploy": "npm run build-docs",
+    "deploy": "gh-pages -d build"
   },
-  "keywords": [
-    "edx",
-    "bootstrap",
-    "theme"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "npm run lint"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
   ],
-  "homepage": "https://github.com/edx/edx-bootstrap#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.6"
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
-    "@edx/stylelint-config-edx": "^1.1.0",
-    "autoprefixer": "^6.6.1",
-    "aws-cli": "^0.0.1",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-angular": "^7.5.0",
+    "@edx/stylelint-config-edx": "^1.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "chroma-js": "^2.0.3",
+    "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
+    "husky": "^1.3.1",
+    "jquery": "^3.4.0",
+    "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
-    "opn-cli": "^3.1.0",
-    "postcss": "^6.0.1",
-    "postcss-cli": "^4.0.0",
-    "postcss-rtlcss-combined": "^0.0.0"
+    "popper.js": "^1.15.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-router-hash-link": "^1.2.1",
+    "react-scripts": "^2.1.8",
+    "semantic-release": "^15.13.3"
   },
-  "publishConfig": {
-    "access": "public"
+  "release": {
+    "branch": "master",
+    "tagFormat": "v${version}",
+    "verifyConditions": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": {
+          "path": "dist/*"
+        }
+      }
+    ],
+    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "generateNotes": "@semantic-release/release-notes-generator",
+    "prepare": "@semantic-release/npm",
+    "publish": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": {
+          "path": "dist/*"
+        }
+      }
+    ],
+    "success": [],
+    "fail": []
   }
 }

@@ -3,7 +3,7 @@
   "description": "The Bootstrap theme for Open edX",
   "license": "Apache-2.0",
   "repository": "git@github.com:edx/edx-bootstrap.git",
-  "version": "2.0.0",
+  "version": "1.0.4",
   "homepage": "http://edx.github.io/edx-bootstrap",
   "scripts": {
     "start": "react-scripts start",

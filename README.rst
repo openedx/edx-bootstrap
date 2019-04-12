@@ -23,7 +23,7 @@ Add the following import in your project's base scss file::
 
     @import "~@edx/edx-bootstrap/scss/edx/theme.scss";
 
-Or for Open edX users,::
+Or for Open edX users::
 
     @import "~@edx/edx-bootstrap/scss/open-edx/theme.scss";
 
@@ -69,7 +69,8 @@ Getting Help
 ------------
 If you’re having trouble, contact the arch squad on Slack:
 
--  https://openedx.slack.com: #architecture
+- `#front-end <https://openedx.slack.com/messages/C0EUBSV7D>`_
+- `#architecture <https://openedx.slack.com/messages/C0RU5BTCP>`_
 -  edX Internal: #arch-team
 
 License

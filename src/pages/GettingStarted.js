@@ -8,7 +8,6 @@ export default class GettingStarted extends React.Component {
         <h1 className="mt-5">Usage</h1>
         <p className="lead mb-5">Details on how to pull this into a project and get started.</p>
 
-        
       </main>
     );
   }

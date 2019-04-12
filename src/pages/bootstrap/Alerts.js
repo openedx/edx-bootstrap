@@ -16,13 +16,13 @@ export default class Alerts extends React.Component {
           Alerts
         </h1>
         <p className="bd-lead">
-          Provide contextual feedback messages for typical user actions with the handful of available and flexible alert
+          Provide contextual feedback messages for typical user actions with a handful of available and flexible alert
           messages.
         </p>
 
         <h2>Notes</h2>
         <ul>
-          <li>The four below are representative samples. The various buttons/links are optional.</li>
+          <li>The four alerts below are representative samples. The various buttons/links are optional.</li>
         </ul>
 
         <div className="bd-example">

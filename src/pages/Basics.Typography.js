@@ -25,14 +25,11 @@ export default function Typography() {
           if (!styleValues['font-family']) return;
 
           const fontFamily = styleValues['font-family'].split(',')[0];
-          //const oneRem = parseInt(window.getComputedStyle(document.documentElement)['font-size']);
           const fontSize = Math.round(parseFloat(styleValues['font-size']));
-
-          //const fontSizeRem = fontSize/oneRem;
           const lineHeight = Math.round(parseFloat(styleValues['line-height']));
-          //const lineHeightRatio = Math.round(10*lineHeight/fontSize)/10;
           let letterSpacing = styleValues['letter-spacing'];
           const fontWeight = styleValues['font-weight'];
+
           const getWeightName = (weight) => {
             if (weight < 400) return 'Light';
             if (weight < 500) return 'Regular';
@@ -43,7 +40,6 @@ export default function Typography() {
           if (letterSpacing !== 'normal') {
             letterSpacing = (parseFloat(letterSpacing)/fontSize) + 'em';
           }
-
 
           return (
             <div className="d-flex mt-2 text-muted">

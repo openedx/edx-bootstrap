@@ -28,9 +28,6 @@ export default class Basics extends React.Component {
         </DocSection>
 
         <DocSection id="links" title="Links">
-          
-        
-         
           <h6>Links</h6>
           <p style={{maxWidth:'30rem'}}>To navigate to a new page use a link instead. By default all links are primary blue and have underlines. Removing the underline is fine, but <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">color must not be used as the only visual means of indicating interactivity</a>.</p>
           <div className="mb-5 d-flex align-items-center">
@@ -39,8 +36,6 @@ export default class Basics extends React.Component {
             <span className="mr-5"><a href="#demo"><FontAwesomeIcon icon={faCheckCircle} />Link with icon</a></span>
             <span className="mr-5"><a className="btn btn-link" href="#demo">Link with button container</a></span>
           </div>
-
-
           <div className="alert alert-info d-flex" role="alert">
             <div className="flex-grow-0 mr-2">
               <FontAwesomeIcon icon={faInfoCircle} />
@@ -48,13 +43,11 @@ export default class Basics extends React.Component {
             <div className="flex-grow-1">
               <h6>To do:</h6>
               <ul className="list-unstyled mb-0">
-                <li>Add documentation on how buttons should be layed out:  left aligned. primary first, others second.</li>
+                <li>Add documentation on how buttons should be laid out:  left aligned. primary first, others second.</li>
                 <li>Flippable for RTL.</li>
               </ul>
             </div>
           </div>
-
-          
         </DocSection>
 
         <DocSection id="icons" title="Icons">
@@ -63,7 +56,7 @@ export default class Basics extends React.Component {
         </DocSection>
 
         <DocSection id="misc-basics" title="Misc Elements">
-          <p className="bd-lead">Examples and usage guidelines for icon styles.</p>
+          <p className="bd-lead">Examples and usage guidelines for miscellaneous elements.</p>
           <MiscBasics />
         </DocSection>
 

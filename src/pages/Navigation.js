@@ -55,9 +55,9 @@ export default class Navigation extends React.Component {
 
         <DocSection id="navs" title="Navs">
           <p>
-            Navigation available in Bootstrap share general markup and styles, from the base{' '}
+            Navigation elements available in Bootstrap share general markup and styles, from the base{' '}
             <code className="highlighter-rouge">.nav</code> class to the active and disabled states. Swap modifier
-            classes to switch between each style.
+            classes to change styles.
           </p>
 
           <div className="bd-example">

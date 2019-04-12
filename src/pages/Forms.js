@@ -70,7 +70,7 @@ export default class Forms extends React.Component {
           <h3>Notes</h3>
           <ul>
             <li>
-              From groups should be stacked. Label first, then input, then help text below that.
+              Form groups should be stacked. Label first, then input, then help text below that.
             </li>
             <li>
               If there is an error state for the input, it should go below the input, above the help

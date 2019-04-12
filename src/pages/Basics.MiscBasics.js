@@ -23,7 +23,7 @@ export default function MiscBasics() {
       <p><span className="badge mr-1 badge-success">OK</span> Use strikethroughs for <s>content that is no longer accurate</s> or <del>has been deleted.</del></p>
       <p><span className="badge mr-1 badge-warning">Avoid</span> <u> Avoid using underlines for static elements</u></p>
       <p><span className="badge mr-1 badge-warning">Use Sparingly</span> <small>Fine print text that is 80% smaller than normal.</small></p>
-      <p><span className="badge mr-1 badge-success">OK</span> <strong>This line rendered as bold text.</strong></p>
+      <p><span className="badge mr-1 badge-success">OK</span> <strong>This line is rendered as bold text.</strong></p>
       <p><span className="badge mr-1 badge-warning">Avoid</span><em>Italicized text is difficult to read and hard to localize.</em></p>
     </div>
   );

@@ -10,12 +10,12 @@ export default class Overview extends React.Component {
 
         <h2>A succinct yet powerful system.</h2>
         <p>
-          This library aims to be a set of <strong>powerful tools that remain as succinct as possible</strong>. We can get a lot done with just a few set of tools. Check out <a href="https://airbnb.design/building-a-visual-language/">Airbnb's thoughts on the matter</a>.
+          This library aims to be a set of <strong>powerful tools that remain as succinct as possible</strong>. We can get a lot done with just a small set of tools. Check out <a href="https://airbnb.design/building-a-visual-language/">Airbnb's thoughts on the matter</a>.
         </p>
 
         <h2>Minimize design & tech debt.</h2>
         <p>
-          When designing and building our products <strong>use these patterns first</strong>. Every time we design or build a new component or variation of an element, we take out design and technical debt. Let's always keep our broader system in mind when we make new things.
+          When designing and building our products <strong>use these patterns first</strong>. Every time we design or build a new component or variation of an element, we take on design and technical debt. Let's always keep our broader system in mind when we make new things.
         </p>
 
         <h2>Flexible and ready for changes.</h2>

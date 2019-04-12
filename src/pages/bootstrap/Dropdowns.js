@@ -16,7 +16,7 @@ export default class Dropdowns extends React.Component {
         <h2>To do</h2>
         <ul>
           
-          <li>replace buttons with a one that looks more like a select.</li>
+          <li>replace buttons with one that looks more like a select.</li>
           <li>
             Remove the buttons, update docs to indicate that the display of the dropdown is unimportant. It's the
             presences of the chevron icon.

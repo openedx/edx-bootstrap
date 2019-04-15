@@ -57,7 +57,7 @@ export default function Typography() {
     <div>
 
       <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Display', tag: 'h1', tagClass: 'display-1'}) }</div>
+        <div className="col-6">{ renderTypeItem({name: 'Display', tag: 'h1', tagClass: 'display-3'}) }</div>
         <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>
       </div>
       <div className="row type-scale-row">

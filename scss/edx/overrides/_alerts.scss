@@ -7,10 +7,10 @@
 .alert-warning,
 .alert-info {
   border: none;
-  color: $alert-color;
+  color: $body-color;
 
   .alert-link {
-    color: $alert-color;
+    color: $body-color;
   }
 }
 

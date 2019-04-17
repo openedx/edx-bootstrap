@@ -17,3 +17,57 @@
     text-decoration: $link-hover-decoration;
   }
 }
+
+// Add focus outlines to all of them. Box shadow focus is turned off in variables.
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  .btn-outline-#{$color},
+  .btn-inverse-#{$color} {
+    &:not(:disabled):not(.disabled),
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:active,
+    &.active {
+      &.focus,
+      &:focus {
+        box-shadow: none;
+        outline: 1px dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+
+  .btn-#{$color} {
+    &:hover {
+      background: darken($value, 10%);
+    }
+  }
+
+  .btn-outline-#{$color} {
+    &:hover {
+      color: darken($value, 10%);
+      border-color: darken($value, 10%);
+      background: desaturate(blend-transparent($value, white, 0.065), 5%);
+    }
+    &:not(:disabled):not(.disabled) {
+      &:active,
+      &.active {
+        color: darken($value, 10%);
+        border-color: darken($value, 10%);
+        background: desaturate(blend-transparent($value, white, 0.065), 5%);
+      }
+    }
+  }
+
+  .btn-inverse-#{$color} {
+    &:hover {
+      color: darken($value, 10%);
+      background: desaturate(blend-transparent($value, white, 0.065), 5%);
+    }
+    &:focus,
+    &.focus {
+      border-color: transparent;
+    }
+  }
+}

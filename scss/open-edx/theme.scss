@@ -1,9 +1,5 @@
 @import "fonts";
+@import "~bootstrap/scss/functions";
 @import "variables";
-
-// If you are creating your own theme remove
-// the "../core/core" import with the line below.
 @import "../core/core";
-// @import "@edx/edx-boostrap/scss/core/core.scss";
-
 @import "overrides";

@@ -23,7 +23,7 @@ export default function ButtonsAndLinks() {
             backgroundImage: 'url(https://source.unsplash.com/featured/320x200/?people)',
             backgroundSize: 'cover',
           }}>
-            <button type="button hover" className="btn btn-inverse-primary shadow">Inverse</button>
+            <button type="button" className="btn btn-inverse-primary shadow">Inverse</button>
           </div>
         </div>
       </div>

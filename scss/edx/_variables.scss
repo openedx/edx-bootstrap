@@ -330,9 +330,9 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        $font-family-serif !default;
+$headings-font-family:        $font-family-sans-serif !default;
 $headings-font-weight:        $font-weight-bold !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1.25 !default;
 $headings-color:              inherit !default;
 
 $display1-size:               6rem !default;
@@ -349,7 +349,7 @@ $display-line-height:         $headings-line-height !default;
 $lead-font-size:              ($font-size-base * 1.25) !default;
 $lead-font-weight:            $font-weight-base !default;
 
-$small-font-size:             80% !default;
+$small-font-size:             87.5% !default;
 
 $text-muted:                  $gray-600 !default;
 

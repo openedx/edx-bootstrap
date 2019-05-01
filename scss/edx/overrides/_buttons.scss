@@ -31,9 +31,18 @@
     &.active {
       &.focus,
       &:focus {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -6px;
+          left: -6px;
+          bottom: -6px;
+          right: -6px;
+          border:solid 2px rgba(35,65, 159, .75);
+          border-radius: 40rem;
+        }
         box-shadow: none;
-        outline: 1px dotted;
-        outline: 5px auto -webkit-focus-ring-color;
       }
     }
   }
@@ -65,9 +74,18 @@
       color: darken($value, 10%);
       background: desaturate(blend-transparent($value, white, 0.065), 5%);
     }
-    &:focus,
-    &.focus {
-      border-color: transparent;
+    &:not(:disabled):not(.disabled),
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        border-color: transparent;
+        &:before {
+          border:solid 2px rgba(white, .75);
+        }
+      }
     }
   }
 }

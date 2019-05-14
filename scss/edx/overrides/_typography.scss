@@ -35,8 +35,13 @@ h6,
 }
 
 @media (max-width: map-get($grid-breakpoints, "sm")) {
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
   h1, .h1 {
     font-size: 2rem;
+    line-height: $headings-line-height;
   }
   h2, .h2 {
     font-size: 1.75rem;

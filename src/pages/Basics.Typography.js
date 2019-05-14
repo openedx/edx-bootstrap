@@ -55,39 +55,19 @@ export default function Typography() {
 
   return (
     <div>
-
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Display', tag: 'h1', tagClass: 'display-3'}) }</div>
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 1', tag: 'h1', tagClass: ''}) }</div>
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty" /></div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 2', tag: 'h2', tagClass: ''}) }</div>
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 3', tag: 'h3', tagClass: ''}) }</div>
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 4', tag: 'h4', tagClass: ''}) }</div>
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 5', tag: 'h5', tagClass: ''}) }</div>
-        <div className="col-6">{ renderTypeItem({name: 'Large Paragraph', tag: 'p', tagClass: 'lead'}) }</div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6">{ renderTypeItem({name: 'Heading 6', tag: 'h6', tagClass: ''}) }</div>
-        <div className="col-6">{ renderTypeItem({name: 'Paragraph', tag: 'p', tagClass: ''}) }</div>
-      </div>
-      <div className="row type-scale-row">
-        <div className="col-6 d-flex align-items-center"><div className="type-scale-cell-empty " /></div>
-        <div className="col-6">{ renderTypeItem({name: 'Small ', tag: 'p', tagClass: 'small'}) }</div>
-      </div>
+      <div className="mb-4">{renderTypeItem({name: 'Display', tag: 'h1', tagClass: 'display-3'})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 1', tag: 'h1', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 2', tag: 'h2', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 3', tag: 'h3', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 4', tag: 'h4', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 5', tag: 'h5', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Heading 6', tag: 'h6', tagClass: ''})}</div>
+      <hr />
+      <div className="mb-4">{renderTypeItem({name: 'Large Paragraph', tag: 'p', tagClass: 'lead'})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Paragraph', tag: 'p', tagClass: ''})}</div>
+      <div className="mb-4">{renderTypeItem({name: 'Small ', tag: 'p', tagClass: 'small'})}</div>
+      <hr />
+      <div className="mb-4">{renderTypeItem({name: 'Label ', tag: 'label'})}</div>
     </div>
   );
 }

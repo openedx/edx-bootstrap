@@ -59,8 +59,14 @@ export default function ButtonsAndLinks() {
         <h5 className="section">With Icons</h5>
 
         <div className="mb-3">
-          <button type="button" className="mr-2 btn btn-primary btn"><FontAwesomeIcon icon={faCheckCircle} />  Medium</button>
-          <button type="button" className="mr-2 btn btn-primary btn-lg"><FontAwesomeIcon icon={faCheckCircle} />  Large</button>
+          <button type="button" className="mr-2 btn btn-primary btn">
+            <FontAwesomeIcon className="mr-2" icon={faCheckCircle} />
+            Medium
+          </button>
+          <button type="button" className="mr-2 btn btn-primary btn-lg">
+            <FontAwesomeIcon className="mr-2" icon={faCheckCircle} />
+            Large
+          </button>
         </div>
       </div>
 

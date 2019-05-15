@@ -33,7 +33,7 @@ export default class Basics extends React.Component {
           <div className="mb-5 d-flex align-items-center">
             <span className="mr-5"><a href="#demo">Link</a></span>
             <span className="mr-5"><a href="#demo">Link extension →</a></span>
-            <span className="mr-5"><a href="#demo"><FontAwesomeIcon icon={faCheckCircle} />Link with icon</a></span>
+            <span className="mr-5"><a href="#demo"><FontAwesomeIcon icon={faCheckCircle} className="mr-1" />Link with icon</a></span>
             <span className="mr-5"><a className="btn btn-link" href="#demo">Link with button container</a></span>
           </div>
           <div className="alert alert-info d-flex" role="alert">

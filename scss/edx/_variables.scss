@@ -152,20 +152,19 @@ $enable-validation-icons:                     false !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: 0.625rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge(
-  (
-    0: 0,
-    1: ($spacer * 0.25),
-    2: ($spacer * 0.5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
-  ),
-  $spacers
-);
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * 0.2), // 2px
+  2: ($spacer * 0.5), // 5px
+  3: $spacer,         // 10px
+  4: ($spacer * 2),   // 20px
+  5: ($spacer * 3),   // 30px
+  6: ($spacer * 4),   // 40px
+  7: ($spacer * 6),   // 60px
+), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;

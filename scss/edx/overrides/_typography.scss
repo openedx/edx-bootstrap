@@ -34,7 +34,17 @@ h6,
   font-weight: $font-weight-bold;
 }
 
-@media (max-width: map-get($grid-breakpoints, "sm")) {
+label {
+  line-height: $headings-line-height;
+  font-weight: $headings-font-weight;
+}
+
+small,
+.small {
+  line-height: 1.428571428571429; // 20px
+}
+
+@mixin mobile-type {
   .display-1,
   .display-2,
   .display-3,
@@ -54,12 +64,6 @@ h6,
   }
 }
 
-label {
-  line-height: $headings-line-height;
-  font-weight: $headings-font-weight;
-}
-
-small,
-.small {
-  line-height: 1.428571428571429; // 20px
+@media (max-width: map-get($grid-breakpoints, "sm")) {
+  @include mobile-type;
 }

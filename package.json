@@ -53,7 +53,7 @@
     "react-router-dom": "^5.0.0",
     "react-router-hash-link": "^1.2.1",
     "react-scripts": "^2.1.8",
-    "semantic-release": "^15.13.3"
+    "semantic-release": "^17.2.3"
   },
   "release": {
     "branch": "master",

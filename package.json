@@ -35,7 +35,7 @@
     "@edx/stylelint-config-edx": "1.1.1",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
-    "@fortawesome/react-fontawesome": "0.1.15",
+    "@fortawesome/react-fontawesome": "0.1.16",
     "chroma-js": "2.1.2",
     "classnames": "2.3.1",
     "gh-pages": "3.2.3",

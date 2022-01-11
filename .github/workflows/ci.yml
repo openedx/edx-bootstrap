@@ -38,6 +38,6 @@ jobs:
           username: ${{secrets.EDX_SMTP_USERNAME}}
           password: ${{secrets.EDX_SMTP_PASSWORD}}
           subject: CI workflow failed in ${{github.repository}}
-          to: arch-team@edx.org
+          to: frontend-working-group@edx.org
           from: github-actions <github-actions@edx.org>
           body: CI workflow in ${{github.repository}} failed! For details see "github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

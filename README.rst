@@ -67,11 +67,10 @@ and make changes. Then include it before you include edx-bootstrap::
 
 Getting Help
 ------------
-If you’re having trouble, contact the arch squad on Slack:
+If you’re having trouble, you can ask in the front-end channel on Slack or contact the Frontend Working Group:
 
 - `#front-end <https://openedx.slack.com/messages/C0EUBSV7D>`_
-- `#architecture <https://openedx.slack.com/messages/C0RU5BTCP>`_
--  edX Internal: #arch-team
+- `#frontend-working-group <https://openedx.slack.com/messages/C02BMP2RD5Y>`_
 
 License
 -------

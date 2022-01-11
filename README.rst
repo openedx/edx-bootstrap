@@ -70,7 +70,7 @@ Getting Help
 If you’re having trouble, you can ask in the front-end channel on Slack or contact the Frontend Working Group:
 
 - `#front-end <https://openedx.slack.com/messages/C0EUBSV7D>`_
-- `#frontend-working-group <https://app.slack.com/client/T02SNA1T6/C02BMP2RD5Y>`_
+- `#frontend-working-group <https://openedx.slack.com/messages/C02BMP2RD5Y>`_
 
 License
 -------

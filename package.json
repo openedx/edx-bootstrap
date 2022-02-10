@@ -8,7 +8,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build-docs": "react-scripts build",
-    "build": "node-sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
+    "build": "sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
     "lint": "stylelint ./scss/**/*.scss",
     "lint-fix": "stylelint ./scss/**/*.scss --fix",
     "test": "react-scripts test",

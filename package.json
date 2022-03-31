@@ -8,7 +8,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build-docs": "react-scripts build",
-    "build": "sass --importer=utils/sass-importer --output-style expanded scss/ -o dist/",
+    "build": "sass --load-path node_modules --style expanded scss/:dist/",
     "lint": "stylelint ./scss/**/*.scss",
     "lint-fix": "stylelint ./scss/**/*.scss --fix",
     "test": "react-scripts test",
@@ -48,8 +48,8 @@
     "react-dom": "16.14.0",
     "react-router-dom": "5.3.0",
     "react-router-hash-link": "1.2.2",
-    "react-scripts": "2.1.8",
-    "sass": "^1.0.0",
+    "react-scripts": "5.0.0",
+    "sass": "1.49.9",
     "semantic-release": "17.4.7"
   },
   "release": {

@@ -147,7 +147,7 @@ class App extends Component {
                   <li>
                     <a
                       className="nav-link "
-                      href="https://github.com/edx/edx-bootstrap/tree/update-with-documentation-site"
+                      href="https://github.com/openedx/edx-bootstrap/tree/update-with-documentation-site"
                     >
                       This project on Github
                     </a>

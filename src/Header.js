@@ -20,7 +20,7 @@ export default class Header extends React.Component {
 
   <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li className="nav-item">
-      <a className="nav-link " href="https://github.com/edx/edx-bootstrap/tree/update-with-documentation-site">This github branch</a>
+      <a className="nav-link " href="https://github.com/openedx/edx-bootstrap/tree/update-with-documentation-site">This github branch</a>
     </li>
     <li className="nav-item">
       <a className="nav-link" href="https://getbootstrap.com/docs/4.2/getting-started/introduction/">Original Bootstrap Docs</a>

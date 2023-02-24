@@ -23,15 +23,13 @@
     }
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
+    "extends @edx/browserslist-config"
   ],
   "dependencies": {
     "bootstrap": "4.6.1"
   },
   "devDependencies": {
+    "@edx/browserslist-config": "^1.1.1",
     "@edx/stylelint-config-edx": "2.2.1",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-solid-svg-icons": "5.15.4",

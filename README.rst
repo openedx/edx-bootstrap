@@ -104,4 +104,4 @@ Please do not report security issues in public. Please email
 security@edx.org.
 
 .. _individual contributor agreement: https://open.edx.org/wp-content/uploads/2019/01/individual-contributor-agreement.pdf
-.. _CONTRIBUTING: https://github.com/openedx/edx-platform/blob/master/CONTRIBUTING.rst
+.. _CONTRIBUTING: https://github.com/openedx/.github/blob/master/CONTRIBUTING.md

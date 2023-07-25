@@ -45,7 +45,7 @@
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-router-dom": "5.3.4",
+    "react-router-dom": "6.14.2",
     "react-router-hash-link": "1.2.2",
     "react-scripts": "5.0.1",
     "semantic-release": "^20.1.3"

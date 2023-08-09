@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink, Routes } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 import Basics from './pages/Basics';
@@ -154,47 +154,48 @@ class App extends Component {
                   </li>
                 </ul>
               </div>
+              <Routes>
+                <Route path="/" element={<Overview />} />
+                <Route path="/GettingStarted" element={<GettingStarted />} />
+                <Route path="/Basics" element={<Basics />} />
 
-              <Route exact path="/" component={Overview} />
-              <Route exact path="/GettingStarted" component={GettingStarted} />
-              <Route exact path="/Basics" component={Basics} />
+                {/* Basics */}
+                <Route path="/Basics#colors" element={<Basics />} />
+                <Route path="/Basics#typography" element={<Basics />} />
+                <Route path="/Basics#buttons" element={<Basics />} />
+                <Route path="/Basics#icons" element={<Basics />} />
+                <Route path="/Basics#themes" element={<Basics />} />
 
-              {/* Basics */}
-              <Route path="/Basics#colors" component={Basics} />
-              <Route path="/Basics#typography" component={Basics} />
-              <Route path="/Basics#buttons" component={Basics} />
-              <Route path="/Basics#icons" component={Basics} />
-              <Route path="/Basics#themes" component={Basics} />
+                {/* Navigation */}
+                <Route exact path="/Navigation" element={<Navigation />} />
+                <Route path="/Navigation#links" element={<Navigation />} />
+                <Route path="/Navigation#breadcrumbs" element={<Navigation />} />
+                <Route path="/Navigation#tabs" element={<Navigation />} />
+                <Route path="/Navigation#search" element={<Navigation />} />
 
-              {/* Navigation */}
-              <Route exact path="/Navigation" component={Navigation} />
-              <Route path="/Navigation#links" component={Navigation} />
-              <Route path="/Navigation#breadcrumbs" component={Navigation} />
-              <Route path="/Navigation#tabs" component={Navigation} />
-              <Route path="/Navigation#search" component={Navigation} />
+                {/* Content */}
+                <Route path="/Forms" element={<Forms />} />
+                <Route path="/Cards" element={<Cards />} />
+                <Route path="/Alerts" element={<Alerts />} />
+                <Route path="/Badge" element={<Badge />} />
+                <Route path="/Dropdowns" element={<Dropdowns />} />
+                <Route path="/Modal" element={<Modal />} />
+                <Route path="/Pagination" element={<Pagination />} />
+                <Route path="/Tables" element={<Tables />} />
 
-              {/* Content */}
-              <Route path="/Forms" component={Forms} />
-              <Route path="/Cards" component={Cards} />
-              <Route path="/Alerts" component={Alerts} />
-              <Route path="/Badge" component={Badge} />
-              <Route path="/Dropdowns" component={Dropdowns} />
-              <Route path="/Modal" component={Modal} />
-              <Route path="/Pagination" component={Pagination} />
-              <Route path="/Tables" component={Tables} />
+                {/* Miscellaneous */}
+                <Route exact path="/Miscellaneous" element={<Miscellaneous />} />
+                <Route path="/Miscellaneous#loaders" element={<Miscellaneous />} />
 
-              {/* Miscellaneous */}
-              <Route exact path="/Miscellaneous" component={Miscellaneous} />
-              <Route path="/Miscellaneous#loaders" component={Miscellaneous} />
+                {/* Examples */}
+                <Route path="/Examples" element={<Examples />} />
 
-              {/* Examples */}
-              <Route path="/Examples" component={Examples} />
-
-              {/* Bootstrap documentation pages */}
-              <Route path="/Bootstrap/Collapse" component={Collapse} />
-              <Route path="/Bootstrap/Grid" component={Grid} />
-              <Route path="/Bootstrap/Popovers" component={Popovers} />
-              <Route path="/Bootstrap/Progress" component={Progress} />
+                {/* Bootstrap documentation pages */}
+                <Route path="/Bootstrap/Collapse" element={<Collapse />} />
+                <Route path="/Bootstrap/Grid" element={<Grid />} />
+                <Route path="/Bootstrap/Popovers" element={<Popovers />} />
+                <Route path="/Bootstrap/Progress" element={<Progress />} />
+              </Routes>
             </div>
           </div>
         </div>

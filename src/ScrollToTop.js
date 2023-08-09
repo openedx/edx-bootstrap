@@ -1,16 +1,14 @@
-import { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-class ScrollToTop extends Component {
-  componentDidUpdate(prevProps) {
-    if (this.props.location.pathname !== prevProps.location.pathname) {
-      window.scrollTo(0, 0);
-    }
-  }
+const ScrollToTop = ({ children }) => {
+  const location = useLocation();
 
-  render() {
-    return this.props.children;
-  }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return children;
 }
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

@@ -1,23 +1,48 @@
+##############
+edX Bootstrap
+##############
+
 .. image:: https://badge.fury.io/js/%40edx%2Fedx-bootstrap.svg
     :target: https://badge.fury.io/js/%40edx%2Fedx-bootstrap
 .. highlight:: css
-    
-=============
-edX Bootstrap
-=============
+
+********
+Purpose
+********
 
 This library is an extension of `Bootstrap 4 <http://getbootstrap.com>`_
 for use with edX and openEdX.
 
 Installation
-------------
+=============
 
 Using npm::
 
     npm install --save @edx/edx-bootstrap
 
+Cloning and Startup
+===================
+
+.. code-block::
+
+
+  1. Clone your new repo:
+
+    ``git clone https://github.com/openedx/edx-bootstrap.git``
+
+  2. Use node v18.x.
+
+    The current version of the micro-frontend build scripts support node 18.
+    Using other major versions of node *may* work, but this is unsupported.  For
+    convenience, this repository includes an .nvmrc file to help in setting the
+    correct node version via `nvm <https://github.com/nvm-sh/nvm>`_.
+
+  3. Install npm dependencies:
+
+    ``cd edx-bootstrap && npm ci``
+
 Usage
------
+=====
 
 Add the following import in your project's base scss file::
 
@@ -38,7 +63,7 @@ Alternatively, you can download this repo and use one of the compiled outputs:
 - ``dist/core/core.css`` (edX bootstrap & extensions only)
 
 Theming
--------
+=======
 
 The content of a `theme.scss` file::
     
@@ -66,21 +91,22 @@ and make changes. Then include it before you include edx-bootstrap::
     @import "overrides";
 
 Getting Help
-------------
+============
+
 If you’re having trouble, you can ask in the front-end channel on Slack or contact the Frontend Working Group:
 
 - `#front-end <https://openedx.slack.com/messages/C0EUBSV7D>`_
 - `#frontend-working-group <https://openedx.slack.com/messages/C02BMP2RD5Y>`_
 
 License
--------
+=======
 
 The code in this repository uses the Apache 2.0 license unless otherwise noted.
 Please see the `LICENSE file <https://github.com/openedx/edx-bootstrap/blob/master/LICENSE>`_
 for details.
 
 Documentation
--------------
+=============
 
 Documentation details can be found in the `docs index.rst`_.
 
@@ -88,7 +114,7 @@ Documentation details can be found in the `docs index.rst`_.
 
 
 How to Contribute
------------------
+=================
 
 Contributions are very welcome, but for legal reasons, you must submit a
 signed `individual contributor agreement`_ before we can accept your
@@ -98,7 +124,7 @@ will make your contribution more likely to be accepted.
 
 
 Reporting Security Issues
--------------------------
+=========================
 
 Please do not report security issues in public. Please email
 security@edx.org.

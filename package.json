@@ -35,7 +35,7 @@
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.2.0",
     "chroma-js": "2.4.2",
-    "classnames": "2.3.2",
+    "classnames": "2.5.1",
     "gh-pages": "6.1.1",
     "husky": "8.0.3",
     "jquery": "3.7.1",

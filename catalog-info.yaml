@@ -8,3 +8,4 @@ metadata:
   description: "This library is an extension of Bootstrap 4, provides a set of tools to bootstrap a new Open edX project."
 spec:
   type: 'library'
+  owner: group:openedx-unmaintained

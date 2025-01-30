@@ -1,0 +1,11 @@
+# This file records information about this repo. Its use is described in OEP-55:
+# https://open-edx-proposals.readthedocs.io/en/latest/processes/oep-0055-proc-project-maintainers.html
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: 'edx-bootstrap'
+  description: "This library is an extension of Bootstrap 4, provides a set of tools to bootstrap a new Open edX project."
+spec:
+  type: 'library'
+  owner: group:openedx-unmaintained

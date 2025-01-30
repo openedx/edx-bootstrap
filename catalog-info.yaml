@@ -4,7 +4,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: 'Bootstrap'
+  name: 'edx-bootstrap'
   description: "This library is an extension of Bootstrap 4, provides a set of tools to bootstrap a new Open edX project."
 spec:
   type: 'library'

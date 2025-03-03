@@ -48,7 +48,7 @@
     "react-router-dom": "6.28.0",
     "react-router-hash-link": "1.2.2",
     "react-scripts": "5.0.1",
-    "semantic-release": "^21.0.7"
+    "semantic-release": "^24.0.0"
   },
   "release": {
     "branch": "master",

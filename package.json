@@ -36,7 +36,7 @@
     "@fortawesome/react-fontawesome": "0.2.2",
     "chroma-js": "2.6.0",
     "classnames": "2.5.1",
-    "gh-pages": "6.2.0",
+    "gh-pages": "6.3.0",
     "husky": "8.0.3",
     "jquery": "3.7.1",
     "lodash": "4.17.21",

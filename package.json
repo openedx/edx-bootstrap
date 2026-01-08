@@ -50,6 +50,9 @@
     "react-scripts": "5.0.1",
     "semantic-release": "^21.0.7"
   },
+  "overrides": {
+    "node-gyp": "^10.0.1"
+  },
   "release": {
     "branch": "master",
     "tagFormat": "v${version}",

@@ -2,7 +2,7 @@
   "name": "@edx/edx-bootstrap",
   "description": "The Bootstrap theme for Open edX",
   "license": "Apache-2.0",
-  "repository": "git@github.com:edx/edx-bootstrap.git",
+  "repository": "https://github.com/openedx/edx-bootstrap.git",
   "version": "1.0.4",
   "homepage": "http://edx.github.io/edx-bootstrap",
   "scripts": {

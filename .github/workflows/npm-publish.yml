@@ -6,7 +6,7 @@ on:
 
 permissions:
   id-token: write  # Required for OIDC
-  contents: wriet  # For Semantic Release tagging
+  contents: write  # For Semantic Release tagging
 
 jobs:
   release:
